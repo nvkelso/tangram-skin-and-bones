@@ -48,7 +48,7 @@ bannana-colors:
     path_casing1:                &path_casing1               '#5d6b5d'
     path_bridge_casing1:         &path_bridge_casing1        black
     path_bridge_casing2:         &path_bridge_casing2        grey                # zoomed out
-    path_steps1:                 &path_steps1                black
+    path_steps1:                 &path_steps1                '#bcc19e'
     
     #areas
     scene1:     &scene1      '#eee'              # map background, water
@@ -126,9 +126,11 @@ bannana-colors:
 #    
 #    #areas
 #    scene1:     &scene1      black               # map background, water
+#    scene2:     &scene2      0.9,0.9,0.9         # map background, water
 #    water1:     &water1      black               # water
 #    earth1:     &earth1      white               # land color
 #    green1:     &green1      [0.50,0.50,0.50]    # park
+#    green1b:    &green1b     0.80,0.80,0.80      # park
 #    green2:     &green2      '#949494'           # cemetery
 #    green3:     &green3      '#9a9a9a'           # golf course
 #    green4:     &green4      [0.90,0.90,0.90]    # farm faint
@@ -241,7 +243,7 @@ bannana-colors:
 #   polygon_type:                 &polygon_type              base
 #   building_type:                &building_type             buildings
 #   buildings_line_type:          &buildings_line_type       buildingsLines
-#
+# 
 #   #roads
 #   highway1:                    &highway1                   '#706249'     #SEPIA
 #   highway_link1:               &highway_link1              '#8d816d'     #85%
@@ -447,14 +449,28 @@ styles:
                     float xMargin(vec2 st,float margin){
                         return 1.0-clamp(step(margin*.5,st.x)*step(margin*.5,1.0-st.x),0.,1.);
                     }
+                    
+                    //  Function from Iñigo Quiles
+                    //  https://www.shadertoy.com/view/MsS3Wc
+                    vec3 hsb2rgb( in vec3 c ){
+                        vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),
+                                                 6.0)-3.0)-1.0, 
+                                         0.0, 
+                                         1.0 );
+                        rgb = rgb*rgb*(3.0-2.0*rgb);
+                        return c.z * mix(vec3(1.0), rgb, c.y);
+                    }
                 color: |
                     vec2 st = v_texcoord;
-                    vec4 foreground = vec4(0.,0.,0.,1.);
+                    vec4 foreground = vec4(0.400,0.400,0.400,1.0);
+                    
+                    vec3 color1 = hsb2rgb(vec3(color.r,1.,1.));
+                    vec3 color2 = hsb2rgb(vec3(color.g,1.,1.));
                     
                     // Nathaniel un-comment the following lines
-                    color = mix(v_color,foreground, chevron(st) - xMargin(st,.25) );
-                    color = mix(v_color,foreground, stripes(st) );
-                    //color = mix(v_color,foreground, clamp(stripes(st)-xMargin(st,.9),0.,1.) ) ;
+                     color = mix(v_color,foreground, chevron(st) - xMargin(st,.25) );
+                     color = mix(v_color,foreground, stripes(st) );
+                    // color = mix(v_color,foreground, clamp(stripes(st)-xMargin(st,.9),0.,1.) ) ;
     dots:
         mix: tools
         blend: overlay
@@ -462,30 +478,25 @@ styles:
         texcoords: true
         shaders:
             blocks:
-                global: |
-                    vec2 tile(vec2 _st, float _zoom){
-                      _st *= _zoom;
-                      return fract(_st);
-                    }
-                    
-                    vec2 brickTile(vec2 _st, float _zoom){
-                        _st *= _zoom;
-                        if (fract(_st.y * 0.5) > 0.5){
-                            _st.x += 0.5;
-                        }
-                        return fract(_st);
-                    }
-                    
-                    float circle(vec2 _st, float _radius){
-                      vec2 pos = vec2(0.5)-_st;
-                      return smoothstep(1.0-_radius,1.0-_radius+_radius*0.2,1.-dot(pos,pos)*3.14);
-                    }
                 color: |
                     vec2 st = TileCoords();
                     st = brickTile(st,40.0);
                     float b = circle(st,0.1);
                     //color = vec4(0.460,0.460,0.460,1.0)*vec4(b);
                     color *= vec4(b);
+                    
+    dots2:
+        mix: tools
+        base: polygons
+        shaders:
+            blocks:
+                color: |
+                    vec2 st = TileCoords();
+                    st = brickTile(st,100.0);
+                    float b = circle(st,0.2);
+                filter: |
+                    color.rgb = mix(vec3(0.9), vec3(0.8), b);
+                    color.rgb -= grain(gl_FragCoord.xy)*0.1;
 
     blueprint:
         base: polygons
@@ -637,6 +648,23 @@ styles:
                         vec2 st = pos/u_resolution.xy-vec2(.5);
                         return dot(st,st)+(fbm(pos*0.6)*0.1);
                     }
+                    vec2 tile(vec2 _st, float _zoom){
+                      _st *= _zoom;
+                      return fract(_st);
+                    }
+                    
+                    vec2 brickTile(vec2 _st, float _zoom){
+                        _st *= _zoom;
+                        if (fract(_st.y * 0.5) > 0.5){
+                            _st.x += 0.5;
+                        }
+                        return fract(_st);
+                    }
+                    
+                    float circle(vec2 _st, float _radius){
+                      vec2 pos = vec2(0.5)-_st;
+                      return smoothstep(1.0-_radius,1.0-_radius+_radius*0.2,1.-dot(pos,pos)*3.14);
+                    }
                 position: |
                     // GridTile
                     v_pos = a_position.xyz * 32767.;
@@ -650,6 +678,23 @@ styles:
                 filter: |
                     color.rgb += vec3(0.2)*TileGrid();
                     color.rgb -= grain(gl_FragCoord.xy)*0.5;
+                    
+    ground:
+        base: polygons
+        mix: tools
+        shaders:
+            blocks:
+                filter: |
+                    color.rgb -= grain(gl_FragCoord.xy)*0.5;
+    ground2:
+        base: polygons
+        mix: tools
+        shaders:
+            blocks:
+                filter: |
+                    color.rgb -= grain(gl_FragCoord.xy)*0.2;
+
+
 
 scene:
     background:
@@ -682,7 +727,7 @@ layers:
     water:
         data: { source: osm, layer: water }
         draw:
-            polygons:
+            ground:
                 order: -1
                 color: *water1
         lakes:
@@ -701,13 +746,13 @@ layers:
                     - { $zoom: { min: 15 }, area: { min: 2000 } }
                     - { $zoom: { min: 16 } }    
             draw:
-                polygons:
+                ground:
                     order: 3
                     color: *water1
         other_water:
             filter: { not: { kind: [ocean, water, reservoir] }, $zoom: { min: 11 }, area: { min: 100 } }
             draw:
-                polygons:
+                ground:
                     order: 3
                     color: *water1
 
@@ -961,19 +1006,15 @@ layers:
                         width: [[15, 0.5px], [17, 1.0px]]
 
         path:
-            filter: { kind: path }
+            filter: { kind: path, not: { highway: steps } }
             draw:
                 flatlines:
                     color: [[15,*path2],[16,*path1]]
+                    order: 6
                     width: [[15, 1.5], [17, 3m]]
                     outline:
                         color: *path_casing1
                         width: [[15, 0.0], [18, .1]]
-            steps:
-                filter: { highway: steps }
-                draw:
-                    flatlines:
-                        color: *path_steps1
             bridge:
                 filter: {is_bridge: yes }
                 draw:
@@ -982,6 +1023,16 @@ layers:
                         outline:
                             color: [[15,*path_bridge_casing2],[16,*path_bridge_casing1]]
                             width: [[15, 0.5px], [16, 1.0px], [18, 2px]]
+        steps:
+            filter: { kind: path, highway: steps }
+            draw:
+                dashedline:
+                    order: 23
+                    color: *earth1
+                    width: [[15, 0.1], [17, 0.1]]
+                    outline:
+                        color: *path_steps1
+                        width: [[15, 1.5], [18, 3m]]
                             
                         
 
@@ -1106,6 +1157,7 @@ layers:
                 kind: park
             draw:
                 polygons:
+                #dots2:
                     order: 1
                     color: *green1
         cemetery:
