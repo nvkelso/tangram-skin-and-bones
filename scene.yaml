@@ -41,7 +41,7 @@ bannana-colors:
     minor_road5:                 &minor_road5                '#909090'           # zoomed out, again
     minor_tunnel1:               &minor_tunnel1              [0.8, 0.8, 0.7]
     minor_tunnel_casing1:        &minor_tunnel_casing1       white
-    service_road1:               &service_road1              white
+    service_road1:               &service_road1              '#ccc'
     service_road_casing1:        &service_road_casing1       grey
     path1:                       &path1                      '#bcc19e'
     path2:                       &path2                      '#c1bc9d'           # zoomed out
