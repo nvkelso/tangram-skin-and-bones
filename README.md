@@ -1,6 +1,6 @@
 # skin-and-bones-demo
 
-A demo showing contextual highway line and landuse polygon styles using the [Tangram](http://github.com/tangrams/tangram) library.
+A demo showing contextual highway line and landuse polygon styles using the [Tangram](http://github.com/tangrams/tangram) library. Modern take on Mike Migurski's standard [High Road](https://github.com/migurski/HighRoad).
 
 Live demo: http://nvkelso.github.io/tangram-skin-and-bones
 
