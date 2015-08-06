@@ -712,23 +712,6 @@ layers:
 #                width: 1px
 #                color: red
 
-
-#    landuse:
-#        data: { source: osm, layer: landuse }
-#        parks:
-#            filter: { kind: [park, cemetery, graveyard, forest] }
-#            draw:
-#                flatpolys:
-#                    order: 1
-#                    # tone down green as you zoom out
-#                    color: [[10, [0.3, 0.4, 0.3]], [14, [0.5, 0.825, 0.5]]]
-#        playgrounds:
-#            filter: { kind: [pitch, playground] }
-#            draw:
-#                flatpolys:
-#                    order: 2
-#                    color: [0.3, 0.675, 0.3]
-
     water:
         data: { source: osm, layer: water }
         draw:
