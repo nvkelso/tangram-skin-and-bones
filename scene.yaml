@@ -26,6 +26,7 @@ bannana-colors:
     major_road2a:                &major_road2a               [0.83, 0.83, 0.83]
     major_road2b:                &major_road2b               [0.75, 0.75, 0.75]
     major_road3:                 &major_road3                [0.70, 0.70, 0.70]
+    major_road4:                 &major_road4                [0.60, 0.60, 0.60]
     major_casing1:               &major_casing1              black               # same as highway_casing1
     major_casing2:               &major_casing2              grey                # zoomed out
     major_tunnel1:               &major_tunnel1              '#ffdb99'           # light orange (major_route1)
@@ -33,7 +34,6 @@ bannana-colors:
     major_route1:                &major_route1               orange
     major_route2:                &major_route2               orange              # zoomed out
     minor_route:                 &minor_route                orange              # same as major_route
-    major_road4:                 &major_road4                [0.60, 0.60, 0.60]
     minor_road1:                 &minor_road1                [0.60, 0.60, 0.60]  # natural earth
     minor_road2:                 &minor_road2                [0.80, 0.80, 0.80]  # natural earth, same as major_road2
     minor_road3:                 &minor_road3                '#ccc'
@@ -707,6 +707,11 @@ layers:
             flatpolys:
                 order: 0
                 color: *earth1
+#            lines:
+#                order: 10
+#                width: 1px
+#                color: red
+
 
 #    landuse:
 #        data: { source: osm, layer: landuse }
@@ -794,7 +799,6 @@ layers:
                 draw:
                     flatlines:
                         color: [[13, *major_road2], [17, *major_road1]]
-                        #color: red
                         width: [[9, 1px], [11, 1.5px], [13, 2.5px], [16, 2.5px], [19, 8m]]
                         outline:
                             width: [[8, 0.0px], [9, 0.5px], [11, .5px], [16, .75px]]
@@ -912,7 +916,8 @@ layers:
                 filter: { is_link: yes } # on- and off-ramps, etc
                 draw:
                     flatlines:
-                        width: [[10, 1px], [14, 3px], [16, 5px], [18, 10m]]
+                        color: [[8, *major_road3], [9, *major_road2b], [14, *major_road2], [15, *major_road1b], [17, *major_road1]]
+                        width: [[10, 1px], [14, 3px], [16, 4.5px], [18, 10m]]
                         outline:
                             color: *major_casing1
                             width: [[10, 1px], [14, 1px], [18, 1.5px]]
