@@ -29,7 +29,7 @@ map = (function () {
     var map = L.map('map',
         {"keyboardZoomOffset" : .05, maxZoom: 20 }
     );
-    
+        
     var layer = Tangram.leafletLayer({
         scene: 'scene.yaml',
         numWorkers: 2,
@@ -46,13 +46,15 @@ map = (function () {
     map.setView(map_start_location.slice(0, 3), map_start_location[2]);
 
     var hash = new L.Hash(map);
+    
+	function long2tile(lon,zoom) { return (Math.floor((lon+180)/360*Math.pow(2,zoom))); }
+	function lat2tile(lat,zoom)  { return (Math.floor((1-Math.log(Math.tan(lat*Math.PI/180) + 1/Math.cos(lat*Math.PI/180))/Math.PI)/2 *Math.pow(2,zoom))); }    
 
     /***** Render loop *****/
 	
 	function addGUI () {
 		// Link to edit in OSM - hold 'e' and click
-		window.addEventListener('click', function () {
-			// if (key.isPressed('e')) {
+		function onMapClick(e) {
 			if (key.shift) {
 				var url = 'https://www.openstreetmap.org/edit?';
 
@@ -66,7 +68,15 @@ map = (function () {
 
 				window.open(url, '_blank');
 			}
-		});
+
+ 			if (key.command) {
+				var url = 'http://vector.mapzen.com/osm/all/' + scene.tile_zoom + '/' + long2tile(e.latlng.lng,scene.tile_zoom)  + '/' + lat2tile(e.latlng.lat,scene.tile_zoom) + '.topojson?api_key=vector-tiles-HqUVidw';
+				window.open(url, '_blank');
+				//console.log( e );
+			}
+		}
+
+		map.on('click', onMapClick);		
 	}
 
 	
