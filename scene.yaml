@@ -1224,7 +1224,7 @@ layers:
                         font:
                             fill: *text_fill
                             typeface: 500 15px Helvetica
-                            stroke: { color: *highway1, width: 4 }
+                            stroke: { color: *text_stroke, width: 4 }
             later3:
                 filter: { $zoom: { min: 18 } }
                 draw:
@@ -1233,7 +1233,7 @@ layers:
                         font:
                             fill: *text_fill2
                             typeface: 500 18px Helvetica
-                            stroke: { color: *text_stroke, width: 4 }
+                            stroke: { color: *highway1, width: 4 }
 
         major_road:
             filter: { kind: major_road }
