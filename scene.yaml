@@ -469,244 +469,244 @@ textures:
         filtering: mipmap
         sprites:
             # define sprites: [x origin, y origin, width, height]
-            adult-boutique: [802, 1116, 36, 36]
-            airport: [631, 105, 36, 36]
-            animal-shelter: [380, 1364, 36, 36]
-            antique-shop: [1048, 861, 36, 36]
-            aquarium: [630, 530, 36, 36]
-            arcade: [964, 530, 36, 36]
-            art-gallery: [968, 2052, 36, 36]
-            arts-crafts: [1052, 948, 36, 36]
-            athletics-sports: [1054, 1541, 36, 36]
-            atm: [1138, 1285, 36, 36]
-            automotive-shop: [630, 187, 36, 36]
-            bagel-shop: [716, 1796, 36, 36]
-            bakery: [461, 1964, 36, 36]
-            bank: [802, 1285, 36, 36]
-            bar: [634, 1713, 36, 36]
-            baseball-field: [632, 1455, 36, 36]
-            basketball-court: [886, 1539, 36, 36]
-            basketball-stadium: [716, 1456, 36, 36]
-            bathroom: [1557, 615, 36, 36]
-            battlefield: [973, 696, 36, 36]
-            bbq: [800, 1796, 36, 36]
-            beach: [382, 531, 36, 36]
-            beach-resort: [1389, 531, 36, 36]
-            beer-garden: [885, 1711, 36, 36]
-            bench: [719, 698, 36, 36]
-            bicycle-parking: [970, 187, 36, 36]
-            bike-shop: [470, 1033, 36, 36]
-            boat-ferry: [716, 104, 36, 36]
-            boat-ramp: [1472, 694, 36, 36]
-            bookstore: [636, 1117, 36, 36]
-            bowling-alley: [1222, 1541, 36, 36]
-            breakfast: [968, 1796, 36, 36]
-            bridal-shop: [550, 1118, 36, 36]
-            bridge: [1392, 192, 36, 36]
-            building: [465, 693, 36, 36]
-            burger: [464, 1796, 36, 36]
-            bus-station: [548, 103, 36, 36]
-            butcher: [1220, 1627, 36, 36]
-            camera-store: [298, 945, 36, 36]
-            campground: [1220, 533, 36, 36]
-            candy-store: [1053, 1627, 36, 36]
-            car-dealership: [380, 187, 36, 36]
-            car-wash: [545, 186, 36, 36]
-            carribean-restaurant: [1050, 1876, 36, 36]
-            casino: [800, 2052, 36, 36]
-            castle: [1223, 616, 36, 36]
-            cemetery: [632, 275, 36, 36]
-            cheese-shop: [969, 1627, 36, 36]
-            chinese-restaurant: [800, 1880, 36, 36]
-            church: [464, 275, 36, 36]
-            city: [296, 695, 36, 36]
-            clinic: [462, 355, 36, 36]
-            clothing-store: [718, 864, 36, 36]
-            cocktail-bar: [550, 1713, 36, 36]
-            coffee-shop: [300, 1965, 36, 36]
-            college-university: [296, 444, 36, 36]
-            comedy-club: [716, 2052, 36, 36]
-            concert-hall: [382, 2052, 36, 36]
-            convenience-store: [461, 1626, 36, 36]
-            cosmetics-shop: [718, 1199, 36, 36]
-            courthouse: [632, 18, 36, 36]
-            credit-union: [882, 1286, 36, 36]
-            cupcake-shop: [717, 1965, 36, 36]
-            daycare: [462, 444, 36, 36]
-            dentist: [380, 355, 36, 36]
-            department-store: [550, 863, 36, 36]
-            design-studio: [632, 1284, 36, 36]
-            dessert: [799, 1967, 36, 36]
-            dog-run: [549, 1371, 36, 36]
-            donut: [546, 1968, 36, 36]
-            electronics-store: [806, 945, 36, 36]
-            ev-charging-station: [799, 187, 36, 36]
-            factory: [1055, 693, 36, 36]
-            farm: [1305, 696, 36, 36]
-            farmers-market: [884, 1627, 36, 36]
-            field: [885, 780, 36, 36]
-            financial-service: [966, 1286, 36, 36]
-            fire-station: [384, 18, 36, 36]
-            fish-market: [800, 1627, 36, 36]
-            fishing-spot: [1390, 611, 36, 36]
-            fitness: [966, 1538, 36, 36]
-            flea-market: [969, 863, 36, 36]
-            flower-shop: [633, 1628, 36, 36]
-            food-court: [295, 1880, 36, 36]
-            food-drink-shop: [1136, 1627, 36, 36]
-            football-stadium: [548, 1454, 36, 36]
-            ford: [1223, 191, 36, 36]
-            fountain: [720, 615, 36, 36]
-            fried-chicken-joint: [548, 1880, 36, 36]
-            fun-fair: [880, 529, 36, 36]
-            furniture-store: [632, 864, 36, 36]
-            gaming-cafe: [1050, 532, 36, 36]
-            garden: [296, 616, 36, 36]
-            garden-center: [381, 1033, 36, 36]
-            gas-station: [295, 188, 36, 36]
-            gastropub: [632, 1880, 36, 36]
-            gate: [803, 698, 36, 36]
-            gay-bar: [466, 1713, 36, 36]
-            general-entertainment: [632, 2052, 36, 36]
-            general-travel: [464, 1284, 36, 36]
-            generic: [294, 2137, 36, 36]
-            german-restaurant: [464, 1880, 36, 36]
-            gift-shop: [718, 1115, 36, 36]
-            golf-course: [296, 1457, 36, 36]
-            gourmet-shop: [549, 1628, 36, 36]
-            government-building: [802, 18, 36, 36]
-            grocery-store: [298, 1627, 36, 36]
-            harbor-marina: [1306, 532, 36, 36]
-            hardware-store: [298, 1033, 36, 36]
-            hiking-trail: [886, 617, 36, 36]
-            historic-site: [888, 18, 36, 36]
-            hobby-shop: [968, 949, 36, 36]
-            hockey-field: [718, 1539, 36, 36]
-            hospital: [295, 356, 36, 36]
-            hot-dog-joint: [886, 1879, 36, 36]
-            hot-pot-restaurant: [1052, 1796, 36, 36]
-            hot-spring: [630, 778, 36, 36]
-            hotel: [631, 694, 36, 36]
-            hunting-supply: [388, 1118, 36, 36]
-            ice-cream-shop: [632, 1964, 36, 36]
-            information: [385, 2137, 36, 36]
-            internet-cafe: [546, 1288, 36, 36]
-            island: [462, 777, 36, 36]
-            jewelry-store: [468, 1118, 36, 36]
-            karaoke: [888, 2052, 36, 36]
-            lake: [550, 777, 36, 36]
-            landmark: [468, 617, 36, 36]
-            laundry: [381, 1200, 36, 36]
-            library: [554, 18, 36, 36]
-            light-rail: [298, 102, 36, 36]
-            lighthouse: [384, 617, 36, 36]
-            liquor-store: [715, 1627, 36, 36]
-            lounge: [382, 1713, 36, 36]
-            mall: [380, 862, 36, 36]
-            marijuana-dispensary: [888, 1033, 36, 36]
-            market: [296, 862, 36, 36]
-            medical-center: [632, 356, 36, 36]
-            military-base: [972, 18, 36, 36]
-            mine: [1307, 615, 36, 36]
-            miscellaneous-shop: [464, 862, 36, 36]
-            mobile-phone-shop: [718, 947, 36, 36]
-            molecular-gastronomy: [383, 1796, 36, 36]
-            mosque: [382, 273, 36, 36]
-            motorcycle-shop: [715, 186, 36, 36]
-            mountain: [296, 779, 36, 36]
-            movie-theatre: [468, 2052, 36, 36]
-            moving-target: [1051, 617, 36, 36]
-            museum: [718, 18, 36, 36]
-            music-store: [552, 943, 36, 36]
-            music-venue: [296, 2052, 36, 36]
-            nail-salon: [631, 1199, 36, 36]
-            neighborhood: [379, 693, 36, 36]
-            newsstand: [1134, 864, 36, 36]
-            nightlife: [968, 1712, 36, 36]
-            noodle-shop: [632, 1796, 36, 36]
-            office: [547, 698, 36, 36]
-            office-supplies: [548, 1032, 36, 36]
-            optical-shop: [716, 358, 36, 36]
-            other-outdoors: [966, 614, 36, 36]
-            park: [296, 529, 36, 36]
-            parking: [883, 187, 36, 36]
-            performing-arts: [546, 2051, 36, 36]
-            pet-store: [464, 1366, 36, 36]
-            pharmacy: [545, 354, 36, 36]
-            photography-lab: [716, 1285, 36, 36]
-            picnic-spot: [1222, 698, 36, 36]
-            pier: [546, 617, 36, 36]
-            pizza: [969, 1874, 36, 36]
-            playground: [470, 531, 36, 36]
-            police: [300, 18, 36, 36]
-            pool: [716, 533, 36, 36]
-            pool-hall: [1138, 1540, 36, 36]
-            post-office: [468, 18, 36, 36]
-            power-pylon: [1139, 693, 36, 36]
-            public-art: [1050, 2054, 36, 36]
-            racetrack: [1134, 529, 36, 36]
-            ramen: [548, 1796, 36, 36]
-            real-estate: [297, 1285, 36, 36]
-            record-shop: [467, 945, 36, 36]
-            recycling-facility: [1054, 18, 36, 36]
-            rental-car: [464, 185, 36, 36]
-            rest-area: [1473, 194, 36, 36]
-            restaurant: [296, 1796, 36, 36]
-            river: [716, 779, 36, 36]
-            road: [1305, 190, 36, 36]
-            ruin: [888, 698, 36, 36]
-            salon-barber: [297, 1201, 36, 36]
-            school: [380, 442, 36, 36]
-            ship-wreck: [1138, 616, 36, 36]
-            shoe-store: [886, 862, 36, 36]
-            skate-park: [634, 1539, 36, 36]
-            skating-rink: [550, 1539, 36, 36]
-            ski-area: [802, 1458, 36, 36]
-            smoke-shop: [804, 1033, 36, 36]
-            soccer-field: [466, 1539, 36, 36]
-            soccer-stadium: [464, 1454, 36, 36]
-            soup-place: [380, 1880, 36, 36]
-            spa-massage: [548, 1199, 36, 36]
-            spiritual-center: [552, 273, 36, 36]
-            sporting-goods-shop: [638, 1033, 36, 36]
-            spring: [803, 776, 36, 36]
-            stable: [804, 617, 36, 36]
-            stadium: [380, 1455, 36, 36]
-            steakhouse: [884, 1796, 36, 36]
-            storage-facility: [1050, 1287, 36, 36]
-            subway: [381, 102, 36, 36]
-            surf-shop: [722, 1032, 36, 36]
-            sushi-restaurant: [718, 1883, 36, 36]
-            swimming: [296, 1539, 36, 36]
-            synagogue: [296, 271, 36, 36]
-            tailor-shop: [882, 1116, 36, 36]
-            tanning-salon: [462, 1203, 36, 36]
-            tattoo-parlor: [298, 1116, 36, 36]
-            taxi: [799, 103, 36, 36]
-            tea-room: [380, 1963, 36, 36]
-            tennis: [806, 1538, 36, 36]
-            theme-park: [798, 529, 36, 36]
-            thrift-vintage-store: [805, 864, 36, 36]
-            toll-booth: [1056, 188, 36, 36]
-            toy-game-store: [886, 947, 36, 36]
-            track: [886, 1455, 36, 36]
-            traffic-signal: [1138, 188, 36, 36]
-            train-station: [464, 102, 36, 36]
-            travel-agency: [383, 1285, 36, 36]
-            veterinarian: [293, 1368, 36, 36]
-            video-game-store: [634, 946, 36, 36]
-            video-store: [380, 944, 36, 36]
-            view-point: [1474, 611, 36, 36]
-            vineyard: [1390, 695, 36, 36]
-            volcano: [381, 778, 36, 36]
-            volleyball-court: [382, 1539, 36, 36]
-            well: [635, 617, 36, 36]
-            whisky-bar: [298, 1713, 36, 36]
-            wine-bar: [801, 1711, 36, 36]
-            wine-shop: [378, 1628, 36, 36]
-            winery: [715, 1713, 36, 36]
-            wings-joint: [1139, 1795, 36, 36]
-            zoo: [550, 529, 36, 36]
+            adult-boutique: [252, 108, 36, 36]
+            airport: [180, 36, 36, 36]
+            animal-shelter: [432, 0, 36, 36]
+            antique-shop: [216, 108, 36, 36]
+            aquarium: [684, 252, 36, 36]
+            arcade: [576, 252, 36, 36]
+            art-gallery: [540, 252, 36, 36]
+            arts-crafts: [180, 108, 36, 36]
+            athletics-sports: [288, 216, 36, 36]
+            atm: [36, 216, 36, 36]
+            automotive-shop: [108, 216, 36, 36]
+            bagel-shop: [468, 288, 36, 36]
+            bakery: [144, 252, 36, 36]
+            bank: [72, 216, 36, 36]
+            bar: [468, 216, 36, 36]
+            baseball-field: [72, 144, 36, 36]
+            basketball-court: [36, 144, 36, 36]
+            basketball-stadium: [360, 252, 36, 36]
+            bathroom: [216, 144, 36, 36]
+            battlefield: [360, 144, 36, 36]
+            bbq: [36, 288, 36, 36]
+            beach: [288, 144, 36, 36]
+            beach-resort: [252, 144, 36, 36]
+            beer-garden: [576, 288, 36, 36]
+            bench: [756, 0, 36, 36]
+            bicycle-parking: [648, 180, 36, 36]
+            bike-shop: [0, 216, 36, 36]
+            boat-ferry: [144, 36, 36, 36]
+            boat-ramp: [360, 108, 36, 36]
+            bookstore: [937, 180, 36, 36]
+            bowling-alley: [504, 252, 36, 36]
+            breakfast: [108, 288, 36, 36]
+            bridal-shop: [144, 72, 36, 36]
+            bridge: [540, 144, 36, 36]
+            building: [684, 216, 36, 36]
+            burger: [360, 288, 36, 36]
+            bus-station: [72, 36, 36, 36]
+            butcher: [900, 72, 36, 36]
+            camera-store: [901, 180, 36, 36]
+            campground: [504, 144, 36, 36]
+            candy-store: [180, 288, 36, 36]
+            car-dealership: [864, 180, 36, 36]
+            car-wash: [828, 180, 36, 36]
+            carribean-restaurant: [36, 252, 36, 36]
+            casino: [468, 252, 36, 36]
+            castle: [180, 72, 36, 36]
+            cemetery: [468, 144, 36, 36]
+            cheese-shop: [144, 288, 36, 36]
+            chinese-restaurant: [72, 252, 36, 36]
+            church: [72, 180, 36, 36]
+            city: [756, 108, 36, 36]
+            clinic: [216, 0, 36, 36]
+            clothing-store: [756, 252, 36, 36]
+            cocktail-bar: [432, 216, 36, 36]
+            coffee-shop: [108, 252, 36, 36]
+            college-university: [864, 252, 36, 36]
+            comedy-club: [432, 252, 36, 36]
+            concert-hall: [396, 252, 36, 36]
+            convenience-store: [108, 108, 36, 36]
+            cosmetics-shop: [72, 108, 36, 36]
+            courthouse: [396, 0, 36, 36]
+            credit-union: [792, 180, 36, 36]
+            cupcake-shop: [937, 216, 36, 36]
+            daycare: [36, 108, 36, 36]
+            dentist: [252, 0, 36, 36]
+            department-store: [756, 180, 36, 36]
+            design-studio: [108, 72, 36, 36]
+            dessert: [36, 0, 36, 36]
+            dog-run: [216, 216, 36, 36]
+            donut: [252, 288, 36, 36]
+            electronics-store: [612, 180, 36, 36]
+            ev-charging-station: [720, 180, 36, 36]
+            factory: [648, 216, 36, 36]
+            farm: [432, 144, 36, 36]
+            farmers-market: [540, 180, 36, 36]
+            field: [396, 144, 36, 36]
+            financial-service: [576, 180, 36, 36]
+            fire-station: [360, 0, 36, 36]
+            fish-market: [504, 180, 36, 36]
+            fishing-spot: [648, 252, 36, 36]
+            fitness: [792, 72, 36, 36]
+            flea-market: [937, 72, 36, 36]
+            flower-shop: [937, 144, 36, 36]
+            food-court: [468, 180, 36, 36]
+            food-drink-shop: [864, 72, 36, 36]
+            football-stadium: [828, 252, 36, 36]
+            ford: [576, 0, 36, 36]
+            fountain: [144, 180, 36, 36]
+            fried-chicken-joint: [901, 216, 36, 36]
+            fun-fair: [612, 144, 36, 36]
+            furniture-store: [360, 180, 36, 36]
+            gaming-cafe: [864, 144, 36, 36]
+            garden: [324, 144, 36, 36]
+            garden-center: [828, 72, 36, 36]
+            gas-station: [0, 288, 36, 36]
+            gastropub: [0, 252, 36, 36]
+            gate: [684, 0, 36, 36]
+            gay-bar: [396, 216, 36, 36]
+            general-entertainment: [324, 252, 36, 36]
+            general-travel: [36, 36, 36, 36]
+            generic: [756, 288, 36, 36]
+            german-restaurant: [864, 216, 36, 36]
+            gift-shop: [828, 144, 36, 36]
+            golf-course: [0, 144, 36, 36]
+            gourmet-shop: [901, 144, 36, 36]
+            government-building: [252, 216, 36, 36]
+            grocery-store: [432, 180, 36, 36]
+            harbor-marina: [180, 216, 36, 36]
+            hardware-store: [756, 72, 36, 36]
+            hiking-trail: [720, 108, 36, 36]
+            historic-site: [792, 144, 36, 36]
+            hobby-shop: [684, 72, 36, 36]
+            hockey-field: [937, 108, 36, 36]
+            hospital: [180, 0, 36, 36]
+            hot-dog-joint: [612, 288, 36, 36]
+            hot-pot-restaurant: [216, 288, 36, 36]
+            hot-spring: [252, 72, 36, 36]
+            hotel: [0, 36, 36, 36]
+            hunting-supply: [648, 72, 36, 36]
+            ice-cream-shop: [648, 288, 36, 36]
+            information: [720, 288, 36, 36]
+            internet-cafe: [612, 72, 36, 36]
+            island: [684, 108, 36, 36]
+            jewelry-store: [576, 72, 36, 36]
+            karaoke: [0, 180, 36, 36]
+            lake: [648, 108, 36, 36]
+            landmark: [324, 0, 36, 36]
+            laundry: [540, 72, 36, 36]
+            library: [0, 0, 36, 36]
+            light-rail: [937, 0, 36, 36]
+            lighthouse: [576, 108, 36, 36]
+            liquor-store: [396, 180, 36, 36]
+            lounge: [360, 216, 36, 36]
+            mall: [504, 72, 36, 36]
+            marijuana-dispensary: [468, 72, 36, 36]
+            market: [432, 72, 36, 36]
+            medical-center: [576, 216, 36, 36]
+            military-base: [180, 144, 36, 36]
+            mine: [720, 72, 36, 36]
+            miscellaneous-shop: [360, 72, 36, 36]
+            mobile-phone-shop: [324, 72, 36, 36]
+            molecular-gastronomy: [324, 288, 36, 36]
+            mosque: [108, 0, 36, 36]
+            motorcycle-shop: [72, 72, 36, 36]
+            mountain: [540, 108, 36, 36]
+            movie-theatre: [720, 252, 36, 36]
+            moving-target: [901, 0, 36, 36]
+            museum: [756, 144, 36, 36]
+            music-store: [36, 72, 36, 36]
+            music-venue: [288, 252, 36, 36]
+            nail-salon: [0, 72, 36, 36]
+            neighborhood: [504, 108, 36, 36]
+            newsstand: [937, 36, 36, 36]
+            nightlife: [180, 252, 36, 36]
+            noodle-shop: [432, 288, 36, 36]
+            office: [144, 144, 36, 36]
+            office-supplies: [864, 36, 36, 36]
+            optical-shop: [900, 36, 36, 36]
+            other-outdoors: [468, 108, 36, 36]
+            park: [108, 180, 36, 36]
+            parking: [684, 180, 36, 36]
+            performing-arts: [252, 252, 36, 36]
+            pet-store: [828, 36, 36, 36]
+            pharmacy: [0, 108, 36, 36]
+            photography-lab: [792, 36, 36, 36]
+            picnic-spot: [720, 0, 36, 36]
+            pier: [864, 0, 36, 36]
+            pizza: [684, 288, 36, 36]
+            playground: [288, 72, 36, 36]
+            police: [288, 0, 36, 36]
+            pool: [432, 108, 36, 36]
+            pool-hall: [720, 144, 36, 36]
+            post-office: [540, 216, 36, 36]
+            power-pylon: [612, 216, 36, 36]
+            public-art: [216, 252, 36, 36]
+            racetrack: [684, 144, 36, 36]
+            ramen: [396, 288, 36, 36]
+            real-estate: [756, 36, 36, 36]
+            record-shop: [720, 36, 36, 36]
+            recycling-facility: [684, 36, 36, 36]
+            rental-car: [828, 0, 36, 36]
+            rest-area: [792, 0, 36, 36]
+            restaurant: [288, 288, 36, 36]
+            river: [396, 108, 36, 36]
+            road: [612, 0, 36, 36]
+            ruin: [648, 0, 36, 36]
+            salon-barber: [648, 36, 36, 36]
+            school: [108, 144, 36, 36]
+            ship-wreck: [108, 36, 36, 36]
+            shoe-store: [396, 72, 36, 36]
+            skate-park: [900, 108, 36, 36]
+            skating-rink: [864, 108, 36, 36]
+            ski-area: [180, 180, 36, 36]
+            smoke-shop: [612, 36, 36, 36]
+            soccer-field: [828, 108, 36, 36]
+            soccer-stadium: [792, 252, 36, 36]
+            soup-place: [828, 216, 36, 36]
+            spa-massage: [576, 36, 36, 36]
+            spiritual-center: [504, 216, 36, 36]
+            sporting-goods-shop: [540, 36, 36, 36]
+            spring: [612, 108, 36, 36]
+            stable: [324, 108, 36, 36]
+            stadium: [288, 180, 36, 36]
+            steakhouse: [72, 288, 36, 36]
+            storage-facility: [504, 36, 36, 36]
+            subway: [540, 0, 36, 36]
+            surf-shop: [144, 108, 36, 36]
+            sushi-restaurant: [36, 180, 36, 36]
+            swimming: [324, 180, 36, 36]
+            synagogue: [72, 0, 36, 36]
+            tailor-shop: [468, 36, 36, 36]
+            tanning-salon: [432, 36, 36, 36]
+            tattoo-parlor: [396, 36, 36, 36]
+            taxi: [504, 0, 36, 36]
+            tea-room: [792, 216, 36, 36]
+            tennis: [216, 180, 36, 36]
+            theme-park: [648, 144, 36, 36]
+            thrift-vintage-store: [360, 36, 36, 36]
+            toll-booth: [937, 252, 36, 36]
+            toy-game-store: [324, 36, 36, 36]
+            track: [252, 180, 36, 36]
+            traffic-signal: [901, 252, 36, 36]
+            train-station: [468, 0, 36, 36]
+            travel-agency: [288, 36, 36, 36]
+            veterinarian: [144, 0, 36, 36]
+            video-game-store: [252, 36, 36, 36]
+            video-store: [216, 36, 36, 36]
+            view-point: [612, 252, 36, 36]
+            vineyard: [144, 216, 36, 36]
+            volcano: [288, 108, 36, 36]
+            volleyball-court: [792, 108, 36, 36]
+            well: [216, 72, 36, 36]
+            whisky-bar: [324, 216, 36, 36]
+            wine-bar: [540, 288, 36, 36]
+            wine-shop: [504, 288, 36, 36]
+            winery: [756, 216, 36, 36]
+            wings-joint: [720, 216, 36, 36]
+            zoo: [576, 144, 36, 36]
 
 sources:
     osm:
@@ -1181,7 +1181,7 @@ layers:
                 filter: {is_tunnel: yes, $zoom: {min: 13} }
                 draw:
                     flatlines:
-                        order: 4
+                        order: 6
                         color: *highway_tunnel1
                         outline:
                             color: *highway_tunnel_casing1
@@ -1265,7 +1265,7 @@ layers:
                         filter: {is_tunnel: yes, $zoom: {min: 13} }
                         draw:
                             flatlines:
-                                order: 4
+                                order: 6
                                 color: *major_tunnel1
                                 outline:
                                     color: *major_tunnel_casing1
@@ -1278,15 +1278,25 @@ layers:
                                 # but give them all the same outline
                                 outline:
                                     order: 23 # 15 is the starting aboveground level, plus 8
-                labels-trunk_primary-early:
-                    filter: { $zoom: { min: 10, max: 15 } }
+                labels-trunk_primary-early1:
+                    filter: { $zoom: { min: 11, max: 13 } }
                     draw:
                         text:
                             visible: *text_visible_trunk_primary
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
                                 fill: *text_fill
-                                typeface: 500 13px Helvetica
+                                typeface: 500 11px Helvetica
+                                stroke: { color: *text_stroke, width: 4 }
+                labels-trunk_primary-early2:
+                    filter: { $zoom: { min: 13, max: 15 } }
+                    draw:
+                        text:
+                            visible: *text_visible_trunk_primary
+                            text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
+                            font:
+                                fill: *text_fill
+                                typeface: 500 12px Helvetica
                                 stroke: { color: *text_stroke, width: 4 }
                 labels-trunk_primary-late:
                     filter: { $zoom: { min: 15, max: 18 } }
@@ -1321,7 +1331,7 @@ layers:
                 filter: {is_tunnel: yes, $zoom: {min: 13} }
                 draw:
                     flatlines:
-                        order: 4
+                        order: 6
                         color: *major_tunnel1
                         outline:
                             color: *major_tunnel_casing1
@@ -1342,7 +1352,7 @@ layers:
                         filter: {is_tunnel: yes, $zoom: {min: 13} }
                         draw:
                             flatlines:
-                                order: 4
+                                order: 6
                                 color: *major_tunnel1
                                 outline:
                                     color: *major_tunnel_casing1
@@ -1357,7 +1367,7 @@ layers:
                                     typeface: 500 13px Helvetica
                                     stroke: { color: *text_stroke, width: 4 }
                 labels-secondary:
-                    filter: { $zoom: { min: 14, max: 15 } }
+                    filter: { $zoom: { min: 13, max: 15 } }
                     draw:
                         text:
                             visible: *text_visible_secondary
@@ -1404,7 +1414,7 @@ layers:
                         filter: {is_tunnel: yes, $zoom: {min: 13} }
                         draw:
                             flatlines:
-                                order: 4
+                                order: 6
                                 color: *major_tunnel1
                                 outline:
                                     color: *major_tunnel_casing1
@@ -1460,7 +1470,7 @@ layers:
                 filter: {is_tunnel: yes, $zoom: {min: 13} }
                 draw:
                     flatlines:
-                        order: 4
+                        order: 6
                         color: *minor_tunnel1
                         outline:
                             color: *minor_tunnel_casing1
@@ -1744,62 +1754,728 @@ layers:
                         typeface: italic 12px Helvetica
                         stroke: { color: white, width: 4 }
                         
-         # examples of different icons mapped to feature properties
+        # examples of different icons mapped to feature properties
         icons:
             visible: *icon_visible_landuse
+            adult-boutique:
+                filter: { kind: [erotic, adult_boutique] }
+                draw:   { icons: { sprite: adult-boutique } }
             airport:
                 filter: { kind: [airport, aerodrome] }
                 draw:   { icons: { sprite: airport } }
+            animal-shelter:
+                filter: { kind: [animal_shelter, animal-shelter, animal_boarding] }
+                draw:   { icons: { sprite: animal-shelter } }
+            antique-shop:
+                filter: { kind: [antiques, antique-shop] }
+                draw:   { icons: { sprite: antique-shop } }
+            aquarium:
+                filter: { kind: [aquarium] }
+                draw:   { icons: { sprite: aquarium } }
+            arcade:
+                filter: { kind: [arcade] }
+                draw:   { icons: { sprite: arcade } }
+            art-gallery:
+                filter: { kind: [art_gallery, art-gallery, art] }
+                draw:   { icons: { sprite: art-gallery } }
+            arts-crafts:
+                filter: { kind: [arts-crafts] }
+                draw:   { icons: { sprite: arts-crafts } }
+            athletics-sports:
+                filter: { kind: [pitch, athletic_sports, recreation_ground] }
+                draw:   { icons: { sprite: athletics-sports } }
+            atm:
+                filter: { kind: [atm] }
+                draw:   { icons: { sprite: atm } }
+            automotive-shop:
+                filter: { kind: [car_repair, automotive-shop, automotive, tyres] }
+                draw:   { icons: { sprite: automotive-shop } }
+            bagel-shop:
+                filter: { kind: [bagel-shop] }
+                draw:   { icons: { sprite: bagel-shop } }
+            bakery:
+                filter: { kind: [bakery, pastry, chocolate] }
+                draw:   { icons: { sprite: bakery } }
+            bank:
+                filter: { kind: [bank] }
+                draw:   { icons: { sprite: bank } }
+            bar:
+                filter: { kind: [pub, bar] }
+                draw:   { icons: { sprite: bar } }
+            baseball-field:
+                filter: { kind: [baseball-field] }
+                draw:   { icons: { sprite: baseball-field } }
+            basketball-court:
+                filter: { kind: [basketball-court] }
+                draw:   { icons: { sprite: basketball-court } }
+            basketball-stadium:
+                filter: { kind: [basketball-stadium] }
+                draw:   { icons: { sprite: basketball-stadium } }
+            bathroom:
+                filter: { kind: [bathroom] }
+                draw:   { icons: { sprite: bathroom } }
+            battlefield:
+                filter: { kind: [battlefield] }
+                draw:   { icons: { sprite: battlefield } }
+            bbq:
+                filter: { kind: [bbq] }
+                draw:   { icons: { sprite: bbq } }
             beach:
                 filter: { kind: [beach] }
                 draw:   { icons: { sprite: beach } }
+            beach-resort:
+                filter: { kind: [beach-resort] }
+                draw:   { icons: { sprite: beach-resort } }
+            beer-garden:
+                filter: { kind: [biergarten, beer-garden] }
+                draw:   { icons: { sprite: beer-garden } }
+            bench:
+                filter: { kind: [bench] }
+                draw:   { icons: { sprite: bench } }
+            bicycle-parking:
+                filter: { kind: [bicycle-parking] }
+                draw:   { icons: { sprite: bicycle-parking } }
+            bike-shop:
+                filter: { kind: [bicycle, bicycle_rental, bike, bike_shop] }
+                draw:   { icons: { sprite: bike-shop } }
+            boat-ferry:
+                filter: { kind: [ferry_terminal, boat-ferry, ferry-boat, ferry] }
+                draw:   { icons: { sprite: boat-ferry } }
+            boat-ramp:
+                filter: { kind: [slipway, boat-ramp, boat_ramp] }
+                draw:   { icons: { sprite: boat-ramp } }
+            bookstore:
+                filter: { kind: [books, bookstore] }
+                draw:   { icons: { sprite: bookstore } }
+            bowling-alley:
+                filter: { kind: [bowling_alley, bowling-alley] }
+                draw:   { icons: { sprite: bowling-alley } }
+            breakfast:
+                filter: { kind: [breakfast] }
+                draw:   { icons: { sprite: breakfast } }
+            bridal-shop:
+                filter: { kind: [bridal, bridal-shop] }
+                draw:   { icons: { sprite: bridal-shop } }
+            bridge:
+                filter: { kind: [bridge] }
+                draw:   { icons: { sprite: bridge } }
+            building:
+                filter: { kind: [building, auditorium, terminal, hangar, retirement_home, manor, recreation_center, apartments] }
+                draw:   { icons: { sprite: building } }
+            burger:
+                filter: { kind: [fast_food, burger] }
+                draw:   { icons: { sprite: burger } }
+            bus-station:
+                filter: { kind: [bus_stop, bus_station], $zoom: { min: 17 } }
+                draw:   { icons: { sprite: bus-station } }
+            butcher:
+                filter: { kind: [butcher] }
+                draw:   { icons: { sprite: butcher } }
+            camera-store:
+                filter: { kind: [camera, camera-store, photo] }
+                draw:   { icons: { sprite: camera-store } }
+            campground:
+                filter: { kind: [campground, camp_site, caravan_site] }
+                draw:   { icons: { sprite: campground } }
+            candy-store:
+                filter: { kind: [candy, candy-store, confectionery] }
+                draw:   { icons: { sprite: candy-store } }
+            car-dealership:
+                filter: { kind: [car, car-dealership] }
+                draw:   { icons: { sprite: car-dealership } }
+            car-wash:
+                filter: { kind: [car_wash, car-wash] }
+                draw:   { icons: { sprite: car-wash } }
+            carribean-restaurant:
+                filter: { kind: [carribean-restaurant] }
+                draw:   { icons: { sprite: carribean-restaurant } }
+            casino:
+                filter: { kind: [casino] }
+                draw:   { icons: { sprite: casino } }
+            castle:
+                filter: { kind: [castle, fort] }
+                draw:   { icons: { sprite: castle } }
             cemetery:
                 filter: { kind: [grave_yard, cemetery] }
                 draw:   { icons: { sprite: cemetery } }
-            golf-course:
-                filter: { kind: [golf_course, golf-course] }
-                draw:   { icons: { sprite: golf-course } }
-            hospital:
-                filter: { kind: [hospital] }
-                draw:   { icons: { sprite: hospital } }
-            park:
-                filter: { kind: [park] }
-                draw:   { icons: { sprite: park } }
-            playground:
-                filter: { kind: [playground] }
-                draw:   { icons: { sprite: playground } }
-            mall:
-                filter: { kind: [mall] }
-                draw:   { icons: { sprite: mall } }
-            military-base:
-                filter: { kind: [military_base, military-base] }
-                draw:   { icons: { sprite: military-base } }
-            museum:
-                filter: { kind: [museum, observatory] }
-                draw:   { icons: { sprite: museum } }
-            school:
-                filter: { kind: [school, kindergarten] }
-                draw:   { icons: { sprite: school } }
-            soccer-stadium:
-                filter: { kind: [soccer-stadium] }
-                draw:   { icons: { sprite: soccer-stadium } }
-            stadium:
-                filter: { kind: [stadium] }
-                draw:   { icons: { sprite: stadium } }
-            theme-park:
-                filter: { kind: [theme_park, theme-park, miniature_golf] }
-                draw:   { icons: { sprite: theme-park } }
+            cheese-shop:
+                filter: { kind: [cheese, cheese-shop] }
+                draw:   { icons: { sprite: cheese-shop } }
+            chinese-restaurant:
+                filter: { kind: [chinese-restaurant] }
+                draw:   { icons: { sprite: chinese-restaurant } }
+            church:
+                filter: { kind: [church] }
+                draw:   { icons: { sprite: church } }
+            city:
+                filter: { kind: [city] }
+                draw:   { icons: { sprite: city } }
+            clinic:
+                filter: { kind: [clinic] }
+                draw:   { icons: { sprite: clinic } }
+            clothing-store:
+                filter: { kind: [clothes, chothing-store] }
+                draw:   { icons: { sprite: clothing-store } }
+            cocktail-bar:
+                filter: { kind: [cocktail-bar] }
+                draw:   { icons: { sprite: cocktail-bar } }
+            coffee-shop:
+                filter: { kind: [cafe, coffee-shop] }
+                draw:   { icons: { sprite: coffee-shop } }
             college-university:
                 filter: { kind: [university, college, college-university] }
                 draw:   { icons: { sprite: college-university } }
+            comedy-club:
+                filter: { kind: [comedy-club] }
+                draw:   { icons: { sprite: comedy-club } }
+            concert-hall:
+                filter: { kind: [music_venue] }
+                draw:   { icons: { sprite: concert-hall } }
+            convenience-store:
+                filter: { kind: [convenience, convenience-store, convenience_store, beverages] }
+                draw:   { icons: { sprite: convenience-store } }
+            cosmetics-shop:
+                filter: { kind: [cosmetics, cosmetics-shop, beauty] }
+                draw:   { icons: { sprite: cosmetics-shop } }
+            courthouse:
+                filter: { kind: [courthouse] }
+                draw:   { icons: { sprite: courthouse } }
+            credit-union:
+                filter: { kind: [credit-union] }
+                draw:   { icons: { sprite: credit-union } }
+            cupcake-shop:
+                filter: { kind: [cupcake-shop] }
+                draw:   { icons: { sprite: cupcake-shop } }
+            daycare:
+                filter: { kind: [daycare] }
+                draw:   { icons: { sprite: daycare } }
+            dentist:
+                filter: { kind: [dentist] }
+                draw:   { icons: { sprite: dentist } }
+            department-store:
+                filter: { kind: [department_store, department-store] }
+                draw:   { icons: { sprite: department-store } }
+            design-studio:
+                filter: { kind: [design-studio] }
+                draw:   { icons: { sprite: design-studio } }
+            dessert:
+                filter: { kind: [dessert] }
+                draw:   { icons: { sprite: dessert } }
+            dog-run:
+                filter: { kind: [dog_park, dog_run, dog-run] }
+                draw:   { icons: { sprite: dog-run } }
+            donut:
+                filter: { kind: [donut] }
+                draw:   { icons: { sprite: donut } }
+            electronics-store:
+                filter: { kind: [electronics, electronics-store, computer] }
+                draw:   { icons: { sprite: electronics-store } }
+            ev-charging-station:
+                filter: { kind: [ev-charging-station] }
+                draw:   { icons: { sprite: ev-charging-station } }
+            factory:
+                filter: { kind: [factory, industrial, chimney, sub_station, substation] }
+                draw:   { icons: { sprite: factory } }
+            farm:
+                filter: { kind: [farm] }
+                draw:   { icons: { sprite: farm } }
+            farmers-market:
+                filter: { kind: [farmers_market, farmers-market] }
+                draw:   { icons: { sprite: farmers-market } }
+            field:
+                filter: { kind: [field] }
+                draw:   { icons: { sprite: field } }
+            financial-service:
+                filter: { kind: [financial-service] }
+                draw:   { icons: { sprite: financial-service } }
+            fire-station:
+                filter: { kind: [fire_station, fire-station] }
+                draw:   { icons: { sprite: fire-station } }
+            fish-market:
+                filter: { kind: [fish, fish-market, seafood, fishmonger] }
+                draw:   { icons: { sprite: fish-market } }
+            fishing-spot:
+                filter: { kind: [fishing_spot, fishing-spot, fishing] }
+                draw:   { icons: { sprite: fishing-spot } }
+            fitness:
+                filter: { kind: [gym, fitness, fitness_center] }
+                draw:   { icons: { sprite: fitness } }
+            flea-market:
+                filter: { kind: [flea_market, flea-market] }
+                draw:   { icons: { sprite: flea-market } }
+            flower-shop:
+                filter: { kind: [florist, flower-shop] }
+                draw:   { icons: { sprite: flower-shop } }
+            food-court:
+                filter: { kind: [food-court] }
+                draw:   { icons: { sprite: food-court } }
+            food-drink-shop:
+                filter: { kind: [food-drink-shop] }
+                draw:   { icons: { sprite: food-drink-shop } }
+            football-stadium:
+                filter: { kind: [football-stadium] }
+                draw:   { icons: { sprite: football-stadium } }
+            ford:
+                filter: { kind: [ford] }
+                draw:   { icons: { sprite: ford } }
+            fountain:
+                filter: { kind: [fountain] }
+                draw:   { icons: { sprite: fountain } }
+            fried-chicken-joint:
+                filter: { kind: [fried-chicken-joint] }
+                draw:   { icons: { sprite: fried-chicken-joint } }
+            fun-fair:
+                filter: { kind: [fun-fair] }
+                draw:   { icons: { sprite: fun-fair } }
+            furniture-store:
+                filter: { kind: [furniture, furniture-store] }
+                draw:   { icons: { sprite: furniture-store } }
+            gaming-cafe:
+                filter: { kind: [gaming-cafe] }
+                draw:   { icons: { sprite: gaming-cafe } }
+            garden:
+                filter: { kind: [garden] }
+                draw:   { icons: { sprite: garden } }
+            garden-center:
+                filter: { kind: [garden_centre, garden_center] }
+                draw:   { icons: { sprite: garden-center } }
+            gas-station:
+                filter: { kind: [fuel, gas-station] }
+                draw:   { icons: { sprite: gas-station } }
+            gastropub:
+                filter: { kind: [gastropub] }
+                draw:   { icons: { sprite: gastropub } }
+            gate:
+                filter: { kind: [gate] }
+                draw:   { icons: { sprite: gate } }
+            gay-bar:
+                filter: { kind: [gay-bar] }
+                draw:   { icons: { sprite: gay-bar } }
+            general-entertainment:
+                filter: { kind: [ticket, general_entertainment] }
+                draw:   { icons: { sprite: general-entertainment } }
+            general-travel:
+                filter: { kind: [general-travel] }
+                draw:   { icons: { sprite: general-travel } }
+            generic:
+                filter: { kind: [generic, subway_entrance] }
+                draw:   { icons: { sprite: generic } }
+            german-restaurant:
+                filter: { kind: [german-restaurant] }
+                draw:   { icons: { sprite: german-restaurant } }
+            gift-shop:
+                filter: { kind: [gift, gift-shop] }
+                draw:   { icons: { sprite: gift-shop } }
+            golf-course:
+                filter: { kind: [golf-course] }
+                draw:   { icons: { sprite: golf-course } }
+            gourmet-shop:
+                filter: { kind: [gourmet-shop] }
+                draw:   { icons: { sprite: gourmet-shop } }
+            government-building:
+                filter: { kind: [townhall, public_building, embassy] }
+                draw:   { icons: { sprite: government-building } }
+            grocery-store:
+                filter: { kind: [supermarket, grocery-store, health_food, greengrocer] }
+                draw:   { icons: { sprite: grocery-store } }
+            harbor-marina:
+                filter: { kind: [marina, harbor, harbor-marina, harbor_marina, dock, mooring] }
+                draw:   { icons: { sprite: harbor-marina } }
+            hardware-store:
+                filter: { kind: [hardware, hardware-store, doityourself, paint] }
+                draw:   { icons: { sprite: hardware-store } }
+            hiking-trail:
+                filter: { kind: [trailhead, hiking_trail] }
+                draw:   { icons: { sprite: hiking-trail } }
+            historic-site:
+                filter: { kind: [historic-site] }
+                draw:   { icons: { sprite: historic-site } }
+            hobby-shop:
+                filter: { kind: [hobby-shop] }
+                draw:   { icons: { sprite: hobby-shop } }
+            hockey-field:
+                filter: { kind: [hockey-field] }
+                draw:   { icons: { sprite: hockey-field } }
+            hospital:
+                filter: { kind: [hospital] }
+                draw:   { icons: { sprite: hospital } }
+            hot-dog-joint:
+                filter: { kind: [hot-dog-joint] }
+                draw:   { icons: { sprite: hot-dog-joint } }
+            hot-pot-restaurant:
+                filter: { kind: [hot-pot-restaurant] }
+                draw:   { icons: { sprite: hot-pot-restaurant } }
+            hot-spring:
+                filter: { kind: [hot-spring] }
+                draw:   { icons: { sprite: hot-spring } }
+            hotel:
+                filter: { kind: [hotel, motel, hostel] }
+                draw:   { icons: { sprite: hotel } }
+            hunting-supply:
+                filter: { kind: [hunting, fishing] }
+                draw:   { icons: { sprite: hunting-supply } }
+            ice-cream-shop:
+                filter: { kind: [ice_cream] }
+                draw:   { icons: { sprite: ice-cream-shop } }
+            information:
+                filter: { kind: [info, information] }
+                draw:   { icons: { sprite: information } }
+            internet-cafe:
+                filter: { kind: [internet-cafe] }
+                draw:   { icons: { sprite: internet-cafe } }
+            island:
+                filter: { kind: [island] }
+                draw:   { icons: { sprite: island } }
+            jewelry-store:
+                filter: { kind: [jewelry, jewelry_store, jewelry-store] }
+                draw:   { icons: { sprite: jewelry-store } }
+            karaoke:
+                filter: { kind: [karaoke] }
+                draw:   { icons: { sprite: karaoke } }
+            lake:
+                filter: { kind: [lake] }
+                draw:   { icons: { sprite: lake } }
+            landmark:
+                filter: { kind: [landmark, memorial, monument, wayside_shrine, tower, beacon] }
+                draw:   { icons: { sprite: landmark } }
+            laundry:
+                filter: { kind: [laundry, dry_cleaning] }
+                draw:   { icons: { sprite: laundry } }
+            library:
+                filter: { kind: [library] }
+                draw:   { icons: { sprite: library } }
+            light-rail:
+                filter: { kind: [light-rail] }
+                draw:   { icons: { sprite: light-rail } }
+            lighthouse:
+                filter: { kind: [lighthouse] }
+                draw:   { icons: { sprite: lighthouse } }
+            liquor-store:
+                filter: { kind: [alcohol, liquor-store, liquor] }
+                draw:   { icons: { sprite: liquor-store } }
+            lounge:
+                filter: { kind: [lounge] }
+                draw:   { icons: { sprite: lounge } }
+            mall:
+                filter: { kind: [mall] }
+                draw:   { icons: { sprite: mall } }
+            marijuana-dispensary:
+                filter: { kind: [marijuana-dispensary] }
+                draw:   { icons: { sprite: marijuana-dispensary } }
+            market:
+                filter: { kind: [market, variety_store, boutique, dairy] }
+                draw:   { icons: { sprite: market } }
+            medical-center:
+                filter: { kind: [medical-center] }
+                draw:   { icons: { sprite: medical-center } }
+            military-base:
+                filter: { kind: [military-base] }
+                draw:   { icons: { sprite: military-base } }
+            mine:
+                filter: { kind: [mind, quarry, mineshaft, adit] }
+                draw:   { icons: { sprite: mine } }
+            miscellaneous-shop:
+                filter: { kind: [houseware, miscellaneous-shop] }
+                draw:   { icons: { sprite: miscellaneous-shop } }
+            mobile-phone-shop:
+                filter: { kind: [mobile_phone] }
+                draw:   { icons: { sprite: mobile-phone-shop } }
+            molecular-gastronomy:
+                filter: { kind: [molecular-gastronomy] }
+                draw:   { icons: { sprite: molecular-gastronomy } }
+            mosque:
+                filter: { kind: [mosque] }
+                draw:   { icons: { sprite: mosque } }
+            motorcycle-shop:
+                filter: { kind: [motorcycle, motorcycle_shop, motorcycle_repair] }
+                draw:   { icons: { sprite: motorcycle-shop } }
+            mountain:
+                filter: { kind: [mountain, peak] }
+                draw:   { icons: { sprite: mountain } }
+            movie-theatre:
+                filter: { kind: [cinema, movie-theatre, movie-theater] }
+                draw:   { icons: { sprite: movie-theatre } }
+            moving-target:
+                filter: { kind: [moving-target] }
+                draw:   { icons: { sprite: moving-target } }
+            museum:
+                filter: { kind: [museum, observatory] }
+                draw:   { icons: { sprite: museum } }
+            music-store:
+                filter: { kind: [music, music-store, musical_instrument] }
+                draw:   { icons: { sprite: music-store } }
+            music-venue:
+                filter: { kind: [music-venue] }
+                draw:   { icons: { sprite: music-venue } }
+            nail-salon:
+                filter: { kind: [nail-salon] }
+                draw:   { icons: { sprite: nail-salon } }
+            neighborhood:
+                filter: { kind: [neighborhood] }
+                draw:   { icons: { sprite: neighborhood } }
+            newsstand:
+                filter: { kind: [kiosk, newsstand, newsagent] }
+                draw:   { icons: { sprite: newsstand } }
+            nightlife:
+                filter: { kind: [nightclub, nightlife] }
+                draw:   { icons: { sprite: nightlife } }
+            noodle-shop:
+                filter: { kind: [noodle-shop] }
+                draw:   { icons: { sprite: noodle-shop } }
+            office:
+                filter: { kind: [insurance, office] }
+                draw:   { icons: { sprite: office } }
+            office-supplies:
+                filter: { kind: [office_supplies, office-supplies, stationery] }
+                draw:   { icons: { sprite: office-supplies } }
+            optical-shop:
+                filter: { kind: [optician, optical_shop, optical-shop] }
+                draw:   { icons: { sprite: optical-shop } }
+            other-outdoors:
+                filter: { kind: [other-outdoors] }
+                draw:   { icons: { sprite: other-outdoors } }
+            park:
+                filter: { kind: [park] }
+                draw:   { icons: { sprite: park } }
+            parking:
+                filter: { kind: [parking], $zoom: { min: 17 } }
+                draw:   { icons: { sprite: parking } }
+            performing-arts:
+                filter: { kind: [theater, performing-arts] }
+                draw:   { icons: { sprite: performing-arts } }
+            pet-store:
+                filter: { kind: [pet, pet-store, pet-service, pet_store] }
+                draw:   { icons: { sprite: pet-store } }
+            pharmacy:
+                filter: { kind: [pharmacy, chemist] }
+                draw:   { icons: { sprite: pharmacy } }
+            photography-lab:
+                filter: { kind: [photo_studio, photography_lab] }
+                draw:   { icons: { sprite: photography-lab } }
+            picnic-spot:
+                filter: { kind: [picnic_site, picnic_spot, picnic-spot] }
+                draw:   { icons: { sprite: picnic-spot } }
+            pier:
+                filter: { kind: [pier] }
+                draw:   { icons: { sprite: pier } }
+            pizza:
+                filter: { kind: [pizza] }
+                draw:   { icons: { sprite: pizza } }
+            playground:
+                filter: { kind: [playground] }
+                draw:   { icons: { sprite: playground } }
+            police:
+                filter: { kind: [police] }
+                draw:   { icons: { sprite: police } }
+            pool:
+                filter: { kind: [pool, swimming_pool, water_park] }
+                draw:   { icons: { sprite: pool } }
+            pool-hall:
+                filter: { kind: [billiards, pool-hall] }
+                draw:   { icons: { sprite: pool-hall } }
+            post-office:
+                filter: { kind: [post_office, post-office] }
+                draw:   { icons: { sprite: post-office } }
+            power-pylon:
+                filter: { kind: [tower, power-pylon, pylon] }
+                draw:   { icons: { sprite: power-pylon } }
+            public-art:
+                filter: { kind: [public-art] }
+                draw:   { icons: { sprite: public-art } }
+            racetrack:
+                filter: { kind: [racetrack] }
+                draw:   { icons: { sprite: racetrack } }
+            ramen:
+                filter: { kind: [ramen] }
+                draw:   { icons: { sprite: ramen } }
+            real-estate:
+                filter: { kind: [estate_agent, real_estate] }
+                draw:   { icons: { sprite: real-estate } }
+            record-shop:
+                filter: { kind: [record-shop] }
+                draw:   { icons: { sprite: record-shop } }
+            recycling-facility:
+                filter: { kind: [recycling, recycling-facility] }
+                draw:   { icons: { sprite: recycling-facility } }
+            rental-car:
+                filter: { kind: [rental-car, car_rental] }
+                draw:   { icons: { sprite: rental-car } }
+            rest-area:
+                filter: { kind: [rest_area, rest-area] }
+                draw:   { icons: { sprite: rest-area } }
+            restaurant:
+                filter: { kind: [restaurant, deli] }
+                draw:   { icons: { sprite: restaurant } }
+            river:
+                filter: { kind: [river] }
+                draw:   { icons: { sprite: river } }
+            road:
+                filter: { kind: [road] }
+                draw:   { icons: { sprite: road } }
+            ruin:
+                filter: { kind: [ruins, archaeological_site] }
+                draw:   { icons: { sprite: ruin } }
+            salon-barber:
+                filter: { kind: [hairdresser, salon-barber, salon, beauty_salon] }
+                draw:   { icons: { sprite: salon-barber } }
+            school:
+                filter: { kind: [school, kindergarten] }
+                draw:   { icons: { sprite: school } }
+            ship-wreck:
+                filter: { kind: [wreck] }
+                draw:   { icons: { sprite: ship-wreck } }
+            shoe-store:
+                filter: { kind: [shoes, shoe-store, shoe_store] }
+                draw:   { icons: { sprite: shoe-store } }
+            skate-park:
+                filter: { kind: [skate-park] }
+                draw:   { icons: { sprite: skate-park } }
+            skating-rink:
+                filter: { kind: [skating-rink] }
+                draw:   { icons: { sprite: skating-rink } }
+            ski-area:
+                filter: { kind: [ski-area] }
+                draw:   { icons: { sprite: ski-area } }
+            smoke-shop:
+                filter: { kind: [smoke_shop, tobacco] }
+                draw:   { icons: { sprite: smoke-shop } }
+            soccer-field:
+                filter: { kind: [soccer-field] }
+                draw:   { icons: { sprite: soccer-field } }
+            soccer-stadium:
+                filter: { kind: [soccer-stadium] }
+                draw:   { icons: { sprite: soccer-stadium } }
+            soup-place:
+                filter: { kind: [soup-place] }
+                draw:   { icons: { sprite: soup-place } }
+            spa-massage:
+                filter: { kind: [spa, spa-massage, sauna, massage] }
+                draw:   { icons: { sprite: spa-massage } }
+            spiritual-center:
+                filter: { kind: [spiritual_center, spiritual-center, place_of_worship, wayside_chapel] }
+                draw:   { icons: { sprite: spiritual-center } }
+            sporting-goods-shop:
+                filter: { kind: [sporting_goods, sporting-goods-shop, sports, outdoor] }
+                draw:   { icons: { sprite: sporting-goods-shop } }
+            spring:
+                filter: { kind: [spring] }
+                draw:   { icons: { sprite: spring } }
+            stable:
+                filter: { kind: [stable, horse_riding] }
+                draw:   { icons: { sprite: stable } }
+            stadium:
+                filter: { kind: [stadium] }
+                draw:   { icons: { sprite: stadium } }
+            steakhouse:
+                filter: { kind: [steakhouse] }
+                draw:   { icons: { sprite: steakhouse } }
+            storage-facility:
+                filter: { kind: [storage, storage-facility] }
+                draw:   { icons: { sprite: storage-facility } }
+            subway:
+                filter: { kind: [subway] }
+                draw:   { icons: { sprite: subway } }
+            surf-shop:
+                filter: { kind: [surf-shop] }
+                draw:   { icons: { sprite: surf-shop } }
+            sushi-restaurant:
+                filter: { kind: [sushi-restaurant] }
+                draw:   { icons: { sprite: sushi-restaurant } }
+            swimming:
+                filter: { kind: [swimming] }
+                draw:   { icons: { sprite: swimming } }
+            synagogue:
+                filter: { kind: [synagogue] }
+                draw:   { icons: { sprite: synagogue } }
+            tailor-shop:
+                filter: { kind: [tailor, tailor-shop] }
+                draw:   { icons: { sprite: tailor-shop } }
+            tanning-salon:
+                filter: { kind: [tanning-salon] }
+                draw:   { icons: { sprite: tanning-salon } }
+            tattoo-parlor:
+                filter: { kind: [tattoo, tattoo_parlor, tattoo-parlor] }
+                draw:   { icons: { sprite: tattoo-parlor } }
+            taxi:
+                filter: { kind: [taxi] }
+                draw:   { icons: { sprite: taxi } }
+            tea-room:
+                filter: { kind: [tea-room] }
+                draw:   { icons: { sprite: tea-room } }
+            tennis:
+                filter: { kind: [tennis] }
+                draw:   { icons: { sprite: tennis } }
+            theme-park:
+                filter: { kind: [theme_park, theme-park, miniature_golf] }
+                draw:   { icons: { sprite: theme-park } }
+            thrift-vintage-store:
+                filter: { kind: [thrift, thrift-vintage-store, second_hand] }
+                draw:   { icons: { sprite: thrift-vintage-store } }
+            toll-booth:
+                filter: { kind: [toll_booth, checkpoint, border_control] }
+                draw:   { icons: { sprite: toll-booth } }
+            toy-game-store:
+                filter: { kind: [toys, toy-game-store, baby_goods] }
+                draw:   { icons: { sprite: toy-game-store } }
+            track:
+                filter: { kind: [track] }
+                draw:   { icons: { sprite: track } }
+            traffic-signal:
+                filter: { kind: [traffic_signals] }
+                draw:   { icons: { sprite: traffic-signal } }
+            train-station:
+                filter: { kind: [station, train-staion] }
+                draw:   { icons: { sprite: train-station } }
+            travel-agency:
+                filter: { kind: [travel-agency] }
+                draw:   { icons: { sprite: travel-agency } }
+            veterinarian:
+                filter: { kind: [pet_care, veterinarian, veterinary] }
+                draw:   { icons: { sprite: veterinarian } }
+            video-game-store:
+                filter: { kind: [video_games] }
+                draw:   { icons: { sprite: video-game-store } }
+            video-store:
+                filter: { kind: [video, video_store] }
+                draw:   { icons: { sprite: video-store } }
+            view-point:
+                filter: { kind: [viewpoint, view_point, view-point, vista] }
+                draw:   { icons: { sprite: view-point } }
+            vineyard:
+                filter: { kind: [vineyard] }
+                draw:   { icons: { sprite: vineyard } }
+            volcano:
+                filter: { kind: [volcano] }
+                draw:   { icons: { sprite: volcano } }
+            volleyball-court:
+                filter: { kind: [volleyball-court] }
+                draw:   { icons: { sprite: volleyball-court } }
+            well:
+                filter: { kind: [well, water_well] }
+                draw:   { icons: { sprite: well } }
+            whisky-bar:
+                filter: { kind: [whisky-bar] }
+                draw:   { icons: { sprite: whisky-bar } }
+            wine-bar:
+                filter: { kind: [wine-bar] }
+                draw:   { icons: { sprite: wine-bar } }
+            wine-shop:
+                filter: { kind: [wine, wine-shop] }
+                draw:   { icons: { sprite: wine-shop } }
+            winery:
+                filter: { kind: [winery, wine] }
+                draw:   { icons: { sprite: winery } }
+            wings-joint:
+                filter: { kind: [wings-joint] }
+                draw:   { icons: { sprite: wings-joint } }
             zoo:
                 filter: { kind: [zoo] }
-
+                draw:   { icons: { sprite: zoo } }
 
     poi_icons:
         data: { source: osm, layer: pois }
         visible: *label_visible_poi
-        filter: { kind: [airport, aerodrome, beach, grave_yard, cemetery, golf_course, hospital, park, playground, mall, military_base, museum, observatory, school, kindergarten, stadium, theme_park, miniature_golf, university, college, zoo], $zoom: { min: 16 } }
+        filter: { name: true, not: { kind: [peak, viewpoint, bicycle_rental, car_sharing] }, $zoom: { min: 15 } }
         draw:
             icons:
                 size: [[13, 12px], [16, 18px]]
@@ -1811,54 +2487,733 @@ layers:
                         typeface: 100 12px Helvetica
                         stroke: { color: white, width: 4 }
                         
+        # add generic icon at high zoom
+        generic-labels:
+            #filter: { $zoom: { min: 18 } }
+            draw: 
+                pois_text:
+                    #text_source: function() { return if( feature.name.lenth > 15) { return feature.name.substring(0,20); } else { return feature.name; } }
+                    visible: *text_visible_poi
+                    interactive: true
+                    font:
+                        fill: '#666'
+                        typeface: italic 12px Helvetica
+                        stroke: { color: white, width: 4 }
+                        
         # examples of different icons mapped to feature properties
         icons:
             visible: *icon_visible_poi
+            adult-boutique:
+                filter: { kind: [erotic, adult_boutique] }
+                draw:   { icons: { sprite: adult-boutique } }
             airport:
                 filter: { kind: [airport, aerodrome] }
                 draw:   { icons: { sprite: airport } }
+            animal-shelter:
+                filter: { kind: [animal_shelter, animal-shelter, animal_boarding] }
+                draw:   { icons: { sprite: animal-shelter } }
+            antique-shop:
+                filter: { kind: [antiques, antique-shop] }
+                draw:   { icons: { sprite: antique-shop } }
+            aquarium:
+                filter: { kind: [aquarium] }
+                draw:   { icons: { sprite: aquarium } }
+            arcade:
+                filter: { kind: [arcade] }
+                draw:   { icons: { sprite: arcade } }
+            art-gallery:
+                filter: { kind: [art_gallery, art-gallery, art] }
+                draw:   { icons: { sprite: art-gallery } }
+            arts-crafts:
+                filter: { kind: [arts-crafts] }
+                draw:   { icons: { sprite: arts-crafts } }
+            athletics-sports:
+                filter: { kind: [pitch, athletic_sports, recreation_ground] }
+                draw:   { icons: { sprite: athletics-sports } }
+            atm:
+                filter: { kind: [atm] }
+                draw:   { icons: { sprite: atm } }
+            automotive-shop:
+                filter: { kind: [car_repair, automotive-shop, automotive, tyres] }
+                draw:   { icons: { sprite: automotive-shop } }
+            bagel-shop:
+                filter: { kind: [bagel-shop] }
+                draw:   { icons: { sprite: bagel-shop } }
+            bakery:
+                filter: { kind: [bakery, pastry, chocolate] }
+                draw:   { icons: { sprite: bakery } }
+            bank:
+                filter: { kind: [bank] }
+                draw:   { icons: { sprite: bank } }
+            bar:
+                filter: { kind: [pub, bar] }
+                draw:   { icons: { sprite: bar } }
+            baseball-field:
+                filter: { kind: [baseball-field] }
+                draw:   { icons: { sprite: baseball-field } }
+            basketball-court:
+                filter: { kind: [basketball-court] }
+                draw:   { icons: { sprite: basketball-court } }
+            basketball-stadium:
+                filter: { kind: [basketball-stadium] }
+                draw:   { icons: { sprite: basketball-stadium } }
+            bathroom:
+                filter: { kind: [bathroom] }
+                draw:   { icons: { sprite: bathroom } }
+            battlefield:
+                filter: { kind: [battlefield] }
+                draw:   { icons: { sprite: battlefield } }
+            bbq:
+                filter: { kind: [bbq] }
+                draw:   { icons: { sprite: bbq } }
             beach:
                 filter: { kind: [beach] }
                 draw:   { icons: { sprite: beach } }
+            beach-resort:
+                filter: { kind: [beach-resort] }
+                draw:   { icons: { sprite: beach-resort } }
+            beer-garden:
+                filter: { kind: [biergarten, beer-garden] }
+                draw:   { icons: { sprite: beer-garden } }
+            bench:
+                filter: { kind: [bench] }
+                draw:   { icons: { sprite: bench } }
+            bicycle-parking:
+                filter: { kind: [bicycle-parking] }
+                draw:   { icons: { sprite: bicycle-parking } }
+            bike-shop:
+                filter: { kind: [bicycle, bicycle_rental, bike, bike_shop] }
+                draw:   { icons: { sprite: bike-shop } }
+            boat-ferry:
+                filter: { kind: [ferry_terminal, boat-ferry, ferry-boat, ferry] }
+                draw:   { icons: { sprite: boat-ferry } }
+            boat-ramp:
+                filter: { kind: [slipway, boat-ramp, boat_ramp] }
+                draw:   { icons: { sprite: boat-ramp } }
+            bookstore:
+                filter: { kind: [books, bookstore] }
+                draw:   { icons: { sprite: bookstore } }
+            bowling-alley:
+                filter: { kind: [bowling_alley, bowling-alley] }
+                draw:   { icons: { sprite: bowling-alley } }
+            breakfast:
+                filter: { kind: [breakfast] }
+                draw:   { icons: { sprite: breakfast } }
+            bridal-shop:
+                filter: { kind: [bridal, bridal-shop] }
+                draw:   { icons: { sprite: bridal-shop } }
+            bridge:
+                filter: { kind: [bridge] }
+                draw:   { icons: { sprite: bridge } }
+            building:
+                filter: { kind: [building, auditorium, terminal, hangar, retirement_home, manor, recreation_center, apartments] }
+                draw:   { icons: { sprite: building } }
+            burger:
+                filter: { kind: [fast_food, burger] }
+                draw:   { icons: { sprite: burger } }
+            bus-station:
+                filter: { kind: [bus_stop, bus_station], $zoom: { min: 17 } }
+                draw:   { icons: { sprite: bus-station } }
+            butcher:
+                filter: { kind: [butcher] }
+                draw:   { icons: { sprite: butcher } }
+            camera-store:
+                filter: { kind: [camera, camera-store, photo] }
+                draw:   { icons: { sprite: camera-store } }
+            campground:
+                filter: { kind: [campground, camp_site, caravan_site] }
+                draw:   { icons: { sprite: campground } }
+            candy-store:
+                filter: { kind: [candy, candy-store, confectionery] }
+                draw:   { icons: { sprite: candy-store } }
+            car-dealership:
+                filter: { kind: [car, car-dealership] }
+                draw:   { icons: { sprite: car-dealership } }
+            car-wash:
+                filter: { kind: [car_wash, car-wash] }
+                draw:   { icons: { sprite: car-wash } }
+            carribean-restaurant:
+                filter: { kind: [carribean-restaurant] }
+                draw:   { icons: { sprite: carribean-restaurant } }
+            casino:
+                filter: { kind: [casino] }
+                draw:   { icons: { sprite: casino } }
+            castle:
+                filter: { kind: [castle, fort] }
+                draw:   { icons: { sprite: castle } }
             cemetery:
                 filter: { kind: [grave_yard, cemetery] }
                 draw:   { icons: { sprite: cemetery } }
-            golf-course:
-                filter: { kind: [golf_course, golf-course] }
-                draw:   { icons: { sprite: golf-course } }
-            hospital:
-                filter: { kind: [hospital] }
-                draw:   { icons: { sprite: hospital } }
-            park:
-                filter: { kind: [park] }
-                draw:   { icons: { sprite: park } }
-            playground:
-                filter: { kind: [playground] }
-                draw:   { icons: { sprite: playground } }
-            mall:
-                filter: { kind: [mall] }
-                draw:   { icons: { sprite: mall } }
-            military-base:
-                filter: { kind: [military_base, military-base] }
-                draw:   { icons: { sprite: military-base } }
-            museum:
-                filter: { kind: [museum, observatory] }
-                draw:   { icons: { sprite: museum } }
-            school:
-                filter: { kind: [school, kindergarten] }
-                draw:   { icons: { sprite: school } }
-            soccer-stadium:
-                filter: { kind: [soccer-stadium] }
-                draw:   { icons: { sprite: soccer-stadium } }
-            stadium:
-                filter: { kind: [stadium] }
-                draw:   { icons: { sprite: stadium } }
-            theme-park:
-                filter: { kind: [theme_park, theme-park, miniature_golf] }
-                draw:   { icons: { sprite: theme-park } }
+            cheese-shop:
+                filter: { kind: [cheese, cheese-shop] }
+                draw:   { icons: { sprite: cheese-shop } }
+            chinese-restaurant:
+                filter: { kind: [chinese-restaurant] }
+                draw:   { icons: { sprite: chinese-restaurant } }
+            church:
+                filter: { kind: [church] }
+                draw:   { icons: { sprite: church } }
+            city:
+                filter: { kind: [city] }
+                draw:   { icons: { sprite: city } }
+            clinic:
+                filter: { kind: [clinic] }
+                draw:   { icons: { sprite: clinic } }
+            clothing-store:
+                filter: { kind: [clothes, chothing-store] }
+                draw:   { icons: { sprite: clothing-store } }
+            cocktail-bar:
+                filter: { kind: [cocktail-bar] }
+                draw:   { icons: { sprite: cocktail-bar } }
+            coffee-shop:
+                filter: { kind: [cafe, coffee-shop] }
+                draw:   { icons: { sprite: coffee-shop } }
             college-university:
                 filter: { kind: [university, college, college-university] }
                 draw:   { icons: { sprite: college-university } }
+            comedy-club:
+                filter: { kind: [comedy-club] }
+                draw:   { icons: { sprite: comedy-club } }
+            concert-hall:
+                filter: { kind: [music_venue] }
+                draw:   { icons: { sprite: concert-hall } }
+            convenience-store:
+                filter: { kind: [convenience, convenience-store, convenience_store, beverages] }
+                draw:   { icons: { sprite: convenience-store } }
+            cosmetics-shop:
+                filter: { kind: [cosmetics, cosmetics-shop, beauty] }
+                draw:   { icons: { sprite: cosmetics-shop } }
+            courthouse:
+                filter: { kind: [courthouse] }
+                draw:   { icons: { sprite: courthouse } }
+            credit-union:
+                filter: { kind: [credit-union] }
+                draw:   { icons: { sprite: credit-union } }
+            cupcake-shop:
+                filter: { kind: [cupcake-shop] }
+                draw:   { icons: { sprite: cupcake-shop } }
+            daycare:
+                filter: { kind: [daycare] }
+                draw:   { icons: { sprite: daycare } }
+            dentist:
+                filter: { kind: [dentist] }
+                draw:   { icons: { sprite: dentist } }
+            department-store:
+                filter: { kind: [department_store, department-store] }
+                draw:   { icons: { sprite: department-store } }
+            design-studio:
+                filter: { kind: [design-studio] }
+                draw:   { icons: { sprite: design-studio } }
+            dessert:
+                filter: { kind: [dessert] }
+                draw:   { icons: { sprite: dessert } }
+            dog-run:
+                filter: { kind: [dog_park, dog_run, dog-run] }
+                draw:   { icons: { sprite: dog-run } }
+            donut:
+                filter: { kind: [donut] }
+                draw:   { icons: { sprite: donut } }
+            electronics-store:
+                filter: { kind: [electronics, electronics-store, computer] }
+                draw:   { icons: { sprite: electronics-store } }
+            ev-charging-station:
+                filter: { kind: [ev-charging-station] }
+                draw:   { icons: { sprite: ev-charging-station } }
+            factory:
+                filter: { kind: [factory, industrial, chimney, sub_station, substation] }
+                draw:   { icons: { sprite: factory } }
+            farm:
+                filter: { kind: [farm] }
+                draw:   { icons: { sprite: farm } }
+            farmers-market:
+                filter: { kind: [farmers_market, farmers-market] }
+                draw:   { icons: { sprite: farmers-market } }
+            field:
+                filter: { kind: [field] }
+                draw:   { icons: { sprite: field } }
+            financial-service:
+                filter: { kind: [financial-service] }
+                draw:   { icons: { sprite: financial-service } }
+            fire-station:
+                filter: { kind: [fire_station, fire-station] }
+                draw:   { icons: { sprite: fire-station } }
+            fish-market:
+                filter: { kind: [fish, fish-market, seafood, fishmonger] }
+                draw:   { icons: { sprite: fish-market } }
+            fishing-spot:
+                filter: { kind: [fishing_spot, fishing-spot, fishing] }
+                draw:   { icons: { sprite: fishing-spot } }
+            fitness:
+                filter: { kind: [gym, fitness, fitness_center] }
+                draw:   { icons: { sprite: fitness } }
+            flea-market:
+                filter: { kind: [flea_market, flea-market] }
+                draw:   { icons: { sprite: flea-market } }
+            flower-shop:
+                filter: { kind: [florist, flower-shop] }
+                draw:   { icons: { sprite: flower-shop } }
+            food-court:
+                filter: { kind: [food-court] }
+                draw:   { icons: { sprite: food-court } }
+            food-drink-shop:
+                filter: { kind: [food-drink-shop] }
+                draw:   { icons: { sprite: food-drink-shop } }
+            football-stadium:
+                filter: { kind: [football-stadium] }
+                draw:   { icons: { sprite: football-stadium } }
+            ford:
+                filter: { kind: [ford] }
+                draw:   { icons: { sprite: ford } }
+            fountain:
+                filter: { kind: [fountain] }
+                draw:   { icons: { sprite: fountain } }
+            fried-chicken-joint:
+                filter: { kind: [fried-chicken-joint] }
+                draw:   { icons: { sprite: fried-chicken-joint } }
+            fun-fair:
+                filter: { kind: [fun-fair] }
+                draw:   { icons: { sprite: fun-fair } }
+            furniture-store:
+                filter: { kind: [furniture, furniture-store] }
+                draw:   { icons: { sprite: furniture-store } }
+            gaming-cafe:
+                filter: { kind: [gaming-cafe] }
+                draw:   { icons: { sprite: gaming-cafe } }
+            garden:
+                filter: { kind: [garden] }
+                draw:   { icons: { sprite: garden } }
+            garden-center:
+                filter: { kind: [garden_centre, garden_center] }
+                draw:   { icons: { sprite: garden-center } }
+            gas-station:
+                filter: { kind: [fuel, gas-station] }
+                draw:   { icons: { sprite: gas-station } }
+            gastropub:
+                filter: { kind: [gastropub] }
+                draw:   { icons: { sprite: gastropub } }
+            gate:
+                filter: { kind: [gate] }
+                draw:   { icons: { sprite: gate } }
+            gay-bar:
+                filter: { kind: [gay-bar] }
+                draw:   { icons: { sprite: gay-bar } }
+            general-entertainment:
+                filter: { kind: [ticket, general_entertainment] }
+                draw:   { icons: { sprite: general-entertainment } }
+            general-travel:
+                filter: { kind: [general-travel] }
+                draw:   { icons: { sprite: general-travel } }
+            generic:
+                filter: { kind: [generic, subway_entrance] }
+                draw:   { icons: { sprite: generic } }
+            german-restaurant:
+                filter: { kind: [german-restaurant] }
+                draw:   { icons: { sprite: german-restaurant } }
+            gift-shop:
+                filter: { kind: [gift, gift-shop] }
+                draw:   { icons: { sprite: gift-shop } }
+            golf-course:
+                filter: { kind: [golf-course] }
+                draw:   { icons: { sprite: golf-course } }
+            gourmet-shop:
+                filter: { kind: [gourmet-shop] }
+                draw:   { icons: { sprite: gourmet-shop } }
+            government-building:
+                filter: { kind: [townhall, public_building, embassy] }
+                draw:   { icons: { sprite: government-building } }
+            grocery-store:
+                filter: { kind: [supermarket, grocery-store, health_food, greengrocer] }
+                draw:   { icons: { sprite: grocery-store } }
+            harbor-marina:
+                filter: { kind: [marina, harbor, harbor-marina, harbor_marina, dock, mooring] }
+                draw:   { icons: { sprite: harbor-marina } }
+            hardware-store:
+                filter: { kind: [hardware, hardware-store, doityourself, paint] }
+                draw:   { icons: { sprite: hardware-store } }
+            hiking-trail:
+                filter: { kind: [trailhead, hiking_trail] }
+                draw:   { icons: { sprite: hiking-trail } }
+            historic-site:
+                filter: { kind: [historic-site] }
+                draw:   { icons: { sprite: historic-site } }
+            hobby-shop:
+                filter: { kind: [hobby-shop] }
+                draw:   { icons: { sprite: hobby-shop } }
+            hockey-field:
+                filter: { kind: [hockey-field] }
+                draw:   { icons: { sprite: hockey-field } }
+            hospital:
+                filter: { kind: [hospital] }
+                draw:   { icons: { sprite: hospital } }
+            hot-dog-joint:
+                filter: { kind: [hot-dog-joint] }
+                draw:   { icons: { sprite: hot-dog-joint } }
+            hot-pot-restaurant:
+                filter: { kind: [hot-pot-restaurant] }
+                draw:   { icons: { sprite: hot-pot-restaurant } }
+            hot-spring:
+                filter: { kind: [hot-spring] }
+                draw:   { icons: { sprite: hot-spring } }
+            hotel:
+                filter: { kind: [hotel, motel, hostel] }
+                draw:   { icons: { sprite: hotel } }
+            hunting-supply:
+                filter: { kind: [hunting, fishing] }
+                draw:   { icons: { sprite: hunting-supply } }
+            ice-cream-shop:
+                filter: { kind: [ice_cream] }
+                draw:   { icons: { sprite: ice-cream-shop } }
+            information:
+                filter: { kind: [info, information] }
+                draw:   { icons: { sprite: information } }
+            internet-cafe:
+                filter: { kind: [internet-cafe] }
+                draw:   { icons: { sprite: internet-cafe } }
+            island:
+                filter: { kind: [island] }
+                draw:   { icons: { sprite: island } }
+            jewelry-store:
+                filter: { kind: [jewelry, jewelry_store, jewelry-store] }
+                draw:   { icons: { sprite: jewelry-store } }
+            karaoke:
+                filter: { kind: [karaoke] }
+                draw:   { icons: { sprite: karaoke } }
+            lake:
+                filter: { kind: [lake] }
+                draw:   { icons: { sprite: lake } }
+            landmark:
+                filter: { kind: [landmark, memorial, monument, wayside_shrine, tower, beacon] }
+                draw:   { icons: { sprite: landmark } }
+            laundry:
+                filter: { kind: [laundry, dry_cleaning] }
+                draw:   { icons: { sprite: laundry } }
+            library:
+                filter: { kind: [library] }
+                draw:   { icons: { sprite: library } }
+            light-rail:
+                filter: { kind: [light-rail] }
+                draw:   { icons: { sprite: light-rail } }
+            lighthouse:
+                filter: { kind: [lighthouse] }
+                draw:   { icons: { sprite: lighthouse } }
+            liquor-store:
+                filter: { kind: [alcohol, liquor-store, liquor] }
+                draw:   { icons: { sprite: liquor-store } }
+            lounge:
+                filter: { kind: [lounge] }
+                draw:   { icons: { sprite: lounge } }
+            mall:
+                filter: { kind: [mall] }
+                draw:   { icons: { sprite: mall } }
+            marijuana-dispensary:
+                filter: { kind: [marijuana-dispensary] }
+                draw:   { icons: { sprite: marijuana-dispensary } }
+            market:
+                filter: { kind: [market, variety_store, boutique, dairy] }
+                draw:   { icons: { sprite: market } }
+            medical-center:
+                filter: { kind: [medical-center] }
+                draw:   { icons: { sprite: medical-center } }
+            military-base:
+                filter: { kind: [military-base] }
+                draw:   { icons: { sprite: military-base } }
+            mine:
+                filter: { kind: [mind, quarry, mineshaft, adit] }
+                draw:   { icons: { sprite: mine } }
+            miscellaneous-shop:
+                filter: { kind: [houseware, miscellaneous-shop] }
+                draw:   { icons: { sprite: miscellaneous-shop } }
+            mobile-phone-shop:
+                filter: { kind: [mobile_phone] }
+                draw:   { icons: { sprite: mobile-phone-shop } }
+            molecular-gastronomy:
+                filter: { kind: [molecular-gastronomy] }
+                draw:   { icons: { sprite: molecular-gastronomy } }
+            mosque:
+                filter: { kind: [mosque] }
+                draw:   { icons: { sprite: mosque } }
+            motorcycle-shop:
+                filter: { kind: [motorcycle, motorcycle_shop, motorcycle_repair] }
+                draw:   { icons: { sprite: motorcycle-shop } }
+            mountain:
+                filter: { kind: [mountain, peak] }
+                draw:   { icons: { sprite: mountain } }
+            movie-theatre:
+                filter: { kind: [cinema, movie-theatre, movie-theater] }
+                draw:   { icons: { sprite: movie-theatre } }
+            moving-target:
+                filter: { kind: [moving-target] }
+                draw:   { icons: { sprite: moving-target } }
+            museum:
+                filter: { kind: [museum, observatory] }
+                draw:   { icons: { sprite: museum } }
+            music-store:
+                filter: { kind: [music, music-store, musical_instrument] }
+                draw:   { icons: { sprite: music-store } }
+            music-venue:
+                filter: { kind: [music-venue] }
+                draw:   { icons: { sprite: music-venue } }
+            nail-salon:
+                filter: { kind: [nail-salon] }
+                draw:   { icons: { sprite: nail-salon } }
+            neighborhood:
+                filter: { kind: [neighborhood] }
+                draw:   { icons: { sprite: neighborhood } }
+            newsstand:
+                filter: { kind: [kiosk, newsstand, newsagent] }
+                draw:   { icons: { sprite: newsstand } }
+            nightlife:
+                filter: { kind: [nightclub, nightlife] }
+                draw:   { icons: { sprite: nightlife } }
+            noodle-shop:
+                filter: { kind: [noodle-shop] }
+                draw:   { icons: { sprite: noodle-shop } }
+            office:
+                filter: { kind: [insurance, office] }
+                draw:   { icons: { sprite: office } }
+            office-supplies:
+                filter: { kind: [office_supplies, office-supplies, stationery] }
+                draw:   { icons: { sprite: office-supplies } }
+            optical-shop:
+                filter: { kind: [optician, optical_shop, optical-shop] }
+                draw:   { icons: { sprite: optical-shop } }
+            other-outdoors:
+                filter: { kind: [other-outdoors] }
+                draw:   { icons: { sprite: other-outdoors } }
+            park:
+                filter: { kind: [park] }
+                draw:   { icons: { sprite: park } }
+            parking:
+                filter: { kind: [parking], $zoom: { min: 17 } }
+                draw:   { icons: { sprite: parking } }
+            performing-arts:
+                filter: { kind: [theater, performing-arts] }
+                draw:   { icons: { sprite: performing-arts } }
+            pet-store:
+                filter: { kind: [pet, pet-store, pet-service, pet_store] }
+                draw:   { icons: { sprite: pet-store } }
+            pharmacy:
+                filter: { kind: [pharmacy, chemist] }
+                draw:   { icons: { sprite: pharmacy } }
+            photography-lab:
+                filter: { kind: [photo_studio, photography_lab] }
+                draw:   { icons: { sprite: photography-lab } }
+            picnic-spot:
+                filter: { kind: [picnic_site, picnic_spot, picnic-spot] }
+                draw:   { icons: { sprite: picnic-spot } }
+            pier:
+                filter: { kind: [pier] }
+                draw:   { icons: { sprite: pier } }
+            pizza:
+                filter: { kind: [pizza] }
+                draw:   { icons: { sprite: pizza } }
+            playground:
+                filter: { kind: [playground] }
+                draw:   { icons: { sprite: playground } }
+            police:
+                filter: { kind: [police] }
+                draw:   { icons: { sprite: police } }
+            pool:
+                filter: { kind: [pool, swimming_pool, water_park] }
+                draw:   { icons: { sprite: pool } }
+            pool-hall:
+                filter: { kind: [billiards, pool-hall] }
+                draw:   { icons: { sprite: pool-hall } }
+            post-office:
+                filter: { kind: [post_office, post-office] }
+                draw:   { icons: { sprite: post-office } }
+            power-pylon:
+                filter: { kind: [tower, power-pylon, pylon] }
+                draw:   { icons: { sprite: power-pylon } }
+            public-art:
+                filter: { kind: [public-art] }
+                draw:   { icons: { sprite: public-art } }
+            racetrack:
+                filter: { kind: [racetrack] }
+                draw:   { icons: { sprite: racetrack } }
+            ramen:
+                filter: { kind: [ramen] }
+                draw:   { icons: { sprite: ramen } }
+            real-estate:
+                filter: { kind: [estate_agent, real_estate] }
+                draw:   { icons: { sprite: real-estate } }
+            record-shop:
+                filter: { kind: [record-shop] }
+                draw:   { icons: { sprite: record-shop } }
+            recycling-facility:
+                filter: { kind: [recycling, recycling-facility] }
+                draw:   { icons: { sprite: recycling-facility } }
+            rental-car:
+                filter: { kind: [rental-car, car_rental] }
+                draw:   { icons: { sprite: rental-car } }
+            rest-area:
+                filter: { kind: [rest_area, rest-area] }
+                draw:   { icons: { sprite: rest-area } }
+            restaurant:
+                filter: { kind: [restaurant, deli] }
+                draw:   { icons: { sprite: restaurant } }
+            river:
+                filter: { kind: [river] }
+                draw:   { icons: { sprite: river } }
+            road:
+                filter: { kind: [road] }
+                draw:   { icons: { sprite: road } }
+            ruin:
+                filter: { kind: [ruins, archaeological_site] }
+                draw:   { icons: { sprite: ruin } }
+            salon-barber:
+                filter: { kind: [hairdresser, salon-barber, salon, beauty_salon] }
+                draw:   { icons: { sprite: salon-barber } }
+            school:
+                filter: { kind: [school, kindergarten] }
+                draw:   { icons: { sprite: school } }
+            ship-wreck:
+                filter: { kind: [wreck] }
+                draw:   { icons: { sprite: ship-wreck } }
+            shoe-store:
+                filter: { kind: [shoes, shoe-store, shoe_store] }
+                draw:   { icons: { sprite: shoe-store } }
+            skate-park:
+                filter: { kind: [skate-park] }
+                draw:   { icons: { sprite: skate-park } }
+            skating-rink:
+                filter: { kind: [skating-rink] }
+                draw:   { icons: { sprite: skating-rink } }
+            ski-area:
+                filter: { kind: [ski-area] }
+                draw:   { icons: { sprite: ski-area } }
+            smoke-shop:
+                filter: { kind: [smoke_shop, tobacco] }
+                draw:   { icons: { sprite: smoke-shop } }
+            soccer-field:
+                filter: { kind: [soccer-field] }
+                draw:   { icons: { sprite: soccer-field } }
+            soccer-stadium:
+                filter: { kind: [soccer-stadium] }
+                draw:   { icons: { sprite: soccer-stadium } }
+            soup-place:
+                filter: { kind: [soup-place] }
+                draw:   { icons: { sprite: soup-place } }
+            spa-massage:
+                filter: { kind: [spa, spa-massage, sauna, massage] }
+                draw:   { icons: { sprite: spa-massage } }
+            spiritual-center:
+                filter: { kind: [spiritual_center, spiritual-center, place_of_worship, wayside_chapel] }
+                draw:   { icons: { sprite: spiritual-center } }
+            sporting-goods-shop:
+                filter: { kind: [sporting_goods, sporting-goods-shop, sports, outdoor] }
+                draw:   { icons: { sprite: sporting-goods-shop } }
+            spring:
+                filter: { kind: [spring] }
+                draw:   { icons: { sprite: spring } }
+            stable:
+                filter: { kind: [stable, horse_riding] }
+                draw:   { icons: { sprite: stable } }
+            stadium:
+                filter: { kind: [stadium] }
+                draw:   { icons: { sprite: stadium } }
+            steakhouse:
+                filter: { kind: [steakhouse] }
+                draw:   { icons: { sprite: steakhouse } }
+            storage-facility:
+                filter: { kind: [storage, storage-facility] }
+                draw:   { icons: { sprite: storage-facility } }
+            subway:
+                filter: { kind: [subway] }
+                draw:   { icons: { sprite: subway } }
+            surf-shop:
+                filter: { kind: [surf-shop] }
+                draw:   { icons: { sprite: surf-shop } }
+            sushi-restaurant:
+                filter: { kind: [sushi-restaurant] }
+                draw:   { icons: { sprite: sushi-restaurant } }
+            swimming:
+                filter: { kind: [swimming] }
+                draw:   { icons: { sprite: swimming } }
+            synagogue:
+                filter: { kind: [synagogue] }
+                draw:   { icons: { sprite: synagogue } }
+            tailor-shop:
+                filter: { kind: [tailor, tailor-shop] }
+                draw:   { icons: { sprite: tailor-shop } }
+            tanning-salon:
+                filter: { kind: [tanning-salon] }
+                draw:   { icons: { sprite: tanning-salon } }
+            tattoo-parlor:
+                filter: { kind: [tattoo, tattoo_parlor, tattoo-parlor] }
+                draw:   { icons: { sprite: tattoo-parlor } }
+            taxi:
+                filter: { kind: [taxi] }
+                draw:   { icons: { sprite: taxi } }
+            tea-room:
+                filter: { kind: [tea-room] }
+                draw:   { icons: { sprite: tea-room } }
+            tennis:
+                filter: { kind: [tennis] }
+                draw:   { icons: { sprite: tennis } }
+            theme-park:
+                filter: { kind: [theme_park, theme-park, miniature_golf] }
+                draw:   { icons: { sprite: theme-park } }
+            thrift-vintage-store:
+                filter: { kind: [thrift, thrift-vintage-store, second_hand] }
+                draw:   { icons: { sprite: thrift-vintage-store } }
+            toll-booth:
+                filter: { kind: [toll_booth, checkpoint, border_control] }
+                draw:   { icons: { sprite: toll-booth } }
+            toy-game-store:
+                filter: { kind: [toys, toy-game-store, baby_goods] }
+                draw:   { icons: { sprite: toy-game-store } }
+            track:
+                filter: { kind: [track] }
+                draw:   { icons: { sprite: track } }
+            traffic-signal:
+                filter: { kind: [traffic_signals] }
+                draw:   { icons: { sprite: traffic-signal } }
+            train-station:
+                filter: { kind: [station, train-staion] }
+                draw:   { icons: { sprite: train-station } }
+            travel-agency:
+                filter: { kind: [travel-agency] }
+                draw:   { icons: { sprite: travel-agency } }
+            veterinarian:
+                filter: { kind: [pet_care, veterinarian, veterinary] }
+                draw:   { icons: { sprite: veterinarian } }
+            video-game-store:
+                filter: { kind: [video_games] }
+                draw:   { icons: { sprite: video-game-store } }
+            video-store:
+                filter: { kind: [video, video_store] }
+                draw:   { icons: { sprite: video-store } }
+            view-point:
+                filter: { kind: [viewpoint, view_point, view-point, vista] }
+                draw:   { icons: { sprite: view-point } }
+            vineyard:
+                filter: { kind: [vineyard] }
+                draw:   { icons: { sprite: vineyard } }
+            volcano:
+                filter: { kind: [volcano] }
+                draw:   { icons: { sprite: volcano } }
+            volleyball-court:
+                filter: { kind: [volleyball-court] }
+                draw:   { icons: { sprite: volleyball-court } }
+            well:
+                filter: { kind: [well, water_well] }
+                draw:   { icons: { sprite: well } }
+            whisky-bar:
+                filter: { kind: [whisky-bar] }
+                draw:   { icons: { sprite: whisky-bar } }
+            wine-bar:
+                filter: { kind: [wine-bar] }
+                draw:   { icons: { sprite: wine-bar } }
+            wine-shop:
+                filter: { kind: [wine, wine-shop] }
+                draw:   { icons: { sprite: wine-shop } }
+            winery:
+                filter: { kind: [winery, wine] }
+                draw:   { icons: { sprite: winery } }
+            wings-joint:
+                filter: { kind: [wings-joint] }
+                draw:   { icons: { sprite: wings-joint } }
             zoo:
                 filter: { kind: [zoo] }
                 draw:   { icons: { sprite: zoo } }
