@@ -83,6 +83,7 @@ banana-colors:
        - &scene1      '#eee'              # map background, water
        - &water1      [0.83, 0.83, 0.83]  # water
        - &earth1      '#666'              # land color
+       - &earth2      '#555'              # urban
        - &green1      '#6e7e6d'           # park
        - &green2      '#879886'           # cemetery
        - &green3      '#8ba289'           # golf course
@@ -103,6 +104,7 @@ banana-colors:
        - &building1   [.3, .3, .3]        # building
        - &building2   [.2, .2, .2]        # building stroke
        - &building_o  5                   # building stroke order
+       - &purple      '#645d66'           # airport
    
    labels:
        - &text_fill   '#fff'             # WHITE
@@ -172,6 +174,7 @@ banana-colors:
 #        - &scene2      0.9,0.9,0.9         # map background, water
 #        - &water1      black               # water
 #        - &earth1      white               # land color
+#        - &earth2      '#111'              # urban
 #        - &green1      [0.50,0.50,0.50]    # park
 #        - &green1b     0.80,0.80,0.80      # park
 #        - &green2      '#949494'           # cemetery
@@ -189,6 +192,7 @@ banana-colors:
 #        - &grey1       '#cccccc'           # pedestrian, retail, airport apron, parking, church
 #        - &grey2       [0.5, 0.5, 0.5]     # airport runway
 #        - &grey3       grey                # railway
+#        - &purple      '#645d66'           # airport
 #        - &mystry1     '#aaaaaa'           # recreation ground (type of park, sometimes around reservoirs)
 #        - &building1   white               # building
 #        - &building2   black               # building stroke
@@ -265,6 +269,7 @@ banana-colors:
 #        - &scene1      '#3091c8'              # map background, water
 #        - &water1      '#3091c8'              # water
 #        - &earth1      white                  # land color
+#        - &earth2      '#111'                 # urban
 #        - &green1      '#7fbfe3'              # 50% - park
 #        - &green2      '#99cce9'              # 40% - cemetery
 #        - &green3      '#b2d9ee'              # 30% - golf course
@@ -281,6 +286,7 @@ banana-colors:
 #        - &grey1       '#e5f2f9'              # 10% - pedestrian, retail, airport apron, parking, church
 #        - &grey2       '#7fbfe3'              # 50% - airport runway
 #        - &grey3       '#b2d9ee'              # 30% - railway
+#        - &purple      '#645d66'              # airport
 #        - &mystry1     '#99cce9'              # 40% - recreation ground (type of park, sometimes around reservoirs)
 #        - &building1   '#b2d9ee'              # 30% - building
 #        - &building2   '#b2d9ee'              # building stroke
@@ -356,6 +362,7 @@ banana-colors:
 #        - &scene1      '#cfc8ba'              # map background, water
 #        - &water1      '#cfc8ba'              # water
 #        - &earth1      white                  # land color
+#        - &earth2      '#111'                 # urban
 #        - &green1      '#b7b0a4'              # 50% - park
 #        - &green2      '#c6c0b6'              # 40% - cemetery
 #        - &green3      '#d4d0c8'              # 30% - golf course
@@ -372,6 +379,7 @@ banana-colors:
 #        - &grey1       '#f0efec'              # 10% - pedestrian, retail, airport apron, parking, church
 #        - &grey2       '#b7b0a4'              # 50% - airport runway
 #        - &grey3       '#d4d0c8'              # 30% - railway
+#        - &purple      '#645d66'              # airport
 #        - &mystry1     '#c6c0b6'              # 40% - recreation ground (type of park, sometimes around reservoirs)
 #        - &building1   '#d4d0c8'              # 30% - building
 #        - &building2   '#706249'              # building stroke
@@ -445,6 +453,7 @@ banana-colors:
 #        - &scene1      '#eee'              # map background, water
 #        - &water1      [0.83, 0.83, 0.83]  # water
 #        - &earth1      white               # land color
+#        - &earth2      '#111'              # urban
 #        - &green1      [0.50,0.50,0.50]    # park
 #        - &green2      '#949494'           # cemetery
 #        - &green3      '#9a9a9a'           # golf course
@@ -461,6 +470,7 @@ banana-colors:
 #        - &grey1       '#787878'           # pedestrian, retail, airport apron, parking, church
 #        - &grey2       [0.5, 0.5, 0.5]     # airport runway
 #        - &grey3       grey                # railway
+#        - &purple      '#645d66'           # airport
 #        - &mystry1     '#aaaaaa'           # recreation ground (type of park, sometimes around reservoirs)
 #        - &building1   [0.3, 0.3, 0.3]     # building
 #        - &building2   [0.2, 0.2, 0.2]     # building stroke
@@ -538,6 +548,7 @@ banana-colors:
 #        - &scene1      '#e1dbd0'              # map background, water
 #        - &water1      '#e1dbd0'              # water
 #        - &earth1      white                  # land color
+#        - &earth2      '#111'                 # urban
 #        - &green1      '#b0b7a4'              # 50% - park
 #        - &green2      '#c6c0b6'              # 40% - cemetery
 #        - &green3      '#d4d0c8'              # 30% - golf course
@@ -554,6 +565,7 @@ banana-colors:
 #        - &grey1       '#f0efec'              # 10% - pedestrian, retail, airport apron, parking, church
 #        - &grey2       '#b7b0a4'              # 50% - airport runway
 #        - &grey3       '#d4d0c8'              # 30% - railway
+#        - &purple      '#645d66'              # airport
 #        - &mystry1     '#c6c0b6'              # 40% - recreation ground (type of park, sometimes around reservoirs)
 #        - &building1   '#d4d0c8'              # 30% - building
 #        - &building2   '#706249'              # building stroke
@@ -625,6 +637,7 @@ banana-colors:
 #        - &scene1      '#cbd8dc'           # map background, water
 #        - &water1      '#cbd8dc'           # water
 #        - &earth1      '#f5f2eb'           # land color
+#        - &earth2      '#111'              # urban
 #        - &green1      '#6e7e6d'           # park
 #        - &green2      '#879886'           # cemetery
 #        - &green3      '#8ba289'           # golf course
@@ -641,6 +654,7 @@ banana-colors:
 #        - &grey1       '#717171'           # pedestrian, retail, airport apron, parking, church
 #        - &grey2       [0.5, 0.5, 0.5]     # airport runway
 #        - &grey3       grey                # railway
+#        - &purple      '#645d66'           # airport
 #        - &mystry1     '#bfb08e'           # recreation ground
 #        - &building1   [.7, .7, .7]        # building
 #        - &building2   [.8, .8, .8]        # building stroke
@@ -2512,6 +2526,27 @@ layers:
                 polygons:
                     order: 2
                     color: *grey1
+        urban:
+            filter: { kind: [urban, rural, residential] }
+            draw:
+                polygons:
+                    order: 1
+                    color: *earth2
+        zoo:
+            filter:
+                kind: zoo
+            draw:
+                polygons:
+                    order: 2
+                    color: *green2
+        airport:
+            filter:
+                kind: aerodrome
+            draw:
+                polygons:
+                    order: 2
+                    color: *purple
+
 
     landuse-not-filtered:
         data: { source: osm, layer: landuse }
@@ -2520,7 +2555,7 @@ layers:
                 kind: runway
             draw:
                 polygons:
-                    order: 2
+                    order: 3
                     color: *grey2
         apron:
             filter:
@@ -2528,7 +2563,7 @@ layers:
                 $zoom: { min: 15}
             draw:
                 polygons:
-                    order: 2
+                    order: 3
                     color: *grey1
                     
     debug:
