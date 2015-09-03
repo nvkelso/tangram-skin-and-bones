@@ -915,6 +915,7 @@ sources:
     osm:
         type: TopoJSONTiles
         #url: '//tileserver-dev-us-east-ext-538678355.us-east-1.elb.amazonaws.com/osm/all/{z}/{x}/{y}.topojson'
+        #url: '//vector.dev.mapzen.com /osm/all/{z}/{x}/{y}.topojson'
         #url:  //localhost:8080//osm/all/{z}/{x}/{y}.topojson
         url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
 
@@ -933,9 +934,10 @@ styles:
     flatlines:
         base: lines
         lighting: false # ignore lights
-        draw:
-            cap: round
-            join: round
+        # putting this here should work, but doesn't
+#        draw:
+#            cap: round
+#            join: round
     flatpolys:
         base: polygons
         lighting: false # ignore lights
@@ -1287,6 +1289,8 @@ layers:
             flatlines:
                 interactive: true
                 order: 7
+                cap: round
+                join: round
                 # this is overriden in all later substyles
                 color: *major_road2a
                 width: function () { return Math.log($zoom); }
@@ -1308,6 +1312,8 @@ layers:
                 flatlines:
                     # put highways on top of all other roads
                     order: 8
+                    cap: round
+                    join: round
                     color: *highway1
                     width: [[9, 2px], [14, 3px], [16, 4px], [17, 10m]]
                     outline:
@@ -1345,6 +1351,8 @@ layers:
                 flatlines:
                     # put highways on top of all other roads
                     order: 8
+                    cap: [[0,butt],[15,round]]
+                    join: round
                     color: *highway1
                     width: [[8, 2px], [9, 2.5px], [14, 4.0px], [15, 6.0px], [16, 6.5px], [17, 20m]]
                     outline:
@@ -1363,6 +1371,7 @@ layers:
                 draw:
                     flatlines:
                         color: *highway_link1
+                        cap: butt
                         width: [[9, 1px], [14, 2.5px], [16, 4px], [18, 9m]]
                         outline:
                             color: *highway_casing1
@@ -1388,6 +1397,11 @@ layers:
                         color: *highway_tunnel1
                         outline:
                             color: *highway_tunnel_casing1
+            highway_bridge:
+                filter: {is_bridge: yes}
+                draw:
+                    flatlines:
+                        cap: butt
                             
             labels-highway-early:
                 filter: { $zoom: { min: 7, max: 13 } }
@@ -1443,6 +1457,8 @@ layers:
             # default style
             draw:
                 flatlines:
+                    cap: round
+                    join: round
                     color: [[8, *major_road4], [13, major_road2], [17, *major_road1]]
                     width: [[13, 0px], [14, 2px], [16, 2.5px], [19, 8m]]
                     outline:
@@ -1664,20 +1680,31 @@ layers:
             filter: { kind: minor_road, not: { highway: service } }
             draw:
                 flatlines:
-                    # order: 3
+                    cap: round
+                    join: round
                     color: [[12, *minor_road5], [13, *minor_road4], [14, *minor_road3]]
                     width: [[12, 0.75px], [13, 1.5px], [14, 1.5px], [15, 2.5px], [16, 8m]]
                     outline:
                         width: [[12, 0.0px], [13, 0.25px], [14, 0.5px], [17, 1.0px], [18, 2.0px]]
+            early:
+                filter: { $zoom: { max: 14 } }
+                draw:
+                    flatlines:
+                        order: 15
             tunnel:
                 filter: {is_tunnel: yes, $zoom: {min: 13} }
                 draw:
                     flatlines:
                         order: 6
+                        cap: butt
                         color: *minor_tunnel1
                         outline:
                             color: *minor_tunnel_casing1
-                        
+            minor_road_bridge:
+                filter: {is_bridge: yes}
+                draw:
+                    flatlines:
+                        cap: butt
             labels-minor_road:
                 filter: { $zoom: { min: 16, max: 18 } }
                 draw:
@@ -1703,6 +1730,8 @@ layers:
             draw:
                 flatlines:
                     # order: 3
+                    cap: round
+                    join: round
                     color: [[0,*service_road2],[18,*service_road2]]
                     width: [[15, 1.5px], [16, 2.0px], [18, 5m], [19, 3.5m]]
                     outline:
@@ -1734,6 +1763,8 @@ layers:
                 flatlines:
                     color: [[15,*path2],[16,*path1]]
                     order: 6
+                    cap: butt
+                    join: round
                     width: [[15, 1.5], [17, 3m]]
                     outline:
                         color: *path_casing1
@@ -1742,6 +1773,7 @@ layers:
                 filter: {is_bridge: yes }
                 draw:
                     flatlines:
+                        cap: butt
                         width: [[15, 3.5], [17, 3m]]
                         outline:
                             color: [[15,*path_bridge_casing2],[16,*path_bridge_casing1]]
@@ -1761,6 +1793,8 @@ layers:
             draw:
                 dashedline:
                     order: 23
+                    cap: round
+                    join: round
                     color: *earth1
                     width: [[15, 0.1], [17, 0.1]]
                     outline:
@@ -1790,6 +1824,7 @@ layers:
                 filter: { any: [is_bridge: yes, is_tunnel: yes] }
                 draw:
                     flatlines:
+                        cap: butt
                         outline:
                             # except bridges and tunnels, their outlines should also self-sort
                             order: function() { return 6 + feature.sort_key; }
