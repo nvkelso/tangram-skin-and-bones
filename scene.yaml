@@ -1226,12 +1226,26 @@ styles:
         texture: pois
         interactive: True
         
+    pois_text_early:
+            base: text
+            shaders:
+                blocks:
+                    position: |
+                        position.y -= 14.0* u_meters_per_pixel;
+
     pois_text:
             base: text
             shaders:
                 blocks:
                     position: |
                         position.y -= 19.0* u_meters_per_pixel;
+
+    place_text:
+            base: text
+            shaders:
+                blocks:
+                    position: |
+                        position.y -= 12.0* u_meters_per_pixel;
 
 
 scene:
@@ -1407,6 +1421,7 @@ layers:
                 filter: { $zoom: { min: 7, max: 13 } }
                 draw:
                     text:
+                        priority: 2
                         visible: *text_visible_highway
                         text_source: ref
                         font:
@@ -1417,6 +1432,7 @@ layers:
                 filter: { $zoom: { min: 13, max: 14 } }
                 draw:
                     text:
+                        priority: 2
                         visible: *text_visible_highway
                         #text_source: ref
                         text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
@@ -1428,6 +1444,7 @@ layers:
                 filter: { $zoom: { min: 14, max: 15 } }
                 draw:
                     text:
+                        priority: 2
                         visible: *text_visible_highway
                         font:
                             fill: *text_fill
@@ -1437,6 +1454,7 @@ layers:
                 filter: { $zoom: { min: 15, max: 18 } }
                 draw:
                     text:
+                        priority: 2
                         visible: *text_visible_highway
                         font:
                             fill: *text_fill
@@ -1446,6 +1464,7 @@ layers:
                 filter: { $zoom: { min: 18 } }
                 draw:
                     text:
+                        priority: 2
                         visible: *text_visible_highway
                         font:
                             fill: *text_fill2
@@ -1501,6 +1520,7 @@ layers:
                     filter: { $zoom: { min: 11, max: 13 } }
                     draw:
                         text:
+                            priority: 3
                             visible: *text_visible_trunk_primary
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
@@ -1511,6 +1531,7 @@ layers:
                     filter: { $zoom: { min: 13, max: 15 } }
                     draw:
                         text:
+                            priority: 3
                             visible: *text_visible_trunk_primary
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
@@ -1521,6 +1542,7 @@ layers:
                     filter: { $zoom: { min: 15, max: 18 } }
                     draw:
                         text:
+                            priority: 3
                             visible: *text_visible_trunk_primary
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
@@ -1531,6 +1553,7 @@ layers:
                     filter: { $zoom: { min: 18 } }
                     draw:
                         text:
+                            priority: 3
                             visible: *text_visible_trunk_primary
                             text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
                             font:
@@ -1579,6 +1602,7 @@ layers:
                         filter: { $zoom: { min: 13, max: 14 } }
                         draw:
                             text:
+                                priority: 4
                                 visible: *text_visible_secondary
                                 text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                                 font:
@@ -1589,6 +1613,7 @@ layers:
                     filter: { $zoom: { min: 13, max: 15 } }
                     draw:
                         text:
+                            priority: 4
                             visible: *text_visible_secondary
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
@@ -1599,6 +1624,7 @@ layers:
                     filter: { $zoom: { min: 15, max: 18 } }
                     draw:
                         text:
+                            priority: 4
                             visible: *text_visible_secondary
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
@@ -1609,6 +1635,7 @@ layers:
                     filter: { $zoom: { min: 18 } }
                     draw:
                         text:
+                            priority: 4
                             visible: *text_visible_secondary
                             #text_source: ref
                             text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
@@ -1650,6 +1677,7 @@ layers:
                     filter: { $zoom: { min: 14, max: 15 } }
                     draw:
                         text:
+                            priority: 5
                             visible: *text_visible_tertiary
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
@@ -1660,6 +1688,7 @@ layers:
                     filter: { $zoom: { min: 15, max: 18 } }
                     draw:
                         text:
+                            priority: 5
                             visible: *text_visible_tertiary
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
@@ -1670,6 +1699,7 @@ layers:
                     filter: { $zoom: { min: 18 } }
                     draw:
                         text:
+                            priority: 5
                             visible: *text_visible_tertiary
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
@@ -1709,6 +1739,7 @@ layers:
                 filter: { $zoom: { min: 16, max: 18 } }
                 draw:
                     text:
+                        priority: 6
                         visible: *text_visible_minor_road
                         text_source: name
                         font:
@@ -1719,6 +1750,7 @@ layers:
                 filter: { $zoom: { min: 18 } }
                 draw:
                     text:
+                        priority: 6
                         visible: *text_visible_minor_road
                         text_source: name
                         font:
@@ -1741,6 +1773,7 @@ layers:
                 filter: { $zoom: { min: 17, min: 18 } }
                 draw:
                     text:
+                        priority: 7
                         visible: *text_visible_service_road
                         text_source: name
                         font:
@@ -1751,6 +1784,7 @@ layers:
                 filter: { $zoom: { min: 18 } }
                 draw:
                     text:
+                        priority: 7
                         visible: *text_visible_service_road
                         text_source: name
                         font:
@@ -1782,6 +1816,7 @@ layers:
                 filter: { $zoom: { min: 17 } }
                 draw:
                     text:
+                        priority: 8
                         visible: *text_visible_path
                         text_source: name
                         font:
@@ -1804,6 +1839,7 @@ layers:
                 filter: { $zoom: { min: 17 } }
                 draw:
                     text:
+                        priority: 9
                         visible: *text_visible_steps
                         text_source: name
                         font:
@@ -1941,15 +1977,55 @@ layers:
                 visible: *text_visible_continent
                 text_source: function() { return feature.name.toUpperCase(); }
                 font:
-                    typeface: italic 14px Helvetica
+                    typeface: italic 13px Helvetica
                     fill: *text_fill
                     stroke: { color: *text_stroke, width: 4 }
 
-    administrative:
+    country-early:
         data: { source: osm, layer: places }
-        filter: { name: true, kind: [state], $zoom: {min: 5} }
+        filter: { name: true, kind: [country], $zoom: {min: 3, max: 6} }
         draw:
             text:
+                priority: 2
+                visible: *text_visible_admin
+                text_source: function() { return feature["name"].toUpperCase(); }
+                font:
+                    typeface: 200 11px Helvetica
+                    fill: *text_fill
+                    stroke: { color: *text_stroke, width: 4 }
+
+    country:
+        data: { source: osm, layer: places }
+        filter: { name: true, kind: [country], $zoom: {min: 6} }
+        draw:
+            text:
+                priority: 2
+                visible: *text_visible_admin
+                text_source: function() { return feature.["name"].toUpperCase(); }
+                font:
+                    typeface: 800 14px Helvetica
+                    fill: *text_fill
+                    stroke: { color: *text_stroke, width: 4 }
+
+    region-early:
+        data: { source: osm, layer: places }
+        filter: { name: true, kind: [state], $zoom: {min: 4, max: 6} }
+        draw:
+            text:
+                priority: 2
+                visible: *text_visible_admin
+                text_source: name:short
+                font:
+                    typeface: 400 12px Helvetica
+                    fill: *text_fill
+                    stroke: { color: *text_stroke, width: 4 }
+
+    region:
+        data: { source: osm, layer: places }
+        filter: { name: true, kind: [state], $zoom: {min: 6} }
+        draw:
+            text:
+                priority: 2
                 visible: *text_visible_admin
                 text_source: function() { return feature.name.toUpperCase(); }
                 font:
@@ -1957,20 +2033,116 @@ layers:
                     fill: *text_fill
                     stroke: { color: *text_stroke, width: 4 }
                     
-    populated-places:
+    populated-places-natural-earth-early:
         data: { source: osm, layer: places }
-        filter: { name: true, not: { kind: [county, state, island] }, $zoom: {min: 6} }
+        filter: { name: true, source: naturalearthdata.com, $zoom: {min: 2, max: 4}, scalerank: 0 }
         draw:
-            text:
+            place_text:
+                priority: 1
+                interactive: true
                 visible: *text_visible_populated_places
                 font:
-                    typeface: 800 14px Helvetica
+                    typeface: 500 10px Helvetica
                     fill: *text_fill
                     stroke: { color: *text_stroke, width: 4 }
+            icons:
+                size: [[13, 12px], [15, 18px]]
+                interactive: true
+                sprite: generic
+
+    populated-places-natural-earth-early2:
+        data: { source: osm, layer: places }
+        filter: { name: true, source: naturalearthdata.com, $zoom: {min: 4, max: 5}, scalerank: [0,1] }
+        draw:
+            place_text:
+                priority: 1
+                interactive: true
+                visible: *text_visible_populated_places
+                font:
+                    typeface: 500 10px Helvetica
+                    fill: *text_fill
+                    stroke: { color: *text_stroke, width: 4 }
+            icons:
+                size: [[13, 12px], [15, 18px]]
+                interactive: true
+                sprite: generic
+
+    populated-places-natural-earth-early3:
+        data: { source: osm, layer: places }
+        filter: { name: true, source: naturalearthdata.com, $zoom: {min: 5, max: 6}, scalerank: [0,1,2,3] }
+        draw:
+            place_text:
+                priority: 1
+                interactive: true
+                visible: *text_visible_populated_places
+                font:
+                    typeface: 500 10px Helvetica
+                    fill: *text_fill
+                    stroke: { color: *text_stroke, width: 4 }
+            icons:
+                size: [[13, 12px], [15, 18px]]
+                interactive: true
+                sprite: generic
+                
+    populated-places-natural-earth:
+        data: { source: osm, layer: places }
+        filter: { name: true, source: naturalearthdata.com, $zoom: {min: 6, max: 8} }
+        draw:
+            place_text:
+                priority: 1
+                interactive: true
+                visible: *text_visible_populated_places
+                font:
+                    typeface: 500 10px Helvetica
+                    fill: *text_fill
+                    stroke: { color: *text_stroke, width: 4 }
+            icons:
+                size: [[13, 12px], [15, 18px]]
+                interactive: true
+                sprite: generic
+
+    populated-places-osm:
+        data: { source: osm, layer: places }
+        filter: { name: true, source: openstreetmap, not: { kind: [county, state, island, neighbourhood, suburb, quarter] }, $zoom: {min: 8} }
+        draw:
+            place_text:
+                priority: 1
+                interactive: true
+                visible: *text_visible_populated_places
+                font:
+                    typeface: 500 10px Helvetica
+                    fill: *text_fill
+                    stroke: { color: *text_stroke, width: 4 }
+            icons:
+                filter: { $zoom: { max: 11 } }
+                size: [[13, 12px], [15, 18px]]
+                interactive: true
+                sprite: generic
+
+        # nix major cities under z15
+        major-places:
+           filter: { kind: [state, province, city], $zoom: { min: 13 } }
+           visible: false
+        medium-places:
+           filter: { kind: [town], $zoom: { max: 11 } }
+           visible: false
         # nix podunk burgs under z15
         minor-places:
-            filter: { kind: [hamlet, village, town, neighbourhood, suburb, quarter], $zoom: { max: 15 } }
+            filter: { kind: [hamlet, village], $zoom: { max: 15 } }
             visible: false
+
+    neighborhood:
+        data: { source: osm, layer: places }
+        filter: { name: true, kind: [neighbourhood, suburb, quarter], $zoom: { min: 14 } }
+        draw:
+            text:
+                priority: 2
+                visible: *text_visible_admin
+                text_source: function() { return feature.name.toUpperCase(); }
+                font:
+                    typeface: 600 12px Helvetica
+                    fill: *text_fill
+                    stroke: { color: *text_stroke, width: 4 }
 
 
     pois_and_landuse_labels:
@@ -2031,9 +2203,21 @@ layers:
                         typeface: 500 12px Helvetica
                         stroke: { color: *text_stroke, width: 4 }
 
+        park-labels-early:
+            filter:
+                kind: [park, forest, conservation, nature_reserve]
+                $zoom: { min: 0, max: 15 }
+            draw:
+                pois_text_early:
+                    visible: *text_visible_poi_landuse
+                    interactive: true
+                    font:
+                        fill: *text_fill
+                        typeface: 500 12px Helvetica
+                        stroke: { color: *text_stroke, width: 4 }
         park-labels:
             filter:
-                kind: [park]
+                kind: [park, forest, conservation, nature_reserve]
                 $zoom: { min: 15 }
             draw:
                 pois_text:
@@ -2309,6 +2493,9 @@ layers:
             optical-shop:
                 filter: { kind: [optician, optical_shop, optical-shop] }
                 draw:   { icons: { sprite: optical-shop } }
+            park:
+                filter: { kind: [park, forest, conservation, nature_reserve] }
+                draw:   { icons: { sprite: park } }
             performing-arts:
                 filter: { kind: [theater, performing-arts] }
                 draw:   { icons: { sprite: performing-arts } }
