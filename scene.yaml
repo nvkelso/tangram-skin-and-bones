@@ -82,6 +82,7 @@ banana-colors:
    areas:
        - &scene1      '#eee'              # map background, water
        - &water1      [0.83, 0.83, 0.83]  # water
+       - &water2      blue                # water stroke
        - &earth1      '#666'              # land color
        - &earth2      '#555'              # urban
        - &green1      '#6e7e6d'           # park
@@ -1293,8 +1294,14 @@ layers:
             draw:
                 ground:
                     color: *water1
-
-
+        water_boundaries:
+          filter: { boundary: yes, $zoom: { min: 12 } }
+          draw:
+            lines:
+              order: 4
+              color: '#ff0000'
+              width: 2px
+              cap: round
 
     roads:
         data: { source: osm, layer: roads }
@@ -1906,6 +1913,26 @@ layers:
                 width: [[14,0.1px],[16,1px],[18,1.25px]]
                 extrude: false
                 tile_edges: true
+        in_park:
+            filter: { landuse_kind: [park,forest,nature_reserve,conservation] }
+            draw:
+                polygons:
+                    color: green
+        in_university:
+            filter: { landuse_kind: university }
+            draw:
+                polygons:
+                    color: brown
+        in_hospital:
+            filter: { landuse_kind: hospital }
+            draw:
+                polygons:
+                    color: red
+        in_retail:
+            filter: { landuse_kind: retail }
+            draw:
+                polygons:
+                    color: orange
                 
     buildings-early-labels:
         data: { source: osm, layer: buildings }
@@ -1947,6 +1974,13 @@ layers:
                     order: 8
                     color: *country_boundary
                     width: [[0, 1.5px], [9, 2.5px], [14, 3.5px], [16, 4.5px], [17, 14m]]
+            water:
+                filter: { kind: territorial, boundary: maritime }
+                draw:
+                    flatlines:
+                        order: 9
+                        color: blue
+
         regions:
             filter: 
                 any:
@@ -1959,6 +1993,13 @@ layers:
                     order: 7
                     color: *region_boundary
                     width: [[0, 1.5px], [9, 3.5px], [14, 5.5px], [16, 6.5px], [17, 16m]]
+            water:
+                filter: { kind: territorial, boundary: maritime }
+                draw:
+                    flatlines:
+                        order: 8
+                        color: blue
+
 #        subregions:
 #            filter: { kind: county, $zoom: { min: 10 } }
 #            draw:
@@ -2730,6 +2771,12 @@ layers:
                 polygons:
                     order: 2
                     color: *grey1
+        power:
+            filter: { kind: [plant, generator, substation] }
+            draw:
+                polygons:
+                    order: 2
+                    color: green
         retail:
             filter:
                 kind: retail
