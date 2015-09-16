@@ -2375,25 +2375,20 @@ layers:
                         fill: *text_fill
                         typeface: 500 12px Helvetica
                         stroke: { color: *text_stroke, width: 4 }
-            wilderness-areas-early:
-                filter:
-                    kind: nature_reserve
-                    #name: function() { return feature.name.includes("Wilderness") }
-                    $zoom: { max: 10 }
-                draw:
-                    icons:
-                        #visible: false
-                        sprite: forest
-                    pois_text_early:
-                        #visible: false
-                        text_source: function() { if(feature.name.indexOf("Wilderness")>0) { return "" } else { return feature.name } }
             wilderness-areas:
                 filter:
                     kind: nature_reserve
-                    $zoom: { min: 10 }
-                draw:
-                    icons:
-                        sprite: forest
+                wilderness-areas-early:
+                    filter: function() { return $zoom < 10 && feature.name.includes("Wilderness") }
+                    draw:
+                        pois_text_early: { visible: false }
+                        icons: { visible: false }                
+                wilderness-areas-z10:
+                    filter:
+                        $zoom: { min: 10 }
+                    draw:
+                        icons:
+                            sprite: forest
         landuse-labels:
             filter:
                 area: true
