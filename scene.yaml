@@ -2375,20 +2375,22 @@ layers:
                         fill: *text_fill
                         typeface: 500 12px Helvetica
                         stroke: { color: *text_stroke, width: 4 }
-            wilderness-areas:
+            nature-reserve:
                 filter:
                     kind: nature_reserve
+                draw:
+                    icons:
+                        sprite: forest
                 wilderness-areas-early:
                     filter: function() { return $zoom < 10 && feature.name.includes("Wilderness") }
                     draw:
                         pois_text_early: { visible: false }
                         icons: { visible: false }                
-                wilderness-areas-z10:
-                    filter:
-                        $zoom: { min: 10 }
+                national-park:
+                    filter: function() { return feature.name.includes("Park") }
                     draw:
-                        icons:
-                            sprite: forest
+                        icons: 
+                            sprite: park
         landuse-labels:
             filter:
                 area: true
