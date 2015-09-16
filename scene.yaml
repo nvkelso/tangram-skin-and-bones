@@ -82,7 +82,8 @@ banana-colors:
    areas:
        - &scene1      '#eee'              # map background, water
        - &water1      [0.83, 0.83, 0.83]  # water
-       - &water2      blue                # water stroke
+       - &water2      [0.50, 0.50, 0.50]  # playa
+       - &water1_o    blue                # water stroke
        - &earth1      '#666'              # land color
        - &earth2      '#555'              # urban
        - &green1      '#6e7e6d'           # park
@@ -108,9 +109,10 @@ banana-colors:
        - &purple      '#645d66'           # airport
    
    labels:
-       - &text_fill   '#fff'             # WHITE
-       - &text_fill2  '#555'             # WHITE
-       - &text_stroke '#444'             # land color
+       - &text_fill         '#fff'             # WHITE
+       - &text_fill2        '#555'             # WHITE
+       - &text_stroke       '#444'             # land color
+       - &townspot_sprite   townspot-l-rev     # depends on land color and text settings
     
 
 #toner-colors:
@@ -174,6 +176,8 @@ banana-colors:
 #        - &scene1      black               # map background, water
 #        - &scene2      0.9,0.9,0.9         # map background, water
 #        - &water1      black               # water
+#        - &water2      [0.50, 0.50, 0.50]  # playa
+#        - &water1_o    blue                # water stroke
 #        - &earth1      white               # land color
 #        - &earth2      '#111'              # urban
 #        - &green1      [0.50,0.50,0.50]    # park
@@ -200,9 +204,10 @@ banana-colors:
 #        - &building_o  25                  # building stroke order
 #    
 #    labels:
-#        - &text_fill   black              # BLACK
-#        - &text_fill2  '#555'             # WHITE
-#        - &text_stroke white              # land color
+#        - &text_fill         black              # BLACK
+#        - &text_fill2        '#555'             # WHITE
+#        - &text_stroke       white              # land color
+#        - &townspot_sprite   townspot-l-rev     # depends on land color and text settings
 
 
 #blueprint-colors:
@@ -269,6 +274,8 @@ banana-colors:
 #    areas:
 #        - &scene1      '#3091c8'              # map background, water
 #        - &water1      '#3091c8'              # water
+#        - &water2      [0.50, 0.50, 0.50]     # playa
+#        - &water1_o    blue                   # water stroke
 #        - &earth1      white                  # land color
 #        - &earth2      '#111'                 # urban
 #        - &green1      '#7fbfe3'              # 50% - park
@@ -294,9 +301,10 @@ banana-colors:
 #        - &building_o  25                     # building stroke order
 #    
 #    labels:
-#        - &text_fill   '#0080c8'             # BLUE
-#        - &text_fill2  '#555'                # WHITE
-#        - &text_stroke white                 # land color
+#        - &text_fill         '#0080c8'             # BLUE
+#        - &text_fill2        '#555'                # WHITE
+#        - &text_stroke       white                 # land color
+#        - &townspot_sprite   townspot-l-rev     # depends on land color and text settings
 
 
 #sepia-tone-colors:
@@ -362,6 +370,8 @@ banana-colors:
 #    areas:
 #        - &scene1      '#cfc8ba'              # map background, water
 #        - &water1      '#cfc8ba'              # water
+#        - &water2      [0.50, 0.50, 0.50]     # playa
+#        - &water1_o    blue                   # water stroke
 #        - &earth1      white                  # land color
 #        - &earth2      '#111'                 # urban
 #        - &green1      '#b7b0a4'              # 50% - park
@@ -387,10 +397,11 @@ banana-colors:
 #        - &building_o  25                     # building stroke order
 #    
 #    labels:
-#        - &text_fill   '#706249'             # SEPIA
-#        - &text_fill2  '#555'                # WHITE
-#        - &text_stroke white                 # land color
- 
+#        - &text_fill         '#706249'             # SEPIA
+#        - &text_fill2        '#555'                # WHITE
+#        - &text_stroke       white                 # land color
+#        - &townspot_sprite   townspot-l-rev     # depends on land color and text settings
+
 
 #data-exploration-colors:
 #    cameras:
@@ -453,6 +464,8 @@ banana-colors:
 #    areas:
 #        - &scene1      '#eee'              # map background, water
 #        - &water1      [0.83, 0.83, 0.83]  # water
+#        - &water2      [0.50, 0.50, 0.50]  # playa
+#        - &water1_o    blue                # water stroke
 #        - &earth1      white               # land color
 #        - &earth2      '#111'              # urban
 #        - &green1      [0.50,0.50,0.50]    # park
@@ -478,9 +491,10 @@ banana-colors:
 #        - &building_o  5                   # building stroke order
 #    
 #    labels:
-#        - &text_fill   white              # WHITE
-#        - &text_fill2  '#555'             # WHITE
-#        - &text_stroke '#444'             # land color
+#        - &text_fill         white              # WHITE
+#        - &text_fill2        '#555'             # WHITE
+#        - &text_stroke       '#444'             # land color
+#        - &townspot_sprite   townspot-l-rev     # depends on land color and text settings
 
 # For Aaron
 # https://collection.cooperhewitt.org/objects/18382391/
@@ -548,6 +562,8 @@ banana-colors:
 #    areas:
 #        - &scene1      '#e1dbd0'              # map background, water
 #        - &water1      '#e1dbd0'              # water
+#        - &water2      [0.50, 0.50, 0.50]     # playa
+#        - &water1_o    blue                   # water stroke
 #        - &earth1      white                  # land color
 #        - &earth2      '#111'                 # urban
 #        - &green1      '#b0b7a4'              # 50% - park
@@ -573,9 +589,10 @@ banana-colors:
 #        - &building_o  25                     # building stroke order
 #    
 #    labels:
-#        - &text_fill   '#85754e'             # SEPIA
-#        - &text_fill2  white                 # WHITE
-#        - &text_stroke white                 # land color
+#        - &text_fill         '#85754e'             # SEPIA
+#        - &text_fill2        white                 # WHITE
+#        - &text_stroke       white                 # land color
+#        - &townspot_sprite   townspot-l-rev     # depends on land color and text settings
 
 #medium-colors:
 #    cameras:
@@ -637,6 +654,8 @@ banana-colors:
 #    areas:
 #        - &scene1      '#cbd8dc'           # map background, water
 #        - &water1      '#cbd8dc'           # water
+#        - &water2      [0.50, 0.50, 0.50]  # playa
+#        - &water1_o    blue                # water stroke
 #        - &earth1      '#f5f2eb'           # land color
 #        - &earth2      '#111'              # urban
 #        - &green1      '#6e7e6d'           # park
@@ -662,9 +681,10 @@ banana-colors:
 #        - &building_o  5                   # building stroke order
 #    
 #    labels:
-#        - &text_fill   '#fff'             # WHITE
-#        - &text_fill2  '#555'             # WHITE
-#        - &text_stroke '#444'             # land color
+#        - &text_fill         '#fff'             # WHITE
+#        - &text_fill2        '#555'             # WHITE
+#        - &text_stroke       '#444'             # land color
+#        - &townspot_sprite   townspot-l-rev     # depends on land color and text settings
 
 
 textures:
@@ -714,6 +734,11 @@ textures:
             camera-store: [901, 180, 36, 36]
             campground: [504, 144, 36, 36]
             candy-store: [180, 288, 36, 36]
+            capital-l: [841, 288, 23, 23]
+            capital-m: [822, 288, 18, 18]
+            capital-s: [806, 288, 17, 17]
+            capital-xl: [863, 288, 25, 25]
+            capital-xs: [792, 288, 13, 13]
             car-dealership: [864, 180, 36, 36]
             car-wash: [828, 180, 36, 36]
             carribean-restaurant: [36, 252, 36, 36]
@@ -760,6 +785,7 @@ textures:
             food-drink-shop: [864, 72, 36, 36]
             football-stadium: [828, 252, 36, 36]
             ford: [576, 0, 36, 36]
+            forest: [103, 324, 36, 36]
             fountain: [144, 180, 36, 36]
             fried-chicken-joint: [901, 216, 36, 36]
             fun-fair: [612, 144, 36, 36]
@@ -892,6 +918,16 @@ textures:
             theme-park: [648, 144, 36, 36]
             thrift-vintage-store: [360, 36, 36, 36]
             toll-booth: [937, 252, 36, 36]
+            townspot-l: [52, 324, 23, 23]
+            townspot-l-rev: [940, 288, 23, 23]
+            townspot-m: [32, 324, 20, 20]
+            townspot-m-rev: [920, 288, 20, 20]
+            townspot-s: [13, 324, 18, 18]
+            townspot-s-rev: [902, 288, 18, 18]
+            townspot-xl: [75, 324, 28, 28]
+            townspot-xl-rev: [964, 288, 28, 28]
+            townspot-xs: [0, 324, 13, 13]
+            townspot-xs-rev: [889, 288, 13, 13]
             toy-game-store: [324, 36, 36, 36]
             track: [252, 180, 36, 36]
             traffic-signal: [901, 252, 36, 36]
@@ -1246,7 +1282,7 @@ styles:
             shaders:
                 blocks:
                     position: |
-                        position.y -= 12.0* u_meters_per_pixel;
+                        position.y -= 8.0* u_meters_per_pixel;
 
 
 scene:
@@ -1274,9 +1310,14 @@ layers:
         lakes:
             filter: 
                 all:
-                    - kind: [ocean, lake, water, reservoir]
+                    - kind: [ocean, lake, water, reservoir,playa]
                 any:
                     # limit show smaller landuse areas to higher zooms
+                    - { $zoom: { min: 4 },  area: { min: 15000000000 } }
+                    - { $zoom: { min: 5 },  area: { min: 1000000000 } }
+                    - { $zoom: { min: 6 },  area: { min: 500000000 } }
+                    - { $zoom: { min: 7 },  area: { min: 160000000 } }
+                    - { $zoom: { min: 8 },  area: { min: 40000000 } }
                     - { $zoom: { min: 9 },  area: { min: 10000000 } }
                     - { $zoom: { min: 10 }, area: { min: 8000000 } }
                     - { $zoom: { min: 11 }, area: { min: 2000000 } }
@@ -1290,16 +1331,27 @@ layers:
                 ground:
                     color: *water1
         other_water:
-            filter: { not: { kind: [ocean, lake, water, reservoir] }, $zoom: { min: 11 }, area: { min: 100 } }
+            filter: { not: { kind: [ocean, lake, water, reservoir,playa] }, $zoom: { min: 11 }, area: { min: 100 } }
             draw:
                 ground:
                     color: *water1
+        playas-early:
+            filter: { kind: playa, $zoom: {max:6} }
+            draw:
+                ground:
+                    visible: false
+        playas:
+            filter: { kind: playa, $zoom: {min:6} }
+            draw:
+                ground:
+                    visible: true
+                    color: *water2
         water_boundaries:
           filter: { boundary: yes, $zoom: { min: 12 } }
           draw:
             lines:
               order: 4
-              color: '#ff0000'
+              color: *water1_o
               width: 2px
               cap: round
 
@@ -1999,6 +2051,10 @@ layers:
                     flatlines:
                         order: 8
                         color: blue
+            early:
+                filter: { scalerank: [3,4,5,6,7,8,9], $zoom: {max: 8} }
+                draw:
+                    visible: false
 
 #        subregions:
 #            filter: { kind: county, $zoom: { min: 10 } }
@@ -2024,16 +2080,41 @@ layers:
 
     country-early:
         data: { source: osm, layer: places }
-        filter: { name: true, kind: [country], $zoom: {min: 3, max: 6} }
+        filter: { name: true, population: true, kind: [country], $zoom: {min: 3, max: 6} }
         draw:
             text:
                 priority: 2
                 visible: *text_visible_admin
-                text_source: function() { return feature["name"].toUpperCase(); }
+                text_source: function() { if(feature["name:en"]) { return feature["name:en"].toUpperCase(); } else { return feature["name"].toUpperCase(); } }
                 font:
                     typeface: 200 11px Helvetica
                     fill: *text_fill
                     stroke: { color: *text_stroke, width: 4 }
+#            icons:
+#                size: [[13, 12px], [15, 18px]]
+#                interactive: true
+#                sprite: *townspot_sprite
+        early-ones:
+            # US, Brazil, China, Russia, Canada, Greenland, Iceland, Australia, India, Japan, Guam, Indonesia, South Africa, Egypt, Nigeria, Kenya
+            filter: { not: { name: ["United States of America","Brasil","中华人民共和国","Россия","Canada","Kalaallit Nunaat","Ísland","Australia","India","日本","Guam","Indonesia","South Africa","مصر","Nigeria","Kenya"] }, $zoom: {min: 3, max: 4} }
+            draw:
+                text:
+                    visible: false
+        early-ones-z4:
+            filter: { name: [Nederland,Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,Crna Gora,Македонија,The Gambia,Burundi,Swaziland,الإمارات العربية المتحدة,العراق,Singapore,El Salvador,Belize,Trinidad and Tobago, Saint Lucia, Montserrat,Anguilla,República Dominicana,Bahamas,British Virgin Islands,Antigua and Barbuda,Grenada,Sint Maarten,Saint Kitts and Nevis,Cayman Islands,België - Belgique - Belgien], $zoom: {min: 4, max: 5} }
+            draw:
+                text:
+                    visible: false
+        early-ones-z5:
+            filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,El Salvador,Belize,België - Belgique - Belgien], $zoom: {min: 5, max: 6} }
+            draw:
+                text:
+                    visible: false
+        early-ones-z6:
+            filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ], $zoom: {min: 6, max: 7} }
+            draw:
+                text:
+                    visible: false
 
     country:
         data: { source: osm, layer: places }
@@ -2042,15 +2123,25 @@ layers:
             text:
                 priority: 2
                 visible: *text_visible_admin
-                text_source: function() { return feature.["name"].toUpperCase(); }
+                text_source: function() { if(feature["name:en"]) { return feature["name:en"].toUpperCase(); } else { return feature["name"].toUpperCase(); } }
                 font:
                     typeface: 800 14px Helvetica
                     fill: *text_fill
                     stroke: { color: *text_stroke, width: 4 }
+        early-ones-z5-6:
+            filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,België - Belgique - Belgien], $zoom: {min: 5, max: 7} }
+            draw:
+                text:
+                    visible: false
+        early-ones-z7:
+            filter: { name: [Liechtenstein,San Marino,Civitatis Vaticanæ], $zoom: {min: 7, max: 8} }
+            draw:
+                text:
+                    visible: false
 
     region-early:
         data: { source: osm, layer: places }
-        filter: { name: true, kind: [state], $zoom: {min: 4, max: 6} }
+        filter: { name: true, kind: [state], $zoom: {min: 4, max: 6}, not: { name: ["Western Cape","Eastern Cape","Northern Cape","North West","Limpopo","KwaZulu-Natal","Hamburg","Freie und Hansestadt Hamburg","Neuchâtel","Nordrhein-Westfalen","Haute-Normandie","Baden-Württemberg","Bayern","Sachsen-Anhalt","Berlin","Mecklenburg-Vorpommern","Schleswig-Holstein","Brandenburg","Niedersachsen","Saarland","Thüringen","Hessen","Sachsen"] } }
         draw:
             text:
                 priority: 2
@@ -2063,16 +2154,31 @@ layers:
 
     region:
         data: { source: osm, layer: places }
-        filter: { name: true, kind: [state], $zoom: {min: 6} }
+        filter: { name: true, kind: [state], $zoom: {min: 6, max: 9} }
         draw:
             text:
                 priority: 2
                 visible: *text_visible_admin
-                text_source: function() { return feature.name.toUpperCase(); }
+                text_source: function() { if(feature["name:short"]) { return feature["name"].toUpperCase(); } else { return "" } }
                 font:
                     typeface: 800 14px Helvetica
                     fill: *text_fill
                     stroke: { color: *text_stroke, width: 4 }
+#            icons:
+#                size: [[13, 12px], [15, 18px]]
+#                interactive: true
+#                sprite: *townspot_sprite
+        pesky:
+            filter: { name: ["Western Cape","Eastern Cape","Northern Cape","North West","Limpopo","KwaZulu-Natal","Hamburg","Freie und Hansestadt Hamburg","Neuchâtel","Nordrhein-Westfalen","Haute-Normandie","Baden-Württemberg","Bayern","Sachsen-Anhalt","Berlin","Mecklenburg-Vorpommern","Schleswig-Holstein","Brandenburg","Niedersachsen","Saarland","Thüringen","Hessen","Sachsen"], $zoom: {min: 6, max: 8} }
+            draw:
+                visible: false
+                text:
+                    visible: false
+        small-ones:
+            filter: { name: ["Delaware","New Jersey","Connecticut","Rhode Island","Massachusetts","New Hampshire","Vermont"], $zoom: {min: 6, max: 8} }
+            draw:
+                text:
+                    text_source: function() { if(feature["name:abbreviation"]) { return feature["name:abbreviation"].toUpperCase(); } else { return feature["name"].toUpperCase(); } }
                     
     populated-places-natural-earth-early:
         data: { source: osm, layer: places }
@@ -2089,7 +2195,7 @@ layers:
             icons:
                 size: [[13, 12px], [15, 18px]]
                 interactive: true
-                sprite: generic
+                sprite: *townspot_sprite
 
     populated-places-natural-earth-early2:
         data: { source: osm, layer: places }
@@ -2106,7 +2212,7 @@ layers:
             icons:
                 size: [[13, 12px], [15, 18px]]
                 interactive: true
-                sprite: generic
+                sprite: *townspot_sprite
 
     populated-places-natural-earth-early3:
         data: { source: osm, layer: places }
@@ -2123,7 +2229,7 @@ layers:
             icons:
                 size: [[13, 12px], [15, 18px]]
                 interactive: true
-                sprite: generic
+                sprite: *townspot_sprite
                 
     populated-places-natural-earth:
         data: { source: osm, layer: places }
@@ -2140,7 +2246,7 @@ layers:
             icons:
                 size: [[13, 12px], [15, 18px]]
                 interactive: true
-                sprite: generic
+                sprite: *townspot_sprite
 
     populated-places-osm:
         data: { source: osm, layer: places }
@@ -2154,19 +2260,33 @@ layers:
                     typeface: 500 10px Helvetica
                     fill: *text_fill
                     stroke: { color: *text_stroke, width: 4 }
-            icons:
-                filter: { $zoom: { max: 11 } }
-                size: [[13, 12px], [15, 18px]]
-                interactive: true
-                sprite: generic
-
+        # add townspots from zoom 0 thru zoom 11
+        townspots:
+            filter: { $zoom: { max: 11 } }
+            draw:
+                icons:
+                    size: [[13, 12px], [15, 18px]]
+                    interactive: true
+                    sprite: *townspot_sprite
         # nix major cities under z15
         major-places:
-           filter: { kind: [state, province, city], $zoom: { min: 13 } }
-           visible: false
+            filter: { kind: [city], $zoom: { min: 13, max: 15 } }
+            visible: false
+            draw:
+                place_text:
+                    font:
+                        typeface: 500 14px Helvetica
+        major-places:
+            filter: { kind: [city], $zoom: { min: 15 } }
+            visible: false
+            draw:
+                place_text:
+                    visible: false
+                    font:
+                        typeface: 500 14px Helvetica
         medium-places:
-           filter: { kind: [town], $zoom: { max: 11 } }
-           visible: false
+            filter: { kind: [town], $zoom: { max: 11 } }
+            visible: false
         # nix podunk burgs under z15
         minor-places:
             filter: { kind: [hamlet, village], $zoom: { max: 15 } }
@@ -2243,10 +2363,9 @@ layers:
                         fill: *text_fill
                         typeface: 500 12px Helvetica
                         stroke: { color: *text_stroke, width: 4 }
-
-        park-labels-early:
+        landuse-labels-early:
             filter:
-                kind: [park, forest, conservation, nature_reserve]
+                area: true
                 $zoom: { min: 0, max: 15 }
             draw:
                 pois_text_early:
@@ -2256,9 +2375,28 @@ layers:
                         fill: *text_fill
                         typeface: 500 12px Helvetica
                         stroke: { color: *text_stroke, width: 4 }
-        park-labels:
+            wilderness-areas-early:
+                filter:
+                    kind: nature_reserve
+                    #name: function() { return feature.name.includes("Wilderness") }
+                    $zoom: { max: 10 }
+                draw:
+                    icons:
+                        #visible: false
+                        sprite: forest
+                    pois_text_early:
+                        #visible: false
+                        text_source: function() { if(feature.name.indexOf("Wilderness")>0) { return "" } else { return feature.name } }
+            wilderness-areas:
+                filter:
+                    kind: nature_reserve
+                    $zoom: { min: 10 }
+                draw:
+                    icons:
+                        sprite: forest
+        landuse-labels:
             filter:
-                kind: [park, forest, conservation, nature_reserve]
+                area: true
                 $zoom: { min: 15 }
             draw:
                 pois_text:
@@ -2268,7 +2406,6 @@ layers:
                         fill: *text_fill
                         typeface: 500 12px Helvetica
                         stroke: { color: *text_stroke, width: 4 }
-
         parking-labels:
             filter:
                 kind: [parking]
@@ -2281,7 +2418,16 @@ layers:
                         fill: *text_fill
                         typeface: 500 12px Helvetica
                         stroke: { color: *text_stroke, width: 4 }
-
+        car-sharing:
+            filter: { kind: car_sharing, $zoom: { max: 17 } }
+            draw:
+                icons:
+                    visible: false
+        tram-stop:
+            filter: { kind: tram_stop, $zoom: { max: 16 } }
+            draw:
+                icons:
+                    visible: false
         bus-stop-labels:
             filter:
                 kind: [bus_stop, bus_station]
@@ -2325,7 +2471,7 @@ layers:
                 filter: { kind: [pub, bar] }
                 draw:   { icons: { sprite: bar } }
             beer-garden:
-                filter: { kind: [biergarten, beer-garden] }
+                filter: { kind: [biergarten, beer-garden, brewery] }
                 draw:   { icons: { sprite: beer-garden } }
             bike-shop:
                 filter: { kind: [bicycle, bicycle_rental, bike, bike_shop] }
@@ -2369,9 +2515,6 @@ layers:
             car-wash:
                 filter: { kind: [car_wash, car-wash] }
                 draw:   { icons: { sprite: car-wash } }
-            carribean-restaurant:
-                filter: { kind: [carribean-restaurant] }
-                draw:   { icons: { sprite: carribean-restaurant } }
             castle:
                 filter: { kind: [castle, fort] }
                 draw:   { icons: { sprite: castle } }
@@ -2381,11 +2524,8 @@ layers:
             cheese-shop:
                 filter: { kind: [cheese, cheese-shop] }
                 draw:   { icons: { sprite: cheese-shop } }
-            chinese-restaurant:
-                filter: { kind: [chinese-restaurant] }
-                draw:   { icons: { sprite: chinese-restaurant } }
             clothing-store:
-                filter: { kind: [clothes, chothing-store] }
+                filter: { kind: [clothes, chothing-store, "clothes store", fashion] }
                 draw:   { icons: { sprite: clothing-store } }
             coffee-shop:
                 filter: { kind: [cafe, coffee-shop] }
@@ -2412,7 +2552,7 @@ layers:
                 filter: { kind: [electronics, electronics-store, computer] }
                 draw:   { icons: { sprite: electronics-store } }
             factory:
-                filter: { kind: [factory, industrial, chimney, sub_station, substation] }
+                filter: { kind: [factory, industrial, chimney, sub_station, substation, wastewater_plant] }
                 draw:   { icons: { sprite: factory } }
             farmers-market:
                 filter: { kind: [farmers_market, farmers-market] }
@@ -2435,6 +2575,9 @@ layers:
             flower-shop:
                 filter: { kind: [florist, flower-shop] }
                 draw:   { icons: { sprite: flower-shop } }
+            forest:
+                filter: { kind: [forest, conservation] }
+                draw:   { icons: { sprite: forest } }
             furniture-store:
                 filter: { kind: [furniture, furniture-store] }
                 draw:   { icons: { sprite: furniture-store } }
@@ -2447,15 +2590,15 @@ layers:
             general-entertainment:
                 filter: { kind: [ticket, general_entertainment] }
                 draw:   { icons: { sprite: general-entertainment } }
-            general-travel:
-                filter: { kind: [general-travel] }
-                draw:   { icons: { sprite: general-travel } }
             generic:
                 filter: { kind: [generic, subway_entrance] }
                 draw:   { icons: { sprite: generic } }
             gift-shop:
                 filter: { kind: [gift, gift-shop] }
                 draw:   { icons: { sprite: gift-shop } }
+            golf-course:
+                filter: { kind: [golf-course, golf_course] }
+                draw:   { icons: { sprite: golf-course } }
             government-building:
                 filter: { kind: [townhall, public_building, embassy] }
                 draw:   { icons: { sprite: government-building } }
@@ -2477,6 +2620,9 @@ layers:
             hunting-supply:
                 filter: { kind: [hunting, fishing] }
                 draw:   { icons: { sprite: hunting-supply } }
+            ice-cream-shop:
+                filter: { kind: [ice_cream] }
+                draw:   { icons: { sprite: ice-cream-shop } }
             information:
                 filter: { kind: [info, information] }
                 draw:   { icons: { sprite: information } }
@@ -2489,11 +2635,14 @@ layers:
             laundry:
                 filter: { kind: [laundry, dry_cleaning] }
                 draw:   { icons: { sprite: laundry } }
+            light-rail:
+                filter: { kind: [light-rail, light_rail, tram_stop] }
+                draw:   { icons: { sprite: light-rail } }
             liquor-store:
                 filter: { kind: [alcohol, liquor-store, liquor] }
                 draw:   { icons: { sprite: liquor-store } }
             market:
-                filter: { kind: [market, variety_store, boutique, dairy] }
+                filter: { kind: [market, variety_store, boutique, dairy, retail] }
                 draw:   { icons: { sprite: market } }
             mine:
                 filter: { kind: [mind, quarry, mineshaft, adit] }
@@ -2526,7 +2675,7 @@ layers:
                 filter: { kind: [nightclub, nightlife] }
                 draw:   { icons: { sprite: nightlife } }
             office:
-                filter: { kind: [insurance, office] }
+                filter: { kind: [insurance, office, company] }
                 draw:   { icons: { sprite: office } }
             office-supplies:
                 filter: { kind: [office_supplies, office-supplies, stationery] }
@@ -2534,11 +2683,8 @@ layers:
             optical-shop:
                 filter: { kind: [optician, optical_shop, optical-shop] }
                 draw:   { icons: { sprite: optical-shop } }
-            park:
-                filter: { kind: [park, forest, conservation, nature_reserve] }
-                draw:   { icons: { sprite: park } }
             performing-arts:
-                filter: { kind: [theater, performing-arts] }
+                filter: { kind: [theater, theatre, performing-arts] }
                 draw:   { icons: { sprite: performing-arts } }
             pet-store:
                 filter: { kind: [pet, pet-store, pet-service, pet_store] }
@@ -2547,7 +2693,7 @@ layers:
                 filter: { kind: [pharmacy, chemist] }
                 draw:   { icons: { sprite: pharmacy } }
             photography-lab:
-                filter: { kind: [photo_studio, photography_lab] }
+                filter: { kind: [photo_studio, photography_lab, photographer] }
                 draw:   { icons: { sprite: photography-lab } }
             picnic-spot:
                 filter: { kind: [picnic_site, picnic_spot, picnic-spot] }
@@ -2571,7 +2717,7 @@ layers:
                 filter: { kind: [recycling, recycling-facility] }
                 draw:   { icons: { sprite: recycling-facility } }
             rental-car:
-                filter: { kind: [rental-car, car_rental] }
+                filter: { kind: [rental-car, car_rental, car_sharing] }
                 draw:   { icons: { sprite: rental-car } }
             rest-area:
                 filter: { kind: [rest_area, rest-area] }
@@ -2831,6 +2977,14 @@ layers:
             draw:
                 polygons:
                     order: 2
+                    color: *purple
+
+        military:
+            filter:
+                kind: military
+            draw:
+                polygons:
+                    order: 1
                     color: *purple
 
 
