@@ -2549,7 +2549,7 @@ layers:
                 filter: { kind: [electronics, electronics-store, computer] }
                 draw:   { icons: { sprite: electronics-store } }
             factory:
-                filter: { kind: [factory, industrial, chimney, sub_station, substation, wastewater_plant, works, water_works] }
+                filter: { kind: [factory, industrial, chimney, sub_station, substation, wastewater_plant, works, water_works, plant, generator] }
                 draw:   { icons: { sprite: factory } }
             farmers-market:
                 filter: { kind: [farmers_market, farmers-market] }
