@@ -2549,7 +2549,7 @@ layers:
                 filter: { kind: [electronics, electronics-store, computer] }
                 draw:   { icons: { sprite: electronics-store } }
             factory:
-                filter: { kind: [factory, industrial, chimney, sub_station, substation, wastewater_plant] }
+                filter: { kind: [factory, industrial, chimney, sub_station, substation, wastewater_plant, works, water_works] }
                 draw:   { icons: { sprite: factory } }
             farmers-market:
                 filter: { kind: [farmers_market, farmers-market] }
@@ -2919,7 +2919,7 @@ layers:
             draw:
                 polygons:
                     order: 2
-                    color: green
+                    color: *grey3
         retail:
             filter:
                 kind: retail
@@ -2975,7 +2975,6 @@ layers:
                 polygons:
                     order: 2
                     color: *purple
-
         military:
             filter:
                 kind: military
@@ -2983,6 +2982,13 @@ layers:
                 polygons:
                     order: 1
                     color: *purple
+                    
+        man-made:
+            filter: { kind: [pier,wastewater_plant,works,bridge,tower,breakwater,water_works,groyne,dike,cutline] }
+            draw: { polygons: { order: 2, color: *grey3 } }
+            pier:
+                filter: { kind: [pier,bridge,breakwater,groyne,dike,cutline] }
+                draw: { polygons: { order: 2, color: *earth1 } }
 
 
     landuse-not-filtered:
