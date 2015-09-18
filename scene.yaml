@@ -1261,29 +1261,6 @@ styles:
     icons:
         base: points
         texture: pois
-        interactive: True
-        
-    pois_text_early:
-            base: text
-            shaders:
-                blocks:
-                    position: |
-                        position.y -= 14.0* u_meters_per_pixel;
-
-    pois_text:
-            base: text
-            shaders:
-                blocks:
-                    position: |
-                        position.y -= 19.0* u_meters_per_pixel;
-
-    place_text:
-            base: text
-            shaders:
-                blocks:
-                    position: |
-                        position.y -= 8.0* u_meters_per_pixel;
-
 
 scene:
     background:
@@ -2183,112 +2160,117 @@ layers:
                     text:
                         text_source: function() { if(feature["name:abbreviation"]) { return feature["name:abbreviation"].toUpperCase(); } else { return feature["name"].toUpperCase(); } }
 
-        populated-places-natural-earth-early:
-            filter: { name: true, source: naturalearthdata.com, $zoom: {min: 2, max: 4}, scalerank: 0 }
+        populated-places:
             draw:
-                place_text:
-                    priority: 1
-                    interactive: true
-                    visible: *text_visible_populated_places
-                    font:
-                        size: 10px
-                        fill: *text_fill
-                        stroke: { color: *text_stroke, width: 4 }
-                icons:
-                    size: [[13, 12px], [15, 18px]]
-                    interactive: true
-                    sprite: *townspot_sprite
+                text:
+                    offset: [0, 8px]
 
-        populated-places-natural-earth-early2:
-            filter: { name: true, source: naturalearthdata.com, $zoom: {min: 4, max: 5}, scalerank: [0,1] }
-            draw:
-                place_text:
-                    priority: 1
-                    interactive: true
-                    visible: *text_visible_populated_places
-                    font:
-                        size: 10px
-                        fill: *text_fill
-                        stroke: { color: *text_stroke, width: 4 }
-                icons:
-                    size: [[13, 12px], [15, 18px]]
-                    interactive: true
-                    sprite: *townspot_sprite
-
-        populated-places-natural-earth-early3:
-            filter: { name: true, source: naturalearthdata.com, $zoom: {min: 5, max: 6}, scalerank: [0,1,2,3] }
-            draw:
-                place_text:
-                    priority: 1
-                    interactive: true
-                    visible: *text_visible_populated_places
-                    font:
-                        size: 10px
-                        fill: *text_fill
-                        stroke: { color: *text_stroke, width: 4 }
-                icons:
-                    size: [[13, 12px], [15, 18px]]
-                    interactive: true
-                    sprite: *townspot_sprite
-
-        populated-places-natural-earth:
-            filter: { name: true, source: naturalearthdata.com, $zoom: {min: 6, max: 8} }
-            draw:
-                place_text:
-                    priority: 1
-                    interactive: true
-                    visible: *text_visible_populated_places
-                    font:
-                        size: 10px
-                        fill: *text_fill
-                        stroke: { color: *text_stroke, width: 4 }
-                icons:
-                    size: [[13, 12px], [15, 18px]]
-                    interactive: true
-                    sprite: *townspot_sprite
-
-        populated-places-osm:
-            filter: { name: true, source: openstreetmap, not: { kind: [county, state, island, neighbourhood, suburb, quarter] }, $zoom: {min: 8} }
-            draw:
-                place_text:
-                    priority: 1
-                    interactive: true
-                    visible: *text_visible_populated_places
-                    font:
-                        size: 10px
-                        fill: *text_fill
-                        stroke: { color: *text_stroke, width: 4 }
-            # add townspots from zoom 0 thru zoom 11
-            townspots:
-                filter: { $zoom: { max: 11 } }
+            populated-places-natural-earth-early:
+                filter: { name: true, source: naturalearthdata.com, $zoom: {min: 2, max: 4}, scalerank: 0 }
                 draw:
+                    text:
+                        priority: 1
+                        interactive: true
+                        visible: *text_visible_populated_places
+                        font:
+                            size: 10px
+                            fill: *text_fill
+                            stroke: { color: *text_stroke, width: 4 }
                     icons:
                         size: [[13, 12px], [15, 18px]]
                         interactive: true
                         sprite: *townspot_sprite
-            # nix major cities under z15
-            major-places:
-                filter: { kind: [city], $zoom: { min: 13, max: 15 } }
-                visible: false
+
+            populated-places-natural-earth-early2:
+                filter: { name: true, source: naturalearthdata.com, $zoom: {min: 4, max: 5}, scalerank: [0,1] }
                 draw:
-                    place_text:
+                    text:
+                        priority: 1
+                        interactive: true
+                        visible: *text_visible_populated_places
                         font:
-                            size: 14px
-            major-places:
-                filter: { kind: [city], $zoom: { min: 15 } }
-                visible: false
+                            size: 10px
+                            fill: *text_fill
+                            stroke: { color: *text_stroke, width: 4 }
+                    icons:
+                        size: [[13, 12px], [15, 18px]]
+                        interactive: true
+                        sprite: *townspot_sprite
+
+            populated-places-natural-earth-early3:
+                filter: { name: true, source: naturalearthdata.com, $zoom: {min: 5, max: 6}, scalerank: [0,1,2,3] }
                 draw:
-                    place_text:
-                        visible: false
+                    text:
+                        priority: 1
+                        interactive: true
+                        visible: *text_visible_populated_places
                         font:
-                            size: 14px
-            medium-places:
-                filter: { kind: [town], $zoom: { max: 11 } }
-                visible: false
-            # nix podunk burgs under z15
-            minor-places:
-                filter: { kind: [hamlet, village], $zoom: { max: 15 } }
-                visible: false
+                            size: 10px
+                            fill: *text_fill
+                            stroke: { color: *text_stroke, width: 4 }
+                    icons:
+                        size: [[13, 12px], [15, 18px]]
+                        interactive: true
+                        sprite: *townspot_sprite
+
+            populated-places-natural-earth:
+                filter: { name: true, source: naturalearthdata.com, $zoom: {min: 6, max: 8} }
+                draw:
+                    text:
+                        priority: 1
+                        interactive: true
+                        visible: *text_visible_populated_places
+                        font:
+                            size: 10px
+                            fill: *text_fill
+                            stroke: { color: *text_stroke, width: 4 }
+                    icons:
+                        size: [[13, 12px], [15, 18px]]
+                        interactive: true
+                        sprite: *townspot_sprite
+
+            populated-places-osm:
+                filter: { name: true, source: openstreetmap, not: { kind: [county, state, island, neighbourhood, suburb, quarter] }, $zoom: {min: 8} }
+                draw:
+                    text:
+                        priority: 1
+                        interactive: true
+                        visible: *text_visible_populated_places
+                        font:
+                            size: 10px
+                            fill: *text_fill
+                            stroke: { color: *text_stroke, width: 4 }
+                # add townspots from zoom 0 thru zoom 11
+                townspots:
+                    filter: { $zoom: { max: 11 } }
+                    draw:
+                        icons:
+                            size: [[13, 12px], [15, 18px]]
+                            interactive: true
+                            sprite: *townspot_sprite
+                # nix major cities under z15
+                major-places:
+                    filter: { kind: [city], $zoom: { min: 13, max: 15 } }
+                    visible: false
+                    draw:
+                        text:
+                            font:
+                                size: 14px
+                major-places:
+                    filter: { kind: [city], $zoom: { min: 15 } }
+                    visible: false
+                    draw:
+                        text:
+                            visible: false
+                            font:
+                                size: 14px
+                medium-places:
+                    filter: { kind: [town], $zoom: { max: 11 } }
+                    visible: false
+                # nix podunk burgs under z15
+                minor-places:
+                    filter: { kind: [hamlet, village], $zoom: { max: 15 } }
+                    visible: false
 
         neighborhood:
             filter: { name: true, kind: [neighbourhood, suburb, quarter], $zoom: { min: 14 } }
@@ -2333,6 +2315,7 @@ layers:
                 interactive: true
             text:
                 visible: false    # labels are enabled by each layer below
+                offset: [0, 19px]
                 font:
                     family: Helvetica
                     weight: 500
@@ -2359,7 +2342,7 @@ layers:
         default-label-text:
             filter: { $zoom: { min: 18 } }
             draw:
-                pois_text:
+                text:
                     visible: *text_visible_poi_landuse
                     interactive: true
                     font:
@@ -2371,9 +2354,10 @@ layers:
                 area: true
                 $zoom: { min: 0, max: 15 }
             draw:
-                pois_text_early:
+                text:
                     visible: *text_visible_poi_landuse
                     interactive: true
+                    offset: [0, 14px]
                     font:
                         fill: *text_fill
                         size: 12px
@@ -2387,7 +2371,7 @@ layers:
                 wilderness-areas-early:
                     filter: function() { return $zoom < 10 && feature.name.includes("Wilderness") }
                     draw:
-                        pois_text_early: { visible: false }
+                        text: { visible: false }
                         icons: { visible: false }                
                 national-park:
                     filter: function() { return feature.name.includes("Park") }
@@ -2399,7 +2383,7 @@ layers:
                 area: true
                 $zoom: { min: 15 }
             draw:
-                pois_text:
+                text:
                     visible: *text_visible_poi_landuse
                     interactive: true
                     font:
@@ -2411,7 +2395,7 @@ layers:
                 kind: [parking]
                 $zoom: { min: 17 }
             draw:
-                pois_text:
+                text:
                     visible: *text_visible_poi_landuse
                     interactive: true
                     font:
@@ -2433,7 +2417,7 @@ layers:
                 kind: [bus_stop, bus_station]
                 $zoom: { min: 18 }
             draw:
-                pois_text:
+                text:
                     visible: *text_visible_poi_landuse
                     interactive: true
                     font:
