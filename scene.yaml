@@ -1370,6 +1370,11 @@ layers:
                 outline:
                     # this is overriden in all later substyles
                     color: *major_casing1
+            text:
+                visible: false    # labels are enabled by each layer below
+                font:
+                    family: Helvetica
+                    weight: 500
 
         # default outlines starting at zoom 16
         default-outline-width:
@@ -1485,7 +1490,7 @@ layers:
                         text_source: ref
                         font:
                             fill: *text_fill
-                            typeface: 500 12px Helvetica
+                            size: 12px
                             stroke: { color: *text_stroke, width: 4 }
             labels-highway-late:
                 filter: { $zoom: { min: 13, max: 14 } }
@@ -1497,7 +1502,7 @@ layers:
                         text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
                         font:
                             fill: *text_fill
-                            typeface: 500 13px Helvetica
+                            size: 13px
                             stroke: { color: *text_stroke, width: 4 }
             labels-highway-late2:
                 filter: { $zoom: { min: 14, max: 15 } }
@@ -1507,7 +1512,7 @@ layers:
                         visible: *text_visible_highway
                         font:
                             fill: *text_fill
-                            typeface: 500 14px Helvetica
+                            size: 14px
                             stroke: { color: *text_stroke, width: 4 }
             labels-highway-late3:
                 filter: { $zoom: { min: 15, max: 18 } }
@@ -1517,7 +1522,7 @@ layers:
                         visible: *text_visible_highway
                         font:
                             fill: *text_fill
-                            typeface: 500 15px Helvetica
+                            size: 15px
                             stroke: { color: *text_stroke, width: 4 }
             later3:
                 filter: { $zoom: { min: 18 } }
@@ -1527,7 +1532,7 @@ layers:
                         visible: *text_visible_highway
                         font:
                             fill: *text_fill2
-                            typeface: 500 18px Helvetica
+                            size: 18px
                             stroke: { color: *highway1, width: 4 }
 
         major_road:
@@ -1584,7 +1589,7 @@ layers:
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
                                 fill: *text_fill
-                                typeface: 500 11px Helvetica
+                                size: 11px
                                 stroke: { color: *text_stroke, width: 4 }
                 labels-trunk_primary-early2:
                     filter: { $zoom: { min: 13, max: 15 } }
@@ -1595,7 +1600,7 @@ layers:
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
                                 fill: *text_fill
-                                typeface: 500 12px Helvetica
+                                size: 12px
                                 stroke: { color: *text_stroke, width: 4 }
                 labels-trunk_primary-late:
                     filter: { $zoom: { min: 15, max: 18 } }
@@ -1606,7 +1611,7 @@ layers:
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
                                 fill: *text_fill
-                                typeface: 500 14px Helvetica
+                                size: 14px
                                 stroke: { color: *text_stroke, width: 4 }
                 labels-trunk_primary-late2:
                     filter: { $zoom: { min: 18 } }
@@ -1617,7 +1622,7 @@ layers:
                             text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
                             font:
                                 fill: *text_fill2
-                                typeface: 500 18px Helvetica
+                                size: 18px
                                 stroke: { color: *major_road1, width: 4 }
             link:
                 filter: { is_link: yes } # on- and off-ramps, etc
@@ -1666,7 +1671,7 @@ layers:
                                 text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                                 font:
                                     fill: *text_fill
-                                    typeface: 500 13px Helvetica
+                                    size: 13px
                                     stroke: { color: *text_stroke, width: 4 }
                 labels-secondary:
                     filter: { $zoom: { min: 13, max: 15 } }
@@ -1677,7 +1682,7 @@ layers:
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
                                 fill: *text_fill
-                                typeface: 500 13px Helvetica
+                                size: 13px
                                 stroke: { color: *text_stroke, width: 4 }
                 labels-secondary2:
                     filter: { $zoom: { min: 15, max: 18 } }
@@ -1688,7 +1693,7 @@ layers:
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
                                 fill: *text_fill
-                                typeface: 500 14px Helvetica
+                                size: 14px
                                 stroke: { color: *text_stroke, width: 4 }
                 labels-secondary3:
                     filter: { $zoom: { min: 18 } }
@@ -1700,7 +1705,7 @@ layers:
                             text_source: function() { if( feature.ref && feature.name ) { return feature.ref + " " + feature.name; } else { return feature.name; } }
                             font:
                                 fill: *text_fill2
-                                typeface: 500 16px Helvetica
+                                size: 16px
                                 stroke: { color: *major_road1, width: 4 }
             tertiary:
                 filter: { highway: [tertiary, tertiary_link] }
@@ -1741,7 +1746,7 @@ layers:
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
                                 fill: *text_fill
-                                typeface: 500 13px Helvetica
+                                size: 13px
                                 stroke: { color: *text_stroke, width: 4 }
                 labels-tertiary2:
                     filter: { $zoom: { min: 15, max: 18 } }
@@ -1752,7 +1757,7 @@ layers:
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
                                 fill: *text_fill
-                                typeface: 500 14px Helvetica
+                                size: 14px
                                 stroke: { color: *text_stroke, width: 4 }
                 labels-tertiary3:
                     filter: { $zoom: { min: 18 } }
@@ -1763,7 +1768,7 @@ layers:
                             text_source: function() { if( feature.ref && feature.name ) { if( feature.ref.length < 6 ) { return feature.ref + " " + feature.name; } else { return feature.name; } } else { return feature.name; } }
                             font:
                                 fill: *text_fill2
-                                typeface: 500 15px Helvetica
+                                size: 15px
                                 stroke: { color: *major_road1, width: 4 }
         minor_road:
             filter: { kind: minor_road, not: { highway: service } }
@@ -1803,7 +1808,7 @@ layers:
                         text_source: name
                         font:
                             fill: *text_fill
-                            typeface: 500 12px Helvetica
+                            size: 12px
                             stroke: { color: *text_stroke, width: 4 }
             labels-minor_road2:
                 filter: { $zoom: { min: 18 } }
@@ -1814,7 +1819,7 @@ layers:
                         text_source: name
                         font:
                             fill: *text_fill2
-                            typeface: 500 15px Helvetica
+                            size: 15px
                             stroke: { color: *minor_road3, width: 4 }
         service_road:
             filter: { kind: minor_road, highway: service }
@@ -1837,7 +1842,7 @@ layers:
                         text_source: name
                         font:
                             fill: *text_fill
-                            typeface: 500 12px Helvetica
+                            size: 12px
                             stroke: { color: *text_stroke, width: 4 }
             labels-service_road2:
                 filter: { $zoom: { min: 18 } }
@@ -1848,7 +1853,7 @@ layers:
                         text_source: name
                         font:
                             fill: *text_fill2
-                            typeface: 500 12px Helvetica
+                            size: 12px
                             stroke: { color: *service_road2, width: 4 }
         path:
             filter: { kind: path, not: { highway: steps } }
@@ -1880,7 +1885,7 @@ layers:
                         text_source: name
                         font:
                             fill: *text_fill
-                            typeface: 500 12px Helvetica
+                            size: 12px
                             stroke: { color: *text_stroke, width: 4 }
         steps:
             filter: { kind: path, highway: steps }
@@ -1903,7 +1908,7 @@ layers:
                         text_source: name
                         font:
                             fill: *text_fill
-                            typeface: 500 12px Helvetica
+                            size: 12px
                             stroke: { color: *text_stroke, width: 4 }
         z-order:
             #filter: { $zoom: {min: 12} }
@@ -1923,19 +1928,6 @@ layers:
                         outline:
                             # except bridges and tunnels, their outlines should also self-sort
                             order: function() { return 6 + feature.sort_key; }
-
-#    road_labels:
-#        data: { source: osm, layer: roads }
-#        filter: { railway: false, not: { kind: rail }, $zoom: { min: 10 } }
-#        
-#        draw:
-#            text:
-#                text_source: sort_key
-#                font: 
-#                    typeface: 500 10pt Helvetica
-#                    fill: white
-#                    stroke: { color: black, width: 4}
-
 
     # buildings are the only layer that gets lighting
     buildings-early:
@@ -2003,7 +1995,9 @@ layers:
                 order: 7
                 font:
                     fill: *text_fill
-                    typeface: italic 12px Helvetica
+                    family: Helvetica
+                    style: italic
+                    size: 12px
                     stroke: { color: *building2, width: 4 }
 
 
@@ -2066,244 +2060,248 @@ layers:
 #                    width: [[9, 1px], [14, 2px], [16, 3px], [17, 8m]]
 
 
-    continent:
+    places:
         data: { source: osm, layer: places }
-        filter: { name: true, kind: [continent], $zoom: {max: 5} }
         draw:
             text:
-                visible: *text_visible_continent
-                text_source: function() { return feature.name.toUpperCase(); }
+                visible: false    # labels are enabled by each layer below
                 font:
-                    typeface: italic 13px Helvetica
-                    fill: *text_fill
-                    stroke: { color: *text_stroke, width: 4 }
+                    family: Helvetica
+                    weight: 500
 
-    country-early:
-        data: { source: osm, layer: places }
-        filter: { name: true, population: true, kind: [country], $zoom: {min: 3, max: 6} }
-        draw:
-            text:
-                priority: 2
-                visible: *text_visible_admin
-                text_source: function() { if(feature["name:en"]) { return feature["name:en"].toUpperCase(); } else { return feature["name"].toUpperCase(); } }
-                font:
-                    typeface: 200 11px Helvetica
-                    fill: *text_fill
-                    stroke: { color: *text_stroke, width: 4 }
-#            icons:
-#                size: [[13, 12px], [15, 18px]]
-#                interactive: true
-#                sprite: *townspot_sprite
-        early-ones:
-            # US, Brazil, China, Russia, Canada, Greenland, Iceland, Australia, India, Japan, Guam, Indonesia, South Africa, Egypt, Nigeria, Kenya
-            filter: { not: { name: ["United States of America","Brasil","中华人民共和国","Россия","Canada","Kalaallit Nunaat","Ísland","Australia","India","日本","Guam","Indonesia","South Africa","مصر","Nigeria","Kenya"] }, $zoom: {min: 3, max: 4} }
+        continent:
+            filter: { name: true, kind: [continent], $zoom: {max: 5} }
             draw:
                 text:
-                    visible: false
-        early-ones-z4:
-            filter: { name: [Nederland,Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,Crna Gora,Македонија,The Gambia,Burundi,Swaziland,الإمارات العربية المتحدة,العراق,Singapore,El Salvador,Belize,Trinidad and Tobago, Saint Lucia, Montserrat,Anguilla,República Dominicana,Bahamas,British Virgin Islands,Antigua and Barbuda,Grenada,Sint Maarten,Saint Kitts and Nevis,Cayman Islands,België - Belgique - Belgien], $zoom: {min: 4, max: 5} }
-            draw:
-                text:
-                    visible: false
-        early-ones-z5:
-            filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,El Salvador,Belize,België - Belgique - Belgien], $zoom: {min: 5, max: 6} }
-            draw:
-                text:
-                    visible: false
-        early-ones-z6:
-            filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ], $zoom: {min: 6, max: 7} }
-            draw:
-                text:
-                    visible: false
+                    visible: *text_visible_continent
+                    text_source: function() { return feature.name.toUpperCase(); }
+                    font:
+                        size: 13px
+                        style: italic
+                        fill: *text_fill
+                        stroke: { color: *text_stroke, width: 4 }
 
-    country:
-        data: { source: osm, layer: places }
-        filter: { name: true, kind: [country], $zoom: {min: 6} }
-        draw:
-            text:
-                priority: 2
-                visible: *text_visible_admin
-                text_source: function() { if(feature["name:en"]) { return feature["name:en"].toUpperCase(); } else { return feature["name"].toUpperCase(); } }
-                font:
-                    typeface: 800 14px Helvetica
-                    fill: *text_fill
-                    stroke: { color: *text_stroke, width: 4 }
-        early-ones-z5-6:
-            filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,België - Belgique - Belgien], $zoom: {min: 5, max: 7} }
+        country-early:
+            filter: { name: true, population: true, kind: [country], $zoom: {min: 3, max: 6} }
             draw:
                 text:
+                    priority: 2
+                    visible: *text_visible_admin
+                    text_source: function() { if(feature["name:en"]) { return feature["name:en"].toUpperCase(); } else { return feature["name"].toUpperCase(); } }
+                    font:
+                        size: 11px
+                        weight: 200
+                        fill: *text_fill
+                        stroke: { color: *text_stroke, width: 4 }
+    #            icons:
+    #                size: [[13, 12px], [15, 18px]]
+    #                interactive: true
+    #                sprite: *townspot_sprite
+            early-ones:
+                # US, Brazil, China, Russia, Canada, Greenland, Iceland, Australia, India, Japan, Guam, Indonesia, South Africa, Egypt, Nigeria, Kenya
+                filter: { not: { name: ["United States of America","Brasil","中华人民共和国","Россия","Canada","Kalaallit Nunaat","Ísland","Australia","India","日本","Guam","Indonesia","South Africa","مصر","Nigeria","Kenya"] }, $zoom: {min: 3, max: 4} }
+                draw:
+                    text:
+                        visible: false
+            early-ones-z4:
+                filter: { name: [Nederland,Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,Crna Gora,Македонија,The Gambia,Burundi,Swaziland,الإمارات العربية المتحدة,العراق,Singapore,El Salvador,Belize,Trinidad and Tobago, Saint Lucia, Montserrat,Anguilla,República Dominicana,Bahamas,British Virgin Islands,Antigua and Barbuda,Grenada,Sint Maarten,Saint Kitts and Nevis,Cayman Islands,België - Belgique - Belgien], $zoom: {min: 4, max: 5} }
+                draw:
+                    text:
+                        visible: false
+            early-ones-z5:
+                filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,El Salvador,Belize,België - Belgique - Belgien], $zoom: {min: 5, max: 6} }
+                draw:
+                    text:
+                        visible: false
+            early-ones-z6:
+                filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ], $zoom: {min: 6, max: 7} }
+                draw:
+                    text:
+                        visible: false
+
+        country:
+            filter: { name: true, kind: [country], $zoom: {min: 6} }
+            draw:
+                text:
+                    priority: 2
+                    visible: *text_visible_admin
+                    text_source: function() { if(feature["name:en"]) { return feature["name:en"].toUpperCase(); } else { return feature["name"].toUpperCase(); } }
+                    font:
+                        size: 14px
+                        weight: 800
+                        fill: *text_fill
+                        stroke: { color: *text_stroke, width: 4 }
+            early-ones-z5-6:
+                filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,België - Belgique - Belgien], $zoom: {min: 5, max: 7} }
+                draw:
+                    text:
+                        visible: false
+            early-ones-z7:
+                filter: { name: [Liechtenstein,San Marino,Civitatis Vaticanæ], $zoom: {min: 7, max: 8} }
+                draw:
+                    text:
+                        visible: false
+
+        region-early:
+            filter: { name: true, kind: [state], $zoom: {min: 4, max: 6}, not: { name: ["Western Cape","Eastern Cape","Northern Cape","North West","Limpopo","KwaZulu-Natal","Hamburg","Freie und Hansestadt Hamburg","Neuchâtel","Nordrhein-Westfalen","Haute-Normandie","Baden-Württemberg","Bayern","Sachsen-Anhalt","Berlin","Mecklenburg-Vorpommern","Schleswig-Holstein","Brandenburg","Niedersachsen","Saarland","Thüringen","Hessen","Sachsen"] } }
+            draw:
+                text:
+                    priority: 2
+                    visible: *text_visible_admin
+                    text_source: name:short
+                    font:
+                        size: 12px
+                        weight: 400
+                        fill: *text_fill
+                        stroke: { color: *text_stroke, width: 4 }
+
+        region:
+            filter: { name: true, kind: [state], $zoom: {min: 6, max: 9} }
+            draw:
+                text:
+                    priority: 2
+                    visible: *text_visible_admin
+                    text_source: function() { if(feature["name:short"]) { return feature["name"].toUpperCase(); } else { return "" } }
+                    font:
+                        size: 14px
+                        weight: 800
+                        fill: *text_fill
+                        stroke: { color: *text_stroke, width: 4 }
+    #            icons:
+    #                size: [[13, 12px], [15, 18px]]
+    #                interactive: true
+    #                sprite: *townspot_sprite
+            pesky:
+                filter: { name: ["Western Cape","Eastern Cape","Northern Cape","North West","Limpopo","KwaZulu-Natal","Hamburg","Freie und Hansestadt Hamburg","Neuchâtel","Nordrhein-Westfalen","Haute-Normandie","Baden-Württemberg","Bayern","Sachsen-Anhalt","Berlin","Mecklenburg-Vorpommern","Schleswig-Holstein","Brandenburg","Niedersachsen","Saarland","Thüringen","Hessen","Sachsen"], $zoom: {min: 6, max: 8} }
+                draw:
                     visible: false
-        early-ones-z7:
-            filter: { name: [Liechtenstein,San Marino,Civitatis Vaticanæ], $zoom: {min: 7, max: 8} }
+                    text:
+                        visible: false
+            small-ones:
+                filter: { name: ["Delaware","New Jersey","Connecticut","Rhode Island","Massachusetts","New Hampshire","Vermont"], $zoom: {min: 6, max: 8} }
+                draw:
+                    text:
+                        text_source: function() { if(feature["name:abbreviation"]) { return feature["name:abbreviation"].toUpperCase(); } else { return feature["name"].toUpperCase(); } }
+
+        populated-places-natural-earth-early:
+            filter: { name: true, source: naturalearthdata.com, $zoom: {min: 2, max: 4}, scalerank: 0 }
             draw:
-                text:
-                    visible: false
-
-    region-early:
-        data: { source: osm, layer: places }
-        filter: { name: true, kind: [state], $zoom: {min: 4, max: 6}, not: { name: ["Western Cape","Eastern Cape","Northern Cape","North West","Limpopo","KwaZulu-Natal","Hamburg","Freie und Hansestadt Hamburg","Neuchâtel","Nordrhein-Westfalen","Haute-Normandie","Baden-Württemberg","Bayern","Sachsen-Anhalt","Berlin","Mecklenburg-Vorpommern","Schleswig-Holstein","Brandenburg","Niedersachsen","Saarland","Thüringen","Hessen","Sachsen"] } }
-        draw:
-            text:
-                priority: 2
-                visible: *text_visible_admin
-                text_source: name:short
-                font:
-                    typeface: 400 12px Helvetica
-                    fill: *text_fill
-                    stroke: { color: *text_stroke, width: 4 }
-
-    region:
-        data: { source: osm, layer: places }
-        filter: { name: true, kind: [state], $zoom: {min: 6, max: 9} }
-        draw:
-            text:
-                priority: 2
-                visible: *text_visible_admin
-                text_source: function() { if(feature["name:short"]) { return feature["name"].toUpperCase(); } else { return "" } }
-                font:
-                    typeface: 800 14px Helvetica
-                    fill: *text_fill
-                    stroke: { color: *text_stroke, width: 4 }
-#            icons:
-#                size: [[13, 12px], [15, 18px]]
-#                interactive: true
-#                sprite: *townspot_sprite
-        pesky:
-            filter: { name: ["Western Cape","Eastern Cape","Northern Cape","North West","Limpopo","KwaZulu-Natal","Hamburg","Freie und Hansestadt Hamburg","Neuchâtel","Nordrhein-Westfalen","Haute-Normandie","Baden-Württemberg","Bayern","Sachsen-Anhalt","Berlin","Mecklenburg-Vorpommern","Schleswig-Holstein","Brandenburg","Niedersachsen","Saarland","Thüringen","Hessen","Sachsen"], $zoom: {min: 6, max: 8} }
-            draw:
-                visible: false
-                text:
-                    visible: false
-        small-ones:
-            filter: { name: ["Delaware","New Jersey","Connecticut","Rhode Island","Massachusetts","New Hampshire","Vermont"], $zoom: {min: 6, max: 8} }
-            draw:
-                text:
-                    text_source: function() { if(feature["name:abbreviation"]) { return feature["name:abbreviation"].toUpperCase(); } else { return feature["name"].toUpperCase(); } }
-                    
-    populated-places-natural-earth-early:
-        data: { source: osm, layer: places }
-        filter: { name: true, source: naturalearthdata.com, $zoom: {min: 2, max: 4}, scalerank: 0 }
-        draw:
-            place_text:
-                priority: 1
-                interactive: true
-                visible: *text_visible_populated_places
-                font:
-                    typeface: 500 10px Helvetica
-                    fill: *text_fill
-                    stroke: { color: *text_stroke, width: 4 }
-            icons:
-                size: [[13, 12px], [15, 18px]]
-                interactive: true
-                sprite: *townspot_sprite
-
-    populated-places-natural-earth-early2:
-        data: { source: osm, layer: places }
-        filter: { name: true, source: naturalearthdata.com, $zoom: {min: 4, max: 5}, scalerank: [0,1] }
-        draw:
-            place_text:
-                priority: 1
-                interactive: true
-                visible: *text_visible_populated_places
-                font:
-                    typeface: 500 10px Helvetica
-                    fill: *text_fill
-                    stroke: { color: *text_stroke, width: 4 }
-            icons:
-                size: [[13, 12px], [15, 18px]]
-                interactive: true
-                sprite: *townspot_sprite
-
-    populated-places-natural-earth-early3:
-        data: { source: osm, layer: places }
-        filter: { name: true, source: naturalearthdata.com, $zoom: {min: 5, max: 6}, scalerank: [0,1,2,3] }
-        draw:
-            place_text:
-                priority: 1
-                interactive: true
-                visible: *text_visible_populated_places
-                font:
-                    typeface: 500 10px Helvetica
-                    fill: *text_fill
-                    stroke: { color: *text_stroke, width: 4 }
-            icons:
-                size: [[13, 12px], [15, 18px]]
-                interactive: true
-                sprite: *townspot_sprite
-                
-    populated-places-natural-earth:
-        data: { source: osm, layer: places }
-        filter: { name: true, source: naturalearthdata.com, $zoom: {min: 6, max: 8} }
-        draw:
-            place_text:
-                priority: 1
-                interactive: true
-                visible: *text_visible_populated_places
-                font:
-                    typeface: 500 10px Helvetica
-                    fill: *text_fill
-                    stroke: { color: *text_stroke, width: 4 }
-            icons:
-                size: [[13, 12px], [15, 18px]]
-                interactive: true
-                sprite: *townspot_sprite
-
-    populated-places-osm:
-        data: { source: osm, layer: places }
-        filter: { name: true, source: openstreetmap, not: { kind: [county, state, island, neighbourhood, suburb, quarter] }, $zoom: {min: 8} }
-        draw:
-            place_text:
-                priority: 1
-                interactive: true
-                visible: *text_visible_populated_places
-                font:
-                    typeface: 500 10px Helvetica
-                    fill: *text_fill
-                    stroke: { color: *text_stroke, width: 4 }
-        # add townspots from zoom 0 thru zoom 11
-        townspots:
-            filter: { $zoom: { max: 11 } }
-            draw:
+                place_text:
+                    priority: 1
+                    interactive: true
+                    visible: *text_visible_populated_places
+                    font:
+                        size: 10px
+                        fill: *text_fill
+                        stroke: { color: *text_stroke, width: 4 }
                 icons:
                     size: [[13, 12px], [15, 18px]]
                     interactive: true
                     sprite: *townspot_sprite
-        # nix major cities under z15
-        major-places:
-            filter: { kind: [city], $zoom: { min: 13, max: 15 } }
-            visible: false
-            draw:
-                place_text:
-                    font:
-                        typeface: 500 14px Helvetica
-        major-places:
-            filter: { kind: [city], $zoom: { min: 15 } }
-            visible: false
-            draw:
-                place_text:
-                    visible: false
-                    font:
-                        typeface: 500 14px Helvetica
-        medium-places:
-            filter: { kind: [town], $zoom: { max: 11 } }
-            visible: false
-        # nix podunk burgs under z15
-        minor-places:
-            filter: { kind: [hamlet, village], $zoom: { max: 15 } }
-            visible: false
 
-    neighborhood:
-        data: { source: osm, layer: places }
-        filter: { name: true, kind: [neighbourhood, suburb, quarter], $zoom: { min: 14 } }
-        draw:
-            text:
-                priority: 2
-                visible: *text_visible_admin
-                text_source: function() { return feature.name.toUpperCase(); }
-                font:
-                    typeface: 600 12px Helvetica
-                    fill: *text_fill
-                    stroke: { color: *text_stroke, width: 4 }
+        populated-places-natural-earth-early2:
+            filter: { name: true, source: naturalearthdata.com, $zoom: {min: 4, max: 5}, scalerank: [0,1] }
+            draw:
+                place_text:
+                    priority: 1
+                    interactive: true
+                    visible: *text_visible_populated_places
+                    font:
+                        size: 10px
+                        fill: *text_fill
+                        stroke: { color: *text_stroke, width: 4 }
+                icons:
+                    size: [[13, 12px], [15, 18px]]
+                    interactive: true
+                    sprite: *townspot_sprite
+
+        populated-places-natural-earth-early3:
+            filter: { name: true, source: naturalearthdata.com, $zoom: {min: 5, max: 6}, scalerank: [0,1,2,3] }
+            draw:
+                place_text:
+                    priority: 1
+                    interactive: true
+                    visible: *text_visible_populated_places
+                    font:
+                        size: 10px
+                        fill: *text_fill
+                        stroke: { color: *text_stroke, width: 4 }
+                icons:
+                    size: [[13, 12px], [15, 18px]]
+                    interactive: true
+                    sprite: *townspot_sprite
+
+        populated-places-natural-earth:
+            filter: { name: true, source: naturalearthdata.com, $zoom: {min: 6, max: 8} }
+            draw:
+                place_text:
+                    priority: 1
+                    interactive: true
+                    visible: *text_visible_populated_places
+                    font:
+                        size: 10px
+                        fill: *text_fill
+                        stroke: { color: *text_stroke, width: 4 }
+                icons:
+                    size: [[13, 12px], [15, 18px]]
+                    interactive: true
+                    sprite: *townspot_sprite
+
+        populated-places-osm:
+            filter: { name: true, source: openstreetmap, not: { kind: [county, state, island, neighbourhood, suburb, quarter] }, $zoom: {min: 8} }
+            draw:
+                place_text:
+                    priority: 1
+                    interactive: true
+                    visible: *text_visible_populated_places
+                    font:
+                        size: 10px
+                        fill: *text_fill
+                        stroke: { color: *text_stroke, width: 4 }
+            # add townspots from zoom 0 thru zoom 11
+            townspots:
+                filter: { $zoom: { max: 11 } }
+                draw:
+                    icons:
+                        size: [[13, 12px], [15, 18px]]
+                        interactive: true
+                        sprite: *townspot_sprite
+            # nix major cities under z15
+            major-places:
+                filter: { kind: [city], $zoom: { min: 13, max: 15 } }
+                visible: false
+                draw:
+                    place_text:
+                        font:
+                            size: 14px
+            major-places:
+                filter: { kind: [city], $zoom: { min: 15 } }
+                visible: false
+                draw:
+                    place_text:
+                        visible: false
+                        font:
+                            size: 14px
+            medium-places:
+                filter: { kind: [town], $zoom: { max: 11 } }
+                visible: false
+            # nix podunk burgs under z15
+            minor-places:
+                filter: { kind: [hamlet, village], $zoom: { max: 15 } }
+                visible: false
+
+        neighborhood:
+            filter: { name: true, kind: [neighbourhood, suburb, quarter], $zoom: { min: 14 } }
+            draw:
+                text:
+                    priority: 2
+                    visible: *text_visible_admin
+                    text_source: function() { return feature.name.toUpperCase(); }
+                    font:
+                        size: 12px
+                        weight: 600
+                        fill: *text_fill
+                        stroke: { color: *text_stroke, width: 4 }
 
 
     pois_and_landuse_labels:
@@ -2333,6 +2331,11 @@ layers:
             icons:
                 size: [[13, 12px], [15, 18px]]
                 interactive: true
+            text:
+                visible: false    # labels are enabled by each layer below
+                font:
+                    family: Helvetica
+                    weight: 500
 
         # match 1:1 correlations between data and sprite name
         direct-match:
@@ -2361,7 +2364,7 @@ layers:
                     interactive: true
                     font:
                         fill: *text_fill
-                        typeface: 500 12px Helvetica
+                        size: 12px
                         stroke: { color: *text_stroke, width: 4 }
         landuse-labels-early:
             filter:
@@ -2373,7 +2376,7 @@ layers:
                     interactive: true
                     font:
                         fill: *text_fill
-                        typeface: 500 12px Helvetica
+                        size: 12px
                         stroke: { color: *text_stroke, width: 4 }
             nature-reserve:
                 filter:
@@ -2401,7 +2404,7 @@ layers:
                     interactive: true
                     font:
                         fill: *text_fill
-                        typeface: 500 12px Helvetica
+                        size: 12px
                         stroke: { color: *text_stroke, width: 4 }
         parking-labels:
             filter:
@@ -2413,7 +2416,7 @@ layers:
                     interactive: true
                     font:
                         fill: *text_fill
-                        typeface: 500 12px Helvetica
+                        size: 12px
                         stroke: { color: *text_stroke, width: 4 }
         car-sharing:
             filter: { kind: car_sharing, $zoom: { max: 17 } }
@@ -2435,7 +2438,7 @@ layers:
                     interactive: true
                     font:
                         fill: *text_fill
-                        typeface: 500 12px Helvetica
+                        size: 12px
                         stroke: { color: *text_stroke, width: 4 }
 
         # examples of different icons mapped to feature properties
