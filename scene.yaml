@@ -2080,11 +2080,11 @@ layers:
                         weight: 200
                         fill: *text_fill
                         stroke: { color: *text_stroke, width: 4 }
-    #            icons:
-    #                size: [[13, 12px], [15, 18px]]
-    #                interactive: true
-    #                sprite: *townspot_sprite
-            early-ones:
+#                icons:
+#                    size: [[13, 12px], [15, 18px]]
+#                    interactive: true
+#                    sprite: *townspot_sprite
+            early-ones-z3:
                 # US, Brazil, China, Russia, Canada, Greenland, Iceland, Australia, India, Japan, Guam, Indonesia, South Africa, Egypt, Nigeria, Kenya
                 filter: { not: { name: ["United States of America","Brasil","中华人民共和国","Россия","Canada","Kalaallit Nunaat","Ísland","Australia","India","日本","Guam","Indonesia","South Africa","مصر","Nigeria","Kenya"] }, $zoom: {min: 3, max: 4} }
                 draw:
@@ -2107,6 +2107,7 @@ layers:
                         visible: false
 
         country:
+            # South Ossetia and Abkhazia aren't countries (they are disputed areas)
             filter: { name: true, kind: [country], $zoom: {min: 6} }
             draw:
                 text:
@@ -2118,13 +2119,17 @@ layers:
                         weight: 800
                         fill: *text_fill
                         stroke: { color: *text_stroke, width: 4 }
-            early-ones-z5-6:
-                filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,België - Belgique - Belgien], $zoom: {min: 5, max: 7} }
+                icons:
+                    size: [[13, 12px], [15, 18px]]
+                    interactive: true
+                    sprite: *townspot_sprite
+            early-ones-z5-z6:
+                filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,België - Belgique - Belgien,Хуссар Ирыстон,Аҧсны - Абхазия], $zoom: {min: 5, max: 7} }
                 draw:
                     text:
                         visible: false
             early-ones-z7:
-                filter: { name: [Liechtenstein,San Marino,Civitatis Vaticanæ], $zoom: {min: 7, max: 8} }
+                filter: { name: [Liechtenstein,San Marino,Civitatis Vaticanæ,Хуссар Ирыстон,Аҧсны - Абхазия], $zoom: {min: 7, max: 8} }
                 draw:
                     text:
                         visible: false
@@ -2175,7 +2180,7 @@ layers:
                 text:
                     offset: [0, 8px]
 
-            populated-places-natural-earth-early:
+            populated-places-natural-earth-z2-z3:
                 filter: { name: true, source: naturalearthdata.com, $zoom: {min: 2, max: 4}, scalerank: 0 }
                 draw:
                     text:
@@ -2191,7 +2196,7 @@ layers:
                         interactive: true
                         sprite: *townspot_sprite
 
-            populated-places-natural-earth-early2:
+            populated-places-natural-earth-z4:
                 filter: { name: true, source: naturalearthdata.com, $zoom: {min: 4, max: 5}, scalerank: [0,1] }
                 draw:
                     text:
@@ -2207,7 +2212,7 @@ layers:
                         interactive: true
                         sprite: *townspot_sprite
 
-            populated-places-natural-earth-early3:
+            populated-places-natural-earth-z5:
                 filter: { name: true, source: naturalearthdata.com, $zoom: {min: 5, max: 6}, scalerank: [0,1,2,3] }
                 draw:
                     text:
@@ -2223,7 +2228,7 @@ layers:
                         interactive: true
                         sprite: *townspot_sprite
 
-            populated-places-natural-earth:
+            populated-places-natural-earth-z6-z7:
                 filter: { name: true, source: naturalearthdata.com, $zoom: {min: 6, max: 8} }
                 draw:
                     text:
