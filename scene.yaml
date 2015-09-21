@@ -12,6 +12,7 @@ labels-global:
     - &label_visible_poi_landuse      true
     - &icon_visible_poi_landuse       true
     - &text_visible_poi_landuse       true
+    - &text_visible_water_labels      true
     - &text_visible_highway           true
     - &text_visible_trunk_primary     true
     - &text_visible_secondary         true
@@ -83,7 +84,8 @@ banana-colors:
        - &scene1      '#eee'              # map background, water
        - &water1      [0.83, 0.83, 0.83]  # water
        - &water2      [0.50, 0.50, 0.50]  # playa
-       - &water1_o    blue                # water stroke
+       - &water1_o    [0.30, 0.30, 0.30]  # water stroke
+       - &water2_o    [0.70, 0.70, 0.70]  # water stroke
        - &earth1      '#666'              # land color
        - &earth2      '#555'              # urban
        - &green1      '#6e7e6d'           # park
@@ -951,10 +953,10 @@ textures:
 sources:
     osm:
         type: TopoJSONTiles
-        #url: '//tileserver-dev-us-east-ext-538678355.us-east-1.elb.amazonaws.com/osm/all/{z}/{x}/{y}.topojson'
+        url: '//tileserver-dev-us-east-ext-538678355.us-east-1.elb.amazonaws.com/osm/all/{z}/{x}/{y}.topojson'
         #url: '//vector.dev.mapzen.com /osm/all/{z}/{x}/{y}.topojson'
         #url:  //localhost:8080//osm/all/{z}/{x}/{y}.topojson
-        url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
+        #url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
 
 camera:
     type: isometric
@@ -1310,7 +1312,7 @@ layers:
         lakes:
             filter: 
                 all:
-                    - kind: [ocean, lake, water, reservoir,playa]
+                    - kind: [ocean, lake, water, reservoir, playa]
                 any:
                     # limit show smaller landuse areas to higher zooms
                     - { $zoom: { min: 4 },  area: { min: 15000000000 } }
@@ -1326,12 +1328,12 @@ layers:
                     - { $zoom: { min: 14 }, area: { min: 50000 } }
                     - { $zoom: { min: 15 }, area: { min: 20000 } }
                     - { $zoom: { min: 15 }, area: { min: 2000 } }
-                    - { $zoom: { min: 16 } }    
+                    - { $zoom: { min: 16 } }
             draw:
                 ground:
                     color: *water1
-        other_water:
-            filter: { not: { kind: [ocean, lake, water, reservoir,playa] }, $zoom: { min: 11 }, area: { min: 100 } }
+        other-water-areas:
+            filter: { not: { kind: [ocean, lake, water, reservoir, playa] }, $zoom: { min: 11 }, area: { min: 100 } }
             draw:
                 ground:
                     color: *water1
@@ -1349,11 +1351,19 @@ layers:
         water_boundaries:
           filter: { boundary: yes, $zoom: { min: 12 } }
           draw:
-            lines:
-              order: 4
-              color: *water1_o
-              width: 2px
-              cap: round
+                lines:
+                    order: 4
+                    color: *water1_o
+                    width: 2px
+                    cap: round
+        river:
+            filter: { kind: [river,canal,stream,dam,ditch,drain], $zoom: { min: 13 } }
+            draw:
+                lines:
+                    order: 2
+                    color: *water2_o
+                    width: [[13,0.5px],[14,1.0px],[16,1.5px],[18,4m]]
+                    cap: round
 
     roads:
         data: { source: osm, layer: roads }
@@ -2008,7 +2018,7 @@ layers:
 
 
     boundaries:
-        data: { source: osm, layer: boundaries }        
+        data: { source: osm, layer: boundaries }
         # country subdivisions (states, provinces)
 #        draw:
 #            flatlines:
@@ -2801,6 +2811,41 @@ layers:
                 filter: { kind: [winery, wine] }
                 draw:   { icons: { sprite: winery } }
 
+#    water-labels:
+#        data: { source: osm, layer: [water] }
+#        visible: *text_visible_water_labels
+#        filter: 
+#            all:
+##                - $zoom: { min: 12 }
+#                - name: true
+#                - not: { kind: [dock] }
+##            any:
+##                # show labels for smaller landuse areas at higher zooms
+##                - { $zoom: { min: 9 },  area: { min: 100000000 } }
+##                - { $zoom: { min: 10 }, area: { min: 100000000 } }
+##                - { $zoom: { min: 11 }, area: { min: 25000000 } }
+##                - { $zoom: { min: 12 }, area: { min: 5000000 } }
+##                - { $zoom: { min: 13 }, area: { min: 2000000 } }
+##                - { $zoom: { min: 14 }, area: { min: 500000 } }
+##                - { $zoom: { min: 15 }, area: { min: 100000 } }
+##                - { $zoom: { min: 15 }, area: { min: 50000 } }
+##                - { $zoom: { min: 16 }, area: { min: 20000 } }
+##                - { $zoom: { min: 18 } }
+#
+#        icons:
+#            size: [[13, 12px], [15, 18px]]
+#            interactive: true
+#            sprite: *townspot_sprite
+#
+#        # add generic text at high zoom
+#        default-label-text:
+#            draw:
+#                text:
+#                    interactive: true
+#                    font:
+#                        fill: blue
+#                        typeface: 500 12px Helvetica
+                
     landuse:
         data: { source: osm }
         filter: 
@@ -2814,7 +2859,7 @@ layers:
                 - { $zoom: { min: 14 }, area: { min: 50000 } }
                 - { $zoom: { min: 15 }, area: { min: 20000 } }
                 - { $zoom: { min: 15 }, area: { min: 2000 } }
-                - { $zoom: { min: 16 } }    
+                - { $zoom: { min: 16 } }
         park:
             filter:
                 kind: [park,'park or protected land']
@@ -2988,7 +3033,7 @@ layers:
             draw: { polygons: { order: 2, color: *grey3 } }
             pier:
                 filter: { kind: [pier,bridge,breakwater,groyne,dike,cutline] }
-                draw: { polygons: { order: 2, color: *earth1 } }
+                draw: { polygons: { order: 4, color: *earth1 } }
 
 
     landuse-not-filtered:
