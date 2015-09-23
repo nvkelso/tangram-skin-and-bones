@@ -3077,6 +3077,16 @@ layers:
                 polygons:
                     order: 1
                     color: *green6
+            wilderness-areas:
+                filter: function() { return feature.name.includes("Wilderness") }
+                draw:
+                    polygons:
+                        color: *green7
+                    outline:
+                        order: 2
+                        style: lines
+                        color: *green6
+                        width: [[9,0px],[10,2px],[12,4px]]
         stadium:
             filter:
                 kind: stadium
