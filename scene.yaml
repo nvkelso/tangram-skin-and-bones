@@ -987,10 +987,10 @@ textures:
 sources:
     osm:
         type: TopoJSONTiles
-        #url: '//tileserver-dev-us-east-ext-538678355.us-east-1.elb.amazonaws.com/osm/all/{z}/{x}/{y}.topojson'
+        url: '//tileserver-dev-us-east-ext-538678355.us-east-1.elb.amazonaws.com/osm/all/{z}/{x}/{y}.topojson'
         #url: '//vector.dev.mapzen.com /osm/all/{z}/{x}/{y}.topojson'
         #url:  //localhost:8080//osm/all/{z}/{x}/{y}.topojson
-        url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
+        #url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
 
 camera:
     type: isometric
@@ -1573,18 +1573,18 @@ layers:
                 draw:
                     flatlines:
                         color: [[8, *major_road3], [9, *major_road2b], [13, *major_road2], [14, *major_road1c], [15, *major_road1b], [17, *major_road1]]
-                        width: [[9, 1.0px], [10, 1.5px], [13, 2.5px], [14, 4.5px], [15, 5.5px], [16, 7.0px], [19, 14m]]
+                        width: [[8, 1.0px], [10, 1.5px], [13, 2.5px], [14, 4.5px], [15, 5.5px], [16, 7.0px], [19, 14m]]
                         outline:
-                            width: [[9, 0px], [10, 1px], [12, 1.25px], [14, 1.5px], [16, 2.5px], [18, 4.5px]]
+                            width: [[8, 0px], [10, 1px], [12, 1.25px], [14, 1.5px], [16, 2.5px], [18, 4.5px]]
                 routes:
                     filter: { ref: true }
                     draw:
                         flatlines:
                             color: [[8,*major_route2],[10,*major_route1]]
-                            width: [[9, 1.5px], [10, 2.0px], [14, 3.5px], [15, 4.5px], [16, 6.0px], [17, 12m]]
+                            width: [[8, 1.5px], [10, 2.0px], [14, 3.5px], [15, 4.5px], [16, 6.0px], [17, 12m]]
                             outline:
                                 color: *major_casing1
-                                width: [[9, 0px], [10, 0.5px], [11, 0.75px], [12, 1px], [16, 2px], [18, 4.5px]]
+                                width: [[8, 0px], [10, 0.5px], [11, 0.75px], [12, 1px], [16, 2px], [18, 4.5px]]
                     tunnel:
                         filter: {is_tunnel: yes, $zoom: {min: 13} }
                         draw:
@@ -2274,10 +2274,10 @@ layers:
                         weight: 800
                         fill: *text_fill
                         stroke: { color: *text_stroke, width: 4 }
-                icons:
-                    size: [[13, 12px], [15, 18px]]
-                    interactive: true
-                    sprite: *townspot_sprite
+#                icons:
+#                    size: [[13, 12px], [15, 18px]]
+#                    interactive: true
+#                    sprite: *townspot_sprite
             early-ones-z5-z6:
                 filter: { name: [Luxembourg,Liechtenstein,San Marino,Civitatis Vaticanæ,België - Belgique - Belgien,Хуссар Ирыстон,Аҧсны - Абхазия], $zoom: {min: 5, max: 7} }
                 draw:
