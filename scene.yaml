@@ -2517,7 +2517,7 @@ layers:
                     filter: { kind: [village], $zoom: { max: 12 } }
                     visible: false
                 minor-places-hamlet:
-                    filter: { kind: [hamlet], $zoom: { max: 14 } }
+                    filter: { kind: [hamlet], $zoom: { max: 15 } }
                     visible: false
 
         neighborhood:
