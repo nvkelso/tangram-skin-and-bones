@@ -3366,6 +3366,10 @@ layers:
             draw:
                 polygons:
                     color: *orange2
+                outline:
+                    style: lines
+                    color: *green6
+                    width: [[14,0px],[15,1px],[16,1m]]
         university:
             filter:
                 kind: university
