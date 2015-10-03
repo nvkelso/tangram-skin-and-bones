@@ -1390,6 +1390,58 @@ layers:
                     width: [[13,0.5px],[14,1.0px],[16,1.5px],[18,4m]]
                     cap: round
 
+    railway-early:
+        data: { source: osm, layer: transit }
+        filter: { kind: [railway,subway,light_rail], $zoom: { min: 14 } }
+        draw:
+            lines:
+                interactive: true
+                order: function() { return 6 + feature.sort_key; }
+        rail:
+            filter: { kind: railway }
+            draw:
+                lines: 
+                    color: grey
+                    width: [[14,1px],[16,2px],[18,5m]]
+        subway:
+            filter: { kind: subway }
+            draw:
+                lines: 
+                    color: black
+                    width: [[14,0.5px],[16,1px],[18,3m]]
+        light_rail:
+            filter: { kind: light_rail, $zoom: { min: 15 } }
+            draw:
+                lines: 
+                    color: grey
+                    order: 30
+
+    railway-late:
+        data: { source: osm, layer: roads }
+        filter: { kind: rail, not: { railway: light_rail } }
+        draw:
+            lines:
+                interactive: true
+                color: [[14,'#bbb'],[16,'#999']]
+                width: [[15,0.5px],[16,0.75px],[18,1m]]
+        z-order:
+            #filter: { $zoom: {min: 12} }
+            draw:
+                lines:
+                    # let roads sort themselves past zoom 14
+                    order: function() { return 6 + feature.sort_key; }
+                    # but give them all the same outline
+                    outline:
+                        order: 21 # 15 is the starting aboveground level, plus 6
+
+            bridges-tunnels:
+                filter: { any: [is_bridge: yes, is_tunnel: yes] }
+                draw:
+                    lines:
+                        outline:
+                            # except bridges and tunnels, their outlines should also self-sort
+                            order: function() { return 6 + feature.sort_key; }
+
     roads:
         data: { source: osm, layer: roads }
         filter: { not: { kind: rail } }
