@@ -703,8 +703,9 @@ traditional-colors:
         - &red1_r      '#d9c3c3'           # hospital roads
         - &red1_b      [.65, .65, .65]     # hospital buildings
         - &red1_bo     [.8, .8, .8]        # hospital building outlines
-        - &grey1       '#f0ebeb'           # pedestrian, retail, airport apron, parking, church
-        - &grey1_v     false               # pedestrian, retail, airport apron, parking, church
+        - &grey1       '#c0bcba'           # pedestrian, retail, airport apron, parking, church
+        - &grey1_e     '#cac6c4'           # pedestrian, retail, airport apron, parking, church early zoom 14
+        - &grey1_v     true                # pedestrian, retail, airport apron, parking, church
         - &grey2       orange              # airport runway
         - &grey3       '#c6c6c6'           # railway
         - &grey4       '#ffc52a'           # airport taxiway
@@ -1962,10 +1963,10 @@ layers:
                     cap: round
                     join: round
                     color: [[0,*service_road2],[18,*service_road2]]
-                    width: [[15, 1.5px], [16, 2.0px], [18, 5m], [19, 3.5m]]
+                    width: [[15, 1px], [16, 1.5px], [18, 4m], [19, 4.5m]]
                     outline:
                         color: [[0,*service_road_casing1],[18,*service_road_casing2]]
-                        width: [[15, 0.5px], [17, 1.0px], [18, 1.75px]]
+                        width: [[15, 0px], [16, 0.5px], [17, 1.0px], [18, 1.75px]]
             labels-service_road:
                 filter: { $zoom: { min: 17, min: 18 } }
                 draw:
@@ -3413,14 +3414,21 @@ layers:
 #                kind: commercial
 #            draw:
 #                polygons:
-#                    color: [0.149, 0.475, 0.851]                    
+#                    color: [0.149, 0.475, 0.851]
+#                    order: 40
         parking:
             filter:
                 kind: parking
+                $zoom: { min: 14 }
             draw:
                 polygons:
                     color: *grey1
                     visible: *grey1_v
+            early:
+                filter: { $zoom: { max: 15 } }
+                draw:
+                    polygons:
+                        color: *grey1_e
         railway:
             filter:
                 kind: railway
