@@ -1709,7 +1709,7 @@ layers:
                                     size: 13px
                                     stroke: { color: *text_stroke, width: 4 }
                 in_park:
-                    filter: { landuse_kind: [park,forest,nature_reserve,conservation,golf_course,garden] }
+                    filter: { landuse_kind: [park,nature_reserve,conservation,golf_course,garden] }
                     draw:
                         flatlines:
                             #width: [[11, 0.0px], [12, .5px], [14, 1.5px], [16, 2.0px], [19, 7m]]
@@ -1782,7 +1782,7 @@ layers:
                                 color: [[12,*major_casing2],[13,*major_casing1]]
                                 width: [[12, 0px], [14, .25px], [16, 1.0px], [18, 4.0px]]
                 in_park:
-                    filter: { landuse_kind: [park,forest,nature_reserve,conservation,golf_course,garden] }
+                    filter: { landuse_kind: [park,nature_reserve,conservation,golf_course,garden] }
                     draw:
                         flatlines:
                             #width: [[11, 0.0px], [12, .5px], [14, 1.5px], [16, 2.0px], [19, 7m]]
@@ -1841,7 +1841,7 @@ layers:
                         order: 15
             
             in_park:
-                filter: { landuse_kind: [park,forest,nature_reserve,conservation,golf_course,garden] }
+                filter: { landuse_kind: [park,nature_reserve,conservation,golf_course,garden] }
                 draw:
                     flatlines:
                         width: [[11, 0.5px], [12, 1.0px], [13, 1.2px], [14, 1.75px], [15, 2.5px], [16, 8m]]
@@ -1958,7 +1958,7 @@ layers:
                             color: [[15,*path_bridge_casing2],[16,*path_bridge_casing1]]
                             width: [[15, 0.5px], [16, 1.0px], [18, 2px]]
             in_park:
-                filter: { landuse_kind: [park,forest,nature_reserve,conservation,golf_course,garden] }
+                filter: { landuse_kind: [park,nature_reserve,conservation,golf_course,garden] }
                 draw:
                     flatlines:
                         color: [[15,*green1_r],[16,*minor_road3]]
@@ -2005,7 +2005,7 @@ layers:
                         color: *path_steps1
                         width: [[15, 1.5], [18, 3m]]
             in_park:
-                filter: { landuse_kind: [park,forest,nature_reserve,conservation,golf_course,garden] }
+                filter: { landuse_kind: [park,nature_reserve,conservation,golf_course,garden] }
                 draw:
                     dashedline:
                         color: [[15,*green1_r],[16,*minor_road3]]
@@ -2046,6 +2046,12 @@ layers:
                     width: [[10, 1px], [11, 1.5px], [12, 2px], [13, 4px], [14, 8px], [15, 16px], [16, 32px], [17, 60m]]
                     outline:
                         color: [0.7,0.7,0.7]
+            # Features come in at zoom 9, but include mostly minor airports without POIs until z13
+            early:
+                filter: { $zoom: { max: 12 }, not: { landuse_kind: [aerodrome, runway, taxiway] } }
+                draw:
+                    lines:
+                        visible: false
             not-round:
                 filter: { $zoom: { min: 17 } }
                 draw:
@@ -2114,7 +2120,7 @@ layers:
                 extrude: *building_e
                 tile_edges: true
         in_park:
-            filter: { landuse_kind: [park,forest,nature_reserve,conservation,golf_course,garden] }
+            filter: { landuse_kind: [park,nature_reserve,conservation,golf_course,garden] }
             draw:
                 polygons:
                     color: *green1_b
@@ -2455,8 +2461,11 @@ layers:
                     filter: { kind: [town], $zoom: { max: 11 } }
                     visible: false
                 # nix podunk burgs under z15
-                minor-places:
-                    filter: { kind: [hamlet, village], $zoom: { max: 15 } }
+                minor-places-village:
+                    filter: { kind: [village], $zoom: { max: 12 } }
+                    visible: false
+                minor-places-hamlet:
+                    filter: { kind: [hamlet], $zoom: { max: 14 } }
                     visible: false
 
         neighborhood:
