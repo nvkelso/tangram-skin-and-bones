@@ -2516,8 +2516,9 @@ layers:
                 minor-places-village:
                     filter: { kind: [village], $zoom: { max: 12 } }
                     visible: false
+                # mobile home parks, really?
                 minor-places-hamlet:
-                    filter: { kind: [hamlet], $zoom: { max: 15 } }
+                    filter: { kind: [hamlet], $zoom: { max: 16 } }
                     visible: false
 
         neighborhood:
@@ -2811,6 +2812,11 @@ layers:
                         fill: *text_fill
                         size: 12px
                         stroke: { color: *text_stroke, width: 4 }
+        landuse-funky:
+            filter: { kind: [commercial, residential, wood], $zoom: { max: 17 } }
+            draw:
+                text:
+                    visible: false
         car-sharing:
             filter: { kind: car_sharing, $zoom: { max: 17 } }
             draw:
