@@ -644,8 +644,8 @@ traditional-colors:
         - &major_route1               '#d19596'
         - &major_route2               '#d19596'           # zoomed out
         - &minor_route                '#d19596'           # same as major_route
-        - &minor_road1                [0.40, 0.40, 0.40]  # natural earth
-        - &minor_road2                [0.20, 0.20, 0.20]  # natural earth, same as major_road2
+        - &minor_road1                white               # natural earth
+        - &minor_road2                whtie               # natural earth, same as major_road2
         - &minor_road3                white
         - &minor_road4                white               # zoomed out
         - &minor_road5                white               # zoomed out, again
@@ -2264,9 +2264,10 @@ layers:
                     flatlines:
                         visible: false
             early:
-                filter: { scalerank: [3,4,5,6,7,8,9], $zoom: {max: 8} }
+                filter: { scalerank: [3,4,5,6,7,8,9], $zoom: { max: 8 } }
                 draw:
-                    visible: false
+                    flatlines:
+                        visible: false
 
 #        subregions:
 #            filter: { kind: county, $zoom: { min: 10 } }
@@ -2642,6 +2643,11 @@ layers:
                     text:
                         font:
                             stroke: { color: '#c2e9cb', width: 4 }
+            early-not-national-park:
+                filter: { not: { kind: national_park }, $zoom: { max: 6 } }
+                draw:
+                    text: { visible: false }
+                    icons: { visible: false }
             forest:
                 filter: function() { return $zoom < 8 && ((feature.name && feature.name.includes("Forest")) || feature.protect_class >=6) }
                 draw:
