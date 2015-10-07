@@ -651,7 +651,7 @@ traditional-colors:
         - &path_bridge_casing1        black
         - &path_bridge_casing2        grey                # zoomed out
         - &path_steps1                '#bcc19e'
-        - &path_steps1_b              '#f0ebeb'
+        - &path_steps1_b              '#dad7d4'
         
     boundaries:
         - &country_boundary           '#222'
@@ -664,7 +664,7 @@ traditional-colors:
         - &water2      [.75,.75,.75]       # playa
         - &water1_o    '#9dc3de'           # water stroke
         - &water2_o    '#9dc3de'           # water stroke 2
-        - &earth1      '#f0ebeb'           # land color
+        - &earth1      '#dad7d4'           # land color
         - &earth2      '#e9e4e0'           # urban
         - &earth2_v    false               # urban
         - &green1      '#aed0b6'           # park (national park, local parks)
@@ -673,9 +673,9 @@ traditional-colors:
         - &green1_bo   [.8, .8, .8]        # park building outlines
         - &green2      '#b8d2bf'           # cemetery
         - &green3      '#b8d2bf'           # golf course
-        - &green4      '#f0ebeb'           # farm faint
+        - &green4      '#dad7d4'           # farm faint
         - &green4_v    false               # farm faint
-        - &green5      '#f0ebeb'           # farm
+        - &green5      '#dad7d4'           # farm
         - &green6      '#94d59f'           # nature reserve
         - &green7      '#bddec5'           # forest
         - &green8      '#bddec5'           # conservation
@@ -714,7 +714,7 @@ traditional-colors:
         - &text_fill2        '#555'             # WHITE
         - &text_fill_water   '#4c89b5'          # blue
         - &text_fill_park    '#43a254'          # green
-        - &text_stroke       '#f0ebeb'             # land color
+        - &text_stroke       '#dad7d4'             # land color
         - &townspot_sprite   townspot-l-rev     # depends on land color and text settings
 
 
@@ -2663,17 +2663,17 @@ layers:
                     filter: { kind: [hamlet], $zoom: { max: 16 } }
                     visible: false
 
-            neighborhood-z13:
-                filter: { name: true, kind: [neighbourhood, suburb, quarter], $zoom: [13] }
-                draw:
-                    text:
-                        priority: 2
-                        visible: *text_visible_admin
-                        font:
-                            size: 9px
-                            weight: 400
-                            fill: *text_fill
-                            transform: uppercase
+#            neighborhood-z13:
+#                filter: { name: true, kind: [neighbourhood, suburb, quarter], $zoom: [13] }
+#                draw:
+#                    text:
+#                        priority: 2
+#                        visible: *text_visible_admin
+#                        font:
+#                            size: 9px
+#                            weight: 400
+#                            fill: *text_fill
+#                            transform: uppercase
 
             neighborhood-z14:
                 filter: { name: true, kind: [neighbourhood, suburb, quarter], $zoom: [14] }
