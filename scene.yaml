@@ -147,6 +147,7 @@ banana-colors:
     labels:
         - &text_fill         '#fff'             # WHITE
         - &text_fill2        '#555'             # WHITE
+        - &text_fill_building '#ccc'            # WHITE
         - &text_fill_water   '#4c89b5'          # blue
         - &text_fill_park    '#627061'          # green
         - &text_stroke       '#444'             # land color
@@ -1144,9 +1145,9 @@ textures:
 sources:
     osm:
         type: TopoJSONTiles
-        url: '//vector.dev.mapzen.com/osm/all/{z}/{x}/{y}.topojson'
+        #url: '//vector.dev.mapzen.com/osm/all/{z}/{x}/{y}.topojson'
         #url:  //localhost:8080//osm/all/{z}/{x}/{y}.topojson
-        #url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
+        url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
 
 camera:
     type: isometric
@@ -2508,6 +2509,7 @@ layers:
             all:
                 - { $zoom: { min: 16 } }
                 - label_placement: yes
+                - kind: false
                 - not: { location: underground }
             any:
                 # limit show smaller landuse areas to higher zooms
@@ -2534,6 +2536,23 @@ layers:
             filter: function() { if( $zoom == 17 && feature.name.length > 20 ) { return true; } else { return false; } }
             text:
                 visible: false
+    address-labels:
+        data: { source: osm, layer: buildings }
+        filter: 
+            all:
+                - { $zoom: { min: 20 } }
+                - kind: address
+        draw:
+            text:
+                interactive: true
+                order: 7
+                text_source: addr_housenumber
+                font:
+                    fill: *text_fill_building
+                    family: Helvetica
+                    style: italic
+                    size: 10px
+                    stroke: { color: *building1, width: 4 }
 
     boundaries:
         data: { source: osm, layer: boundaries }
@@ -2582,7 +2601,7 @@ layers:
                     lines:
                         visible: false
             early:
-                filter: { scalerank: [3,4,5,6,7,8,9], $zoom: { max: 8 } }
+                filter: { scalerank: [0,3,4,5,6,7,8,9,10], $zoom: { max: 8 } }
                 draw:
                     lines:
                         visible: false
@@ -2896,15 +2915,18 @@ layers:
 
 
     pois_and_landuse_labels:
-        data: { source: osm, layer: [pois, landuse_labels] }
+        data: { source: osm, layer: [pois,landuse,buildings] }
         visible: *label_visible_poi_landuse
         filter: 
-            not: { kind: [farm, peak, tree, gate] }
+            not: { kind: [farm,peak,tree,gate,address] }
             any:
                 - area: false
                   all:
                       - $zoom: { min: 12 }
                 - area: true
+                  all:
+                      - label_placement: yes
+                      - kind: true
         draw:
             icons:
                 size: [[13, 12px], [15, 18px]]
@@ -3963,7 +3985,7 @@ layers:
                 draw: { polygons: { order: 2, color: *grey3 } }
                 pier:
                     filter: { kind: [pier,bridge,breakwater,groyne,dike,cutline] }
-                    draw: { polygons: { color: *earth1 } }
+                    draw: { polygons: { order: 5, color: *earth1 } }
         tier5:
             filter: 
                 any:
