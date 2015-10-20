@@ -1146,6 +1146,7 @@ sources:
     osm:
         type: TopoJSONTiles
         #url: '//vector.dev.mapzen.com/osm/all/{z}/{x}/{y}.topojson'
+        #url:  '//mapzen-tiles-prod-us-east-20151007.s3.amazonaws.com/osm/all/{z}/{x}/{y}.topojson'
         #url:  //localhost:8080//osm/all/{z}/{x}/{y}.topojson
         url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
 
@@ -2587,7 +2588,7 @@ layers:
                 any:
                     - type: state
                     # territorial here is probably a hack
-                    - kind: [state, departement, region, provincial, territorial]
+                    - kind: [state, department, region, provincial, territorial]
                     - admin_level: 4
             draw:
                 lines:
