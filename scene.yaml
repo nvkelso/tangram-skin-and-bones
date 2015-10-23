@@ -3656,7 +3656,8 @@ layers:
             all:
                 - name: true
                 - label_placement: yes
-                - not: { kind: [dock, playa] }
+                - not: { kind: [riverbank, dock, playa] }
+                - area: true
             any:
                 # show labels for smaller landuse areas at higher zooms
                 - { $zoom: { min: 5 },  area: { min: 10000000000 } }
@@ -3707,6 +3708,7 @@ layers:
                 - name: true
                 - label_placement: yes
                 - kind: playa
+                - area: true
             any:
                 # show labels for smaller landuse areas at higher zooms
                 - { $zoom: { min: 7 },  area: { min: 1500000000 } }
@@ -3735,6 +3737,33 @@ layers:
 #            size: [[13, 12px], [15, 18px]]
 #            interactive: true
 #            sprite: *townspot_sprite
+    water-line-labels:
+        data: { source: osm, layer: [water] }
+        filter:
+            all:
+                - name: true
+                - area: false
+                - kind: [river,canal,stream,dam,ditch,drain]
+                - $zoom: { min: 14 }
+        draw:
+            text:
+                font:
+                    fill: *text_fill_water
+                    family: Helvetica
+                    style: italic
+                    weight: 500
+                    size: 12px
+                    stroke: { color: *text_stroke_water, width: 3 }
+        not-river-not-stream:
+            filter: { kind: [canal,dam,ditch,drain], $zoom: { max: 16 } }
+            draw:
+                text:
+                    visible: false
+        stream:
+            filter: { kind: [stream], $zoom: { max: 17 } }
+            draw:
+                text:
+                    visible: false
                  
     landuse:
         data: { source: osm }
