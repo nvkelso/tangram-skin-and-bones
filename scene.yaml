@@ -2966,7 +2966,7 @@ layers:
                     filter: { sport: tennis }
                     draw: { icons: { sprite: tennis } }
             traffic-signal:
-                filter: { kind: [traffic_signals], $zoom: { min: 17 } }
+                filter: { kind: traffic_signals }
                 draw:   { icons: { sprite: traffic-signal, visible: true } }
             bicycle-parking:
                 filter: { kind: [bicycle_parking], $zoom: { min: 19 } }
