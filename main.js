@@ -1,5 +1,5 @@
 /*jslint browser: true*/
-/*global Tangram, gui */
+/*global Tangram */
 
 map = (function () {
     'use strict';
@@ -51,34 +51,6 @@ map = (function () {
 	function lat2tile(lat,zoom)  { return (Math.floor((1-Math.log(Math.tan(lat*Math.PI/180) + 1/Math.cos(lat*Math.PI/180))/Math.PI)/2 *Math.pow(2,zoom))); }    
 
     /***** Render loop *****/
-	
-	function addGUI () {
-		// Link to edit in OSM - hold 'e' and click
-		function onMapClick(e) {
-			if (key.shift) {
-				var url = 'https://www.openstreetmap.org/edit?';
-
-				if (scene.selection.feature && scene.selection.feature.id) {
-					url += 'way=' + scene.selection.feature.id;
-				}
-
-				if (scene.center) {
-					url += '#map=' + scene.baseZoom(scene.zoom) + '/' + scene.center.lat + '/' + scene.center.lng;
-				}
-
-				window.open(url, '_blank');
-			}
-
- 			if (key.command) {
-				var url = 'http://vector.mapzen.com/osm/all/' + scene.tile_zoom + '/' + long2tile(e.latlng.lng,scene.tile_zoom)  + '/' + lat2tile(e.latlng.lat,scene.tile_zoom) + '.topojson?api_key=vector-tiles-HqUVidw';
-				window.open(url, '_blank');
-				//console.log( e );
-			}
-		}
-
-		map.on('click', onMapClick);		
-	}
-
 	
      // Feature selection
     function initFeatureSelection () {
@@ -177,7 +149,6 @@ map = (function () {
     window.addEventListener('load', function () {
         // Scene initialized
         layer.on('init', function() {
-	        addGUI();
         	initFeatureSelection();
         });
         layer.addTo(map);
