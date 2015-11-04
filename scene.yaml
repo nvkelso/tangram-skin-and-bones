@@ -2787,7 +2787,7 @@ layers:
         draw:
             #filter: { not: { location: underground } }
             polygons:
-                order: [[0,5],[17,9]]
+                order: function() { if( $zoom < 17) { return 5; } else { return 9; } }
                 color: *building1
                 extrude: *building_e
             outline:
