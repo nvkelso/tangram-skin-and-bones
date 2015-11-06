@@ -878,7 +878,7 @@ traditional-colors:
         - &highway_tunnel1            '#D19596'       #85%
         - &highway_tunnel_casing1     [0.3, 0.3, 0.3] #95%
         - &highway_link_tunnel_casing1 '#D16768'      #95%
-        - &ferry1                     '#7ea6c3'
+        - &ferry1                     '#7caacb'
         - &rail1                      '#777'
         - &rail1_e                    '#bbb'
         - &rail2                      '#999'             # less important rail (service, sidings)
@@ -1397,10 +1397,10 @@ textures:
 sources:
     osm:
         type: TopoJSONTiles
-        #url: '//vector.dev.mapzen.com/osm/all/{z}/{x}/{y}.topojson'
+        url: '//vector.dev.mapzen.com/osm/all/{z}/{x}/{y}.topojson'
         #url:  '//mapzen-tiles-prod-us-east-20151007.s3.amazonaws.com/osm/all/{z}/{x}/{y}.topojson'
         #url:  //localhost:8080//osm/all/{z}/{x}/{y}.topojson
-        url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
+        #url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
 
 camera:
     type: isometric
@@ -1722,7 +1722,7 @@ layers:
         data: { source: osm, layer: water }
         draw:
             polygons:
-                order: 4
+                order: 5
                 #color: *water1
         lakes:
             filter:
@@ -1763,7 +1763,7 @@ layers:
           filter: { boundary: yes, kind: ocean, $zoom: { min: 10 } }
           draw:
                 lines:
-                    order: 5
+                    order: 7
                     color: *water1_o
                     width: [[10,1px],[12,2px]]
                     join: round
@@ -1778,7 +1778,7 @@ layers:
                     - { $zoom: { min: 15 } }
             draw:
                 lines:
-                    order: 5
+                    order: 6
                     color: *water2_o
                     width: [[14,1.0px],[16,1.5px],[18,2m]]
                     join: round
@@ -1786,7 +1786,7 @@ layers:
             filter: { kind: [river,canal,stream,dam,ditch,drain], $zoom: { min: 13 } }
             draw:
                 lines:
-                    order: 3
+                    order: 6
                     color: *water2_o
                     width: [[13,0.5px],[14,1.0px],[16,1.5px],[18,4m]]
                     join: round
@@ -2844,7 +2844,7 @@ layers:
                 lines:
                     # order: 3
                     color: *ferry1
-                    width: [[12, 1.0px], [14, 1.5px], [16, 5m]]
+                    width: [[12, 1.0px], [14, 1.5px], [17, 3m]]
         aerialway:
             filter: { kind: aerialway }
             draw:
@@ -3047,7 +3047,7 @@ layers:
             filter: { $zoom: { min: 20 } }
             draw:
                 text:
-                    text_source: function() { if( feature.addr_housenumber ) { return feature.name + '\n' + feature.addr_housenumber; } else { return feature.name; } }
+                    text_source: function() { if( feature.addr_housenumber /*&& !feature.name.indexof(feature.addr_housenumber)*/) { return feature.name + '\n' + feature.addr_housenumber; } else { return feature.name; } }
     address-labels:
         data: { source: osm, layer: buildings }
         filter: 
@@ -4147,7 +4147,7 @@ layers:
                 draw:
                     text:
                         priority: 2
-                        text_wrap: 12
+                        text_wrap: 10
                         visible: *text_visible_admin
                         font:
                             size: 9px
@@ -4172,7 +4172,7 @@ layers:
                 draw:
                     text:
                         priority: 2
-                        text_wrap: 12
+                        text_wrap: 10
                         visible: *text_visible_admin
                         font:
                             size: 9px
@@ -4197,7 +4197,7 @@ layers:
                 draw:
                     text:
                         priority: 2
-                        text_wrap: 12
+                        text_wrap: 10
                         visible: *text_visible_admin
                         font:
                             size: 10px
@@ -4297,7 +4297,7 @@ layers:
                       - kind: true
         draw:
             icons:
-                size: [[13, 12px], [16, 16px], [19, 20px]]
+                size: [[13, 14px], [16, 16px], [19, 20px]]
                 interactive: true
                 visible: false
             text:
@@ -4351,7 +4351,7 @@ layers:
                 draw:
                     icons:
                         # sprite_source: kind
-                        sprite: function() { return feature.kind }
+                        sprite: function() { return feature.kind; }
                         visible: *icon_visible_poi_landuse
                         interactive: true
 
@@ -4366,7 +4366,7 @@ layers:
 
             # add generic icon at high zoom
             default-label-text:
-                filter: { $zoom: { min: 13 }, area: false }
+                filter: { $zoom: { min: 18 }, area: false }
                 draw:
                     text:
                         visible: *text_visible_poi_landuse
@@ -4383,14 +4383,16 @@ layers:
                         - kind: [national_park, "park or protected land"]
                     any:
                         # show labels for smaller landuse areas at higher zooms
-                        - { $zoom: { min: 5 },  area: { min: 3000000000 } }
-                        - { $zoom: { min: 6 },  area: { min: 500000000 } }
-                        - { $zoom: { min: 9 },  area: { min: 100000000 } }
-                        - { $zoom: { min: 10 }, area: { min: 50000000 } }
-                        - { $zoom: { min: 11 }, area: { min: 25000000 } }
-                        - { $zoom: { min: 12 }, area: { min: 5000000 } }
-                        - { $zoom: { min: 13 }, area: { min: 200000 } }
-                        - { $zoom: { min: 14 }, area: { min: 50000 } }
+                        - { $zoom: [4],  area: { min: 3000000000 } }
+                        - { $zoom: [5],  area: { min: 3000000000 } }
+                        - { $zoom: [6],  area: { min: 500000000 } }
+                        - { $zoom: [9],  area: { min: 100000000 } }
+                        - { $zoom: [10], area: { min: 50000000 } }
+                        - { $zoom: [11], area: { min: 25000000 } }
+                        - { $zoom: [12], area: { min: 5000000 } }
+                        - { $zoom: [13], area: { min: 200000 } }
+                        - { $zoom: [14], area: { min: 50000 } }
+                        - { $zoom: { min: 15 } }
                 national-park:
                     filter: function() { return feature.name && feature.name.includes("National Park") }
                     draw:
@@ -4412,18 +4414,21 @@ layers:
                     all:
                         - area: true
                         - $geometry: point
-                        - kind: [park, national_park, "park or protected land",conservation, protected_area, nature_reserve, forest]
+                        - kind: [park, national_park, "park or protected land",conservation, protected_area, nature_reserve, forest, grass]
                     any:
                         # show labels for smaller landuse areas at higher zooms
-                        - { $zoom: { min: 5, max: 6 },  area: { min: 10000000000 } }
-                        - { $zoom: { min: 6, max: 8 },  area: { min: 5000000000 } }
-                        - { $zoom: { min: 8 },          area: { min: 1000000000 } }
-                        - { $zoom: { min: 9 },          area: { min: 100000000 } }
-                        - { $zoom: { min: 10 },         area: { min: 50000000 } }
-                        - { $zoom: { min: 11 },         area: { min: 25000000 } }
-                        - { $zoom: { min: 12 },         area: { min: 5000000 } }
-                        - { $zoom: { min: 13 },         area: { min: 200000 } }
-                        - { $zoom: { min: 14 },         area: { min: 50000 } }
+                        - { $zoom: [5],    area: { min: 10000000000 } }
+                        - { $zoom: [6,7],  area: { min: 5000000000 } }
+                        - { $zoom: [8],    area: { min: 1000000000 } }
+                        - { $zoom: [9],    area: { min: 100000000 } }
+                        - { $zoom: [10],   area: { min: 50000000 } }
+                        - { $zoom: [11],   area: { min: 25000000 } }
+                        - { $zoom: [12],   area: { min: 5000000 } }
+                        - { $zoom: [13],   area: { min: 200000 } }
+                        - { $zoom: [14],   area: { min: 50000 } }
+                        - { $zoom: [15],   area: { min: 10000 } }
+                        - { $zoom: [16],   area: { min: 1000 } }
+                        - { $zoom: { min: 17 } }
                 draw:
                     icons:
                         visible: *icon_visible_landuse_green
@@ -4463,6 +4468,16 @@ layers:
                     draw:
                         text: { visible: false }
                         icons: { visible: false }
+                hide-till-later:
+                    filter: { kind: [grass], $zoom: { max: 16 } }
+                    draw:
+                        text: { visible: false }
+                        icons: { visible: false }
+                only-text-later:
+                    filter: { kind: [grass], $zoom: { min: 16 } }
+                    draw:
+                        text: { font: { style: italic } }
+                        icons: { visible: false }
             airport:
                 filter:
                     all:
@@ -4471,16 +4486,16 @@ layers:
                         - $geometry: point
                     any:
                         # show labels for smaller landuse areas at higher zooms
-                        - { $zoom: { min: 9 },  area: { min: 10000000 } }
-                        - { $zoom: { min: 10 }, area: { min: 10000000 } }
-                        - { $zoom: { min: 11 }, area: { min: 5000000 } }
-                        - { $zoom: { min: 12 }, area: { min: 5000000 } }
-                        - { $zoom: { min: 13 }, area: { min: 500000 } }
-                        - { $zoom: { min: 14 }, area: { min: 20000 } }                    
+                        - { $zoom: [9],  area: { min: 10000000 } }
+                        - { $zoom: [10], area: { min: 10000000 } }
+                        - { $zoom: [11], area: { min: 5000000 } }
+                        - { $zoom: [12], area: { min: 5000000 } }
+                        - { $zoom: [13], area: { min: 500000 } }
+                        - { $zoom: [14], area: { min: 20000 } }                    
                         # show labels for smaller landuse areas at higher zooms
-                        - { $zoom: { min: 15 }, area: { min: 10000 } }
-                        - { $zoom: { min: 15 }, area: { min: 5000 } }
-                        - { $zoom: { min: 16 }, area: { min: 2000 } }
+                        - { $zoom: [15], area: { min: 10000 } }
+                        - { $zoom: [16], area: { min: 5000 } }
+                        - { $zoom: [17], area: { min: 2000 } }
                         - { $zoom: { min: 18 } }
                 draw:
                     text:
@@ -4500,21 +4515,21 @@ layers:
             university:
                 filter:
                     all:
-                        - kind: university
+                        - kind: [university,college]
                         - area: true
                         - $geometry: point
                     any:
                         # show labels for smaller landuse areas at higher zooms
-                        - { $zoom: { min: 9 },  area: { min: 10000000 } }
-                        - { $zoom: { min: 10 }, area: { min: 5000000 } }
-                        - { $zoom: { min: 11 }, area: { min: 5000000 } }
-                        - { $zoom: { min: 12 }, area: { min: 1000000 } }
-                        - { $zoom: { min: 13 }, area: { min: 500000 } }
-                        - { $zoom: { min: 14 }, area: { min: 100000 } }
+                        - { $zoom: [9],   area: { min: 10000000 } }
+                        - { $zoom: [10], area: { min: 5000000 } }
+                        - { $zoom: [11], area: { min: 2000000 } }
+                        - { $zoom: [12], area: { min: 500000 } }
+                        - { $zoom: [13], area: { min: 100000 } }
+                        - { $zoom: [14], area: { min: 100000 } }
                         # show labels for smaller landuse areas at higher zooms
-                        - { $zoom: { min: 15 }, area: { min: 40000 } }
-                        - { $zoom: { min: 15 }, area: { min: 5000 } }
-                        - { $zoom: { min: 16 }, area: { min: 2000 } }
+                        - { $zoom: [15], area: { min: 40000 } }
+                        - { $zoom: [16], area: { min: 5000 } }
+                        - { $zoom: [17], area: { min: 2000 } }
                         - { $zoom: { min: 18 } }
                 draw:
                     text:
@@ -4525,32 +4540,32 @@ layers:
                             size: 12px
                             stroke: { color: *text_stroke, width: 4 }
                     icons:
-                        sprite: university
-                        visible: *icon_visible_poi_landuse
+                        sprite: college-university
+                        visible: true
                         interactive: true
                 early:
-                    filter: { $zoom: { max: 12 } }
-                    draw: { text: { visible: false } }
+                    filter: { $zoom: { max: 14 } }
+                    draw: { text: { font: { size: 11px } } }
             landuse-labels-not-green-areas:
                 filter:
                     all:
                         - $zoom: { min: 6 }
                         - area: true
                         - $geometry: point
-                        - not: { kind: [park, national_park, "park or protected land",conservation, protected_area, nature_reserve, airport, aerodrome, university] }
+                        - not: { kind: [park, national_park, "park or protected land",conservation, protected_area, nature_reserve, airport, aerodrome, university, college] }
                     any:
                         # show labels for smaller landuse areas at higher zooms
-                        - { $zoom: { min: 5, max: 7 },  area: { min: 5000000000 } }
-                        - { $zoom: { min: 8 },  area: { min: 1600000000 } }
-                        - { $zoom: { min: 9 },  area: { min: 400000000 } }
-                        - { $zoom: { min: 10 }, area: { min: 100000000 } }
-                        - { $zoom: { min: 11 }, area: { min: 25000000 } }
-                        - { $zoom: { min: 12 }, area: { min: 5000000 } }
-                        - { $zoom: { min: 13 }, area: { min: 1000000 } }
-                        - { $zoom: { min: 14 }, area: { min: 100000 } }
+                        - { $zoom: [5,6,7], area: { min: 5000000000 } }
+                        - { $zoom: [8],     area: { min: 1600000000 } }
+                        - { $zoom: [9],     area: { min: 400000000 } }
+                        - { $zoom: [10],    area: { min: 100000000 } }
+                        - { $zoom: [11],    area: { min: 25000000 } }
+                        - { $zoom: [12],    area: { min: 5000000 } }
+                        - { $zoom: [13],    area: { min: 1000000 } }
+                        - { $zoom: [14],    area: { min: 100000 } }
                         # show labels for smaller landuse areas at higher zooms
-                        - { $zoom: { min: 15 }, area: { min: 5000 } }
-                        - { $zoom: { min: 16 }, area: { min: 2000 } }
+                        - { $zoom: [15],    area: { min: 5000 } }
+                        - { $zoom: [16],    area: { min: 2000 } }
                         - { $zoom: { min: 17 } }
                 draw:
                     text:
@@ -4561,14 +4576,29 @@ layers:
                             size: 12px
                             stroke: { color: *text_stroke, width: 4 }
                     icons:
-                        sprite: function() { return feature.kind }
+                        sprite: function() { return feature.kind; }
+                        sprite_default: generic
                         visible: *icon_visible_poi_landuse
                         interactive: true
-
+                building-like:
+                    filter: { kind: [commercial,residential,warehouse,public] }
+                    draw:
+                        icons:
+                            sprite: building
+                hide-till-later:
+                    filter: { kind: [pedestrian,common,railway,ship,houseboat,common,grass,wetland,pitch], $zoom: { max: 17 } }
+                    draw:
+                        text: { visible: false }
+                        icons: { visible: false }
+                only-text-later:
+                    filter: { kind: [pedestrian,common,railway,ship,houseboat,common,grass,wetland,pitch], $zoom: { min: 17 } }
+                    draw:
+                        text: { font: { style: italic } }
+                        icons: { visible: false }
             poi-labels-early:
                 filter:
                     all:
-                        - $zoom: { max: 18 }
+                        - $zoom: { max: 13 }
                         - area: false
                         - $geometry: point
                 draw:
@@ -4651,7 +4681,7 @@ layers:
                         text:
                             visible: false
             station-train-subway:
-                filter: { kind: [station, train-station], $zoom: { min: 11 } }
+                filter: { kind: [station, train-station, train_station], $zoom: { min: 11 } }
                 draw:   { icons: { visible: true, sprite: train-station, size: [[13,12px],[14,14px],[15,16px],[17,20px]] }, text: { visible: true } }
                 low-priority-early:
                     filter: { kind_tile_rank: { min: 5 }, area: false, $zoom: { min: 0, max: 14 } }
@@ -4671,6 +4701,11 @@ layers:
                 filter: { kind: tram_stop, $zoom: { max: 15 } }
                 draw:
                     icons:
+                        visible: false
+            tram-stop-early-z15:
+                filter: { kind: tram_stop, $zoom: [15] }
+                draw:
+                    text:
                         visible: false
             tram-stop:
                 filter: { kind: tram_stop, $zoom: { min: 15 } }
@@ -4717,7 +4752,7 @@ layers:
                     filter: { kind: [art_gallery, art-gallery, art] }
                     draw:   { icons: { sprite: art-gallery } }
                 athletics-sports:
-                    filter: { kind: [athletic_sports, recreation_ground] }
+                    filter: { kind: [athletic_sports, recreation_ground, sports_centre] }
                     draw:   { icons: { sprite: athletics-sports } }
                 automotive-shop:
                     filter: { kind: [car_repair, automotive-shop, automotive, tyres] }
@@ -5512,6 +5547,7 @@ layers:
                 filter: { kind: pitch }
                 draw:
                     polygons:
+                        order: 7
                         color: *orange2
                     outline:
                         style: lines
