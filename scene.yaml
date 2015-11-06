@@ -21,9 +21,9 @@ labels-global:
     - &label_visible_poi_landuse_e    true
     - &icon_visible_poi_landuse_e     false
     - &text_visible_poi_landuse_e     true
-    - &label_visible_station          true
+    - &label_visible_station          false
     - &icon_visible_station           false
-    - &text_visible_station           true
+    - &text_visible_station           false
     - &text_visible_highway           true
     - &text_visible_highway_e         false
     - &text_visible_trunk_primary     true
@@ -4732,13 +4732,13 @@ layers:
                             visible: false
             station-train-subway:
                 filter: { kind: [station, train-station, train_station], $zoom: { min: 11 } }
-                draw:   { icons: { visible: *icon_visible_station, sprite: train-station, size: [[13,12px],[14,14px],[15,16px],[17,20px]] }, text: { visible: *text_visible_station } }
+                draw:   { visible: *label_visible_station, icons: { visible: *icon_visible_station, sprite: train-station, size: [[13,12px],[14,14px],[15,16px],[17,20px]] }, text: { visible: *text_visible_station } }
                 low-priority-early:
                     filter: { kind_tile_rank: { min: 5 }, area: false, $zoom: { min: 0, max: 14 } }
                     draw:
                         icons:
                             visible: false
-                            size: [[12, 10px], [14, 10px], [15, 16px]]
+                            #size: [[12, 10px], [14, 10px], [15, 16px]]
                         text: { visible: false } 
                 low-priority-early-z14:
                     filter: { kind_tile_rank: { min: 7 }, area: false, $zoom: { min: 14, max: 15 } }
