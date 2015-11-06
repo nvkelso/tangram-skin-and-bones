@@ -1397,10 +1397,10 @@ textures:
 sources:
     osm:
         type: TopoJSONTiles
-        url: '//vector.dev.mapzen.com/osm/all/{z}/{x}/{y}.topojson'
+        #url: '//vector.dev.mapzen.com/osm/all/{z}/{x}/{y}.topojson'
         #url:  '//mapzen-tiles-prod-us-east-20151007.s3.amazonaws.com/osm/all/{z}/{x}/{y}.topojson'
         #url:  //localhost:8080//osm/all/{z}/{x}/{y}.topojson
-        #url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
+        url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
 
 camera:
     type: isometric
@@ -4135,12 +4135,15 @@ layers:
                     all:
                         - name: true
                         - kind: [macrohood, neighbourhood]
-                        - min_zoom: [11]
-                        - max_zoom: { min: 12 }
-                        - is_landuse_aoi: false
-                        - source: whosonfirst
                         - $zoom: [11]
-                        - kind_tile_rank: { max: 6 }
+                    any:
+                        - source: openstreetmap
+                        - source: whosonfirst
+                          all:
+                            - min_zoom: [11]
+                            - max_zoom: { min: 12 }
+                            - is_landuse_aoi: false
+                            #- kind_tile_rank: { max: 6 }
                 draw:
                     text:
                         priority: 2
@@ -4157,12 +4160,15 @@ layers:
                     all:
                         - name: true
                         - kind: [macrohood, neighbourhood]
-                        - min_zoom: [11,12]
-                        - max_zoom: { min: 13 }
-                        - is_landuse_aoi: false
-                        - source: whosonfirst
                         - $zoom: [12]
-#                        - kind_tile_rank: { max: 8 }
+                    any:
+                        - source: openstreetmap
+                        - source: whosonfirst
+                          all:
+                            - min_zoom: [11,12]
+                            - max_zoom: { min: 13 }
+                            - is_landuse_aoi: false
+                            #- kind_tile_rank: { max: 8 }
                 draw:
                     text:
                         priority: 2
@@ -4179,12 +4185,15 @@ layers:
                     all:
                         - name: true
                         - kind: [macrohood, neighbourhood]
-                        - min_zoom: [11,12,13]
-                        - max_zoom: { min: 14 }
-                        - is_landuse_aoi: false
-                        - source: whosonfirst
                         - $zoom: [13]
-#                        - kind_tile_rank: { max: 8 }
+                    any:
+                        - source: openstreetmap
+                        - source: whosonfirst
+                          all:
+                            - min_zoom: [11,12,13]
+                            - max_zoom: { min: 14 }
+                            - is_landuse_aoi: false
+                            - kind_tile_rank: { max: 8 }
                 draw:
                     text:
                         priority: 2
@@ -4201,12 +4210,15 @@ layers:
                     all:
                         - name: true
                         - kind: [macrohood, neighbourhood]
-                        - min_zoom: [11,12,13,14]
-                        - max_zoom: { min: 15 }
-                        - is_landuse_aoi: false
-                        - source: whosonfirst
                         - $zoom: [14]
-                        - kind_tile_rank: { max: 8 }
+                    any:
+                        - source: openstreetmap
+                        - source: whosonfirst
+                          all:
+                            - min_zoom: [11,12,13,14]
+                            - max_zoom: { min: 15 }
+                            - is_landuse_aoi: false
+                            - kind_tile_rank: { max: 8 }
                 draw:
                     text:
                         priority: 2
@@ -4223,12 +4235,15 @@ layers:
                     all:
                         - name: true
                         - kind: [macrohood, neighbourhood]
-                        - min_zoom: [11,12,13,14,15]
-                        - max_zoom: { min: 16 }
-                        - is_landuse_aoi: false
-                        - source: whosonfirst
                         - $zoom: [15]
-                        - kind_tile_rank: { max: 8 }
+                    any:
+                        - source: openstreetmap
+                        - source: whosonfirst
+                          all:
+                            - min_zoom: [11,12,13,14,15]
+                            - max_zoom: { min: 16 }
+                            - is_landuse_aoi: false
+                            - kind_tile_rank: { max: 8 }
                 draw:
                     text:
                         priority: 2
@@ -4246,12 +4261,15 @@ layers:
                     all:
                         - name: true
                         - kind: [macrohood, neighbourhood]
-                        - min_zoom: [11,12,13,14,15,16]
-                        - max_zoom: { min: 17 }
-                        - is_landuse_aoi: false
-                        - source: whosonfirst
                         - $zoom: [16]
-                        - kind_tile_rank: { max: 8 }
+                    any:
+                        - source: openstreetmap
+                        - source: whosonfirst
+                          all:
+                            - min_zoom: [11,12,13,14,15,16]
+                            - max_zoom: { min: 17 }
+                            - is_landuse_aoi: false
+                            - kind_tile_rank: { max: 8 }
                 draw:
                     text:
                         priority: 2
