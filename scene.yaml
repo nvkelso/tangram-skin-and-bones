@@ -3779,6 +3779,87 @@ layers:
                                 font:
                                     size: 10px
                                     
+            populated-places-natural-earth-z8-backfill:
+                filter: { name: true, source: naturalearthdata.com, $zoom: [8], population: { max: 50000 } }
+                draw: { text: { font: { fill: *text_fill } } }
+                z8places-1-ne:
+                    filter: { scalerank: [0,1] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 16px
+                        icons:
+                            size: 14px
+                            interactive: true
+                            sprite: townspot-m-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 16px
+                            icons:
+                                sprite: capital-m
+
+                z8places-2-ne:
+                    filter: { scalerank: [2,3,4,5] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 13px
+                        icons:
+                            size: 11px
+                            interactive: true
+                            sprite: townspot-s-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 16px
+                            icons:
+                                sprite: capital-m
+                    state_capital:
+                        filter: { state_capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 14px
+
+                z8places-3-ne:
+                    filter: { scalerank: [6,7] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 11px
+                        icons:
+                            size: 9px
+                            interactive: true
+                            sprite: townspot-s-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 14px
+                            icons:
+                                    sprite: capital-s
+                    state_capital:
+                        filter: { state_capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 12px
+                                    
             populated-places-osm-z9:
                 filter:
                     all:
@@ -3936,6 +4017,87 @@ layers:
                                 font:
                                     size: 11px
 
+            populated-places-natural-earth-z9-backfill:
+                filter: { name: true, source: naturalearthdata.com, $zoom: [9], population: { max: 50000 } }
+                draw: { text: { font: { fill: *text_fill } } }
+                z9places-1-ne:
+                    filter: { scalerank: [0,1] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 16px
+                        icons:
+                            size: 14px
+                            interactive: true
+                            sprite: townspot-m-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 16px
+                            icons:
+                                sprite: capital-m
+
+                z9places-2-ne:
+                    filter: { scalerank: [2,3,4,5] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 13px
+                        icons:
+                            size: 11px
+                            interactive: true
+                            sprite: townspot-s-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 16px
+                            icons:
+                                sprite: capital-m
+                    state_capital:
+                        filter: { state_capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 14px
+
+                z9places-3-ne:
+                    filter: { scalerank: [6,7,8,9] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 11px
+                        icons:
+                            size: 9px
+                            interactive: true
+                            sprite: townspot-s-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 14px
+                            icons:
+                                    sprite: capital-s
+                    state_capital:
+                        filter: { state_capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 12px
+
             populated-places-osm-z10:
                 filter:
                     all:
@@ -4010,6 +4172,87 @@ layers:
                             interactive: true
                             sprite: townspot-xs-rev
 
+            populated-places-natural-earth-z10-backfill:
+                filter: { name: true, source: naturalearthdata.com, $zoom: [10], population: { max: 35000 } }
+                draw: { text: { font: { fill: *text_fill } } }
+                z10places-1-ne:
+                    filter: { scalerank: [0,1] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 16px
+                        icons:
+                            size: 14px
+                            interactive: true
+                            sprite: townspot-m-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 16px
+                            icons:
+                                sprite: capital-m
+
+                z10places-2-ne:
+                    filter: { scalerank: [2,3,4,5] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 13px
+                        icons:
+                            size: 11px
+                            interactive: true
+                            sprite: townspot-s-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 16px
+                            icons:
+                                sprite: capital-m
+                    state_capital:
+                        filter: { state_capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 14px
+
+                z10places-3-ne:
+                    filter: { scalerank: [6,7,8,9,10] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 11px
+                        icons:
+                            size: 9px
+                            interactive: true
+                            sprite: townspot-s-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 14px
+                            icons:
+                                    sprite: capital-s
+                    state_capital:
+                        filter: { state_capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 12px
+
             populated-places-osm-z11:
                 filter: 
                     all:
@@ -4060,6 +4303,87 @@ layers:
                                 size: 10px
 
 
+            populated-places-natural-earth-z11-backfill:
+                filter: { name: true, source: naturalearthdata.com, $zoom: [11], population: { max: 10000 } }
+                draw: { text: { font: { fill: *text_fill } } }
+                z11places-1-ne:
+                    filter: { scalerank: [0,1] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 16px
+                        icons:
+                            size: 14px
+                            interactive: true
+                            sprite: townspot-m-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 16px
+                            icons:
+                                sprite: capital-m
+
+                z11places-2-ne:
+                    filter: { scalerank: [2,3,4,5] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 13px
+                        icons:
+                            size: 11px
+                            interactive: true
+                            sprite: townspot-s-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 16px
+                            icons:
+                                sprite: capital-m
+                    state_capital:
+                        filter: { state_capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 14px
+
+                z11places-3-ne:
+                    filter: { scalerank: [6,7,8,9,10,11] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 11px
+                        icons:
+                            size: 9px
+                            interactive: true
+                            sprite: townspot-s-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 14px
+                            icons:
+                                    sprite: capital-s
+                    state_capital:
+                        filter: { state_capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 12px
+
             populated-places-osm-z12:
                 filter: 
                     all:
@@ -4107,6 +4431,88 @@ layers:
                             visible: *text_visible_populated_places
                             font:
                                 size: 11px
+
+            populated-places-natural-earth-z12-backfill:
+                filter: { name: true, source: naturalearthdata.com, $zoom: [12], population: { max: 7000 } }
+                draw: { text: { font: { fill: *text_fill } } }
+                z12places-1-ne:
+                    filter: { scalerank: [0,1] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 16px
+                        icons:
+                            size: 14px
+                            interactive: true
+                            sprite: townspot-m-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 16px
+                            icons:
+                                sprite: capital-m
+
+                z12places-2-ne:
+                    filter: { scalerank: [2,3,4,5] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 13px
+                        icons:
+                            size: 11px
+                            interactive: true
+                            sprite: townspot-s-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 16px
+                            icons:
+                                sprite: capital-m
+                    state_capital:
+                        filter: { state_capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 14px
+
+                z12places-3-ne:
+                    filter: { scalerank: [6,7,8,9,10,11,12] }
+                    draw:
+                        text:
+                            priority: 1
+                            interactive: true
+                            visible: *text_visible_populated_places
+                            font:
+                                size: 11px
+                        icons:
+                            size: 9px
+                            interactive: true
+                            sprite: townspot-s-rev
+                    capital:
+                        filter: { capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 14px
+                            icons:
+                                    sprite: capital-s
+                    state_capital:
+                        filter: { state_capital: yes }
+                        draw:
+                            text:
+                                font:
+                                    size: 12px
+                                    
             populated-places-osm:
                 filter: { name: true, source: openstreetmap, not: { kind: [country, county, state, island, neighbourhood, suburb, quarter] }, $zoom: { min: 13 } }
                 draw:
@@ -4158,6 +4564,18 @@ layers:
                         text:
                             font:
                                 size: 13px
+
+                z13places-4:
+                    filter:
+                        any:
+                            - population: false
+                            - population: true
+                              all:
+                                - population: { max: 7000 }
+                    draw:
+                        text:
+                            font:
+                                size: 12px
 
                 # nix major cities under z15
                 major-places:
@@ -4645,7 +5063,7 @@ layers:
                         visible: *icon_visible_poi_landuse
                         interactive: true
                 building-like:
-                    filter: { kind: [commercial,residential,warehouse,public] }
+                    filter: { kind: [commercial,residential,warehouse,public,dormitory] }
                     draw:
                         icons:
                             sprite: building
@@ -4789,6 +5207,9 @@ layers:
                 adult-boutique:
                     filter: { kind: [erotic, adult_boutique] }
                     draw:   { icons: { sprite: adult-boutique } }
+                allotments:
+                    filter: { kind: [allotments] }
+                    draw:   { icons: { sprite: garden } }
                 airport:
                     filter: { kind: [airport, aerodrome] }
                     draw:   { icons: { sprite: airport } }
@@ -4935,7 +5356,7 @@ layers:
                     filter: { kind: [florist, flower-shop] }
                     draw:   { icons: { sprite: flower-shop } }
                 forest:
-                    filter: { kind: [forest, conservation] }
+                    filter: { kind: [forest, conservation, wood] }
                     draw:   { icons: { sprite: forest } }
                 furniture-store:
                     filter: { kind: [furniture, furniture-store] }
@@ -5383,7 +5804,7 @@ layers:
                         color: [ [10,*green4], [12,*green5] ]
                         visible: *green4_v
             forest:
-                filter: { kind: forest, $zoom: { min: 6 } }
+                filter: { kind: [forest,wood], $zoom: { min: 6 } }
                 national-forest:
                     filter:
                         operator: [ "United States Forest Service", "US Forest Service", "U.S. Forest Service", "USDA Forest Service" ]
