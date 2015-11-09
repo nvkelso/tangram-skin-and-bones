@@ -4874,8 +4874,8 @@ layers:
                         - { $zoom: { min: 15 } }
                 national-park:
                     filter: function() { return feature.name && feature.name.includes("National Park") }
+                    visible: *label_visible_landuse_green
                     draw:
-                        visible: *label_visible_landuse_green
                         icons:
                             visible: *icon_visible_landuse_green
                             sprite: park
@@ -4909,8 +4909,8 @@ layers:
                         - { $zoom: [15],   area: { min: 10000 } }
                         - { $zoom: [16],   area: { min: 1000 } }
                         - { $zoom: { min: 17 } }
+                visible: *label_visible_landuse_green
                 draw:
-                    visible: *label_visible_landuse_green
                     icons:
                         visible: *icon_visible_landuse_green
                         sprite: forest
@@ -5012,8 +5012,8 @@ layers:
                         - { $zoom: [16], area: { min: 5000 } }
                         - { $zoom: [17], area: { min: 2000 } }
                         - { $zoom: { min: 18 } }
+                visible: *label_visible_landuse_green
                 draw:
-                    visible: *label_visible_landuse_green
                     text:
                         visible: *text_visible_landuse_green
                         interactive: true
@@ -5150,7 +5150,8 @@ layers:
                             visible: false
             station-train-subway:
                 filter: { kind: [station, train-station, train_station], $zoom: { min: 11 } }
-                draw:   { visible: *label_visible_station, icons: { visible: *icon_visible_station, sprite: train-station, size: [[13,12px],[14,14px],[15,16px],[17,20px]] }, text: { visible: *text_visible_station } }
+                visible: *label_visible_station
+                draw:   { icons: { visible: *icon_visible_station, sprite: train-station, size: [[13,12px],[14,14px],[15,16px],[17,20px]] }, text: { visible: *text_visible_station } }
                 low-priority-early:
                     filter: { kind_tile_rank: { min: 5 }, area: false, $zoom: { min: 0, max: 14 } }
                     draw:
