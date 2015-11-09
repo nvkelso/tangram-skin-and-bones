@@ -989,7 +989,7 @@ traditional-colors:
         - &orange1     '#bfb08e'           # stadium
         - &orange2     '#d8ccb0'           # pitch (play field)
         - &brown1      '#D9CFC3'           # university
-        - &brown1_r    '#D9CFC3'           # university roads
+        - &brown1_r    '#cec1b2'           # university roads
         - &brown1_b    '#b1aca4'           # university buildings
         - &brown1_bo   [.30, .30, .30]     # university building outlines
         - &brown2      '#D9CFC3'           # school
@@ -2554,7 +2554,7 @@ layers:
                 filter: { landuse_kind: university }
                 draw:
                     lines:
-                        color: [[11,*brown1_r],[13,*brown1_r],[14,*minor_road3]]
+                        #color: [[11,*brown1_re],[13,*brown1_r],[14,*minor_road3]]
                         outline:
                             color: *brown1_r
                             width: [[13, 0px], [14, 0.5px], [17, 2.0px], [18, 4.0px]]
@@ -2562,7 +2562,7 @@ layers:
                 filter: { landuse_kind: hospital }
                 draw:
                     lines:
-                        color: [[11,*red1_r],[13,*red1_r],[14,*minor_road3]]
+                        #color: [[11,*red1_r],[13,*red1_r],[14,*minor_road3]]
                         outline:
                             color: *red1_r
                             width: [[13, 0px], [14, 0.5px], [17, 2.0px], [18, 4.0px]]
@@ -3133,7 +3133,7 @@ layers:
         draw:
             lines:
                 interactive: true
-                order: 6
+                order: 11
 #                color: red
 #                width: [[8, 1px], [14, 2px], [16, 3px], [17, 8m]]
         country:
@@ -3145,7 +3145,7 @@ layers:
             draw:
                 lines:
                     interactive: true
-                    order: 8
+                    order: 13
                     color: *country_boundary
                     width: [[1, 0.5px], [2, 1.0px], [4, 1.5px], [9, 2.5px], [14, 3.5px], [16, 4.5px], [17, 14m]]
             water:
@@ -3164,7 +3164,7 @@ layers:
             draw:
                 lines:
                     interactive: true
-                    order: 7
+                    order: 12
                     color: *region_boundary
                     width: [[2, 0.75px], [3, 1px], [5, 1.5px], [9, 3.5px], [14, 5.5px], [16, 6.5px], [17, 16m]]
             water:
@@ -4992,7 +4992,7 @@ layers:
                         interactive: true
                 early:
                     filter: { $zoom: { max: 12 } }
-                    draw: { text: { visible: false } }
+                    draw: { text: { text_source: ref } }
             university:
                 filter:
                     all:
