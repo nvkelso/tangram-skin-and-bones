@@ -111,6 +111,10 @@ labels-global:
 #        - &earth1_r    '#666'              # land color road
 #        - &earth2      '#555'              # urban
 #        - &earth2_v    false               # urban
+#        - &earth2_e    '#d8d3ca'           # urban early
+#        - &earth2_e2   '#d4cfc6'           # urban early fade in
+#        - &earth2_e3   '#dbd8d3'           # urban early fade in 3
+#        - &earth2_ev   true                # urban early visibility
 #        - &green1      '#6e7e6d'           # park
 #        - &green1_r    '#6e7e6d'           # park roads
 #        - &green1_rd   '#5c695b'           # park tracks
@@ -249,6 +253,10 @@ labels-global:
 #        - &earth1_r    '#666'              # land color road
 #        - &earth2      '#111'              # urban
 #        - &earth2_v    false               # urban
+#        - &earth2_e    '#d8d3ca'           # urban early
+#        - &earth2_e2   '#d4cfc6'           # urban early fade in
+#        - &earth2_e3   '#dbd8d3'           # urban early fade in 3
+#        - &earth2_ev   true                # urban early visibility
 #        - &green1      [0.50,0.50,0.50]    # park
 #        - &green1_r    '#7e7e7e'           # park roads
 #        - &green1_b    [.65, .65, .65]     # park buildings
@@ -395,6 +403,10 @@ labels-global:
 #        - &earth1_r    '#666'                 # land color road
 #        - &earth2      '#111'                 # urban
 #        - &earth2_v    false                  # urban visibility
+#        - &earth2_e    '#d8d3ca'              # urban early
+#        - &earth2_e2   '#d4cfc6'              # urban early fade in
+#        - &earth2_e3   '#dbd8d3'              # urban early fade in 3
+#        - &earth2_ev   true                   # urban early visibility
 #        - &green1      '#7fbfe3'              # 50% - park
 #        - &green1_r    '#6e7e6d'              # park roads
 #        - &green1_b    [.65, .65, .65]        # park buildings
@@ -540,6 +552,10 @@ labels-global:
 #        - &earth1_r    '#666'                 # land color road
 #        - &earth2      '#111'                 # urban
 #        - &earth2_v    false                  # urban visibility
+#        - &earth2_e    '#d8d3ca'              # urban early
+#        - &earth2_e2   '#d4cfc6'              # urban early fade in
+#        - &earth2_e3   '#dbd8d3'              # urban early fade in 3
+#        - &earth2_ev   true                   # urban early visibility
 #        - &green1      '#b7b0a4'              # 50% - park
 #        - &green1_r    '#6e7e6d'              # park roads
 #        - &green1_b    [.65, .65, .65]        # park buildings
@@ -683,6 +699,10 @@ labels-global:
 #        - &earth1_r    '#666'              # land color road
 #        - &earth2      '#111'              # urban
 #        - &earth2_v    false               # urban visibility
+#        - &earth2_e    '#d8d3ca'           # urban early
+#        - &earth2_e2   '#d4cfc6'           # urban early fade in
+#        - &earth2_e3   '#dbd8d3'           # urban early fade in 3
+#        - &earth2_ev   true                # urban early visibility
 #        - &green1      [0.50,0.50,0.50]    # park
 #        - &green1_r    '#6e7e6d'           # park roads
 #        - &green1_b    [.65, .65, .65]     # park buildings
@@ -830,6 +850,10 @@ labels-global:
 #        - &earth1_r    '#666'                 # land color road
 #        - &earth2      '#111'                 # urban
 #        - &earth2_v    false                  # urban visibility
+#        - &earth2_e    '#d8d3ca'              # urban early
+#        - &earth2_e2   '#d4cfc6'              # urban early fade in
+#        - &earth2_e3   '#dbd8d3'              # urban early fade in 3
+#        - &earth2_ev   true                   # urban early visibility
 #        - &green1      '#b0b7a4'              # 50% - park
 #        - &green1_r    '#6e7e6d'              # park roads
 #        - &green1_b    [.65, .65, .65]        # park buildings
@@ -966,8 +990,12 @@ traditional-colors:
         - &water2_o    '#9dc3de'           # water stroke 2
         - &earth1      '#e3e2e0'           # land color
         - &earth1_r    '#666'              # land color road
-        - &earth2      '#e9e4e0'           # urban
+        - &earth2      '#d8d3ca'           # urban
         - &earth2_v    false               # urban visibility
+        - &earth2_e    '#d8d3ca'           # urban early
+        - &earth2_e2   '#d4cfc6'           # urban early fade in
+        - &earth2_e3   '#dbd8d3'           # urban early fade in 3
+        - &earth2_ev   true                # urban early visibility
         - &green1      '#aed0b6'           # park (national park, local parks)
         - &green1_r    '#bddec5'           # park roads
         - &green1_b    '#9caca0'           # park buildings
@@ -1106,6 +1134,10 @@ traditional-colors:
 #        - &earth1_r    '#666'              # land color road
 #        - &earth2      '#111'              # urban
 #        - &earth2_v    false               # urban
+#        - &earth2_e    '#d8d3ca'           # urban early
+#        - &earth2_e2   '#d4cfc6'           # urban early fade in
+#        - &earth2_e3   '#dbd8d3'           # urban early fade in 3
+#        - &earth2_ev   true                # urban early visibility
 #        - &green1      [0.55,0.55,0.55]    # park
 #        - &green1_r    [0.60,0.60,0.60]    # park roads
 #        - &green1_b    [0.60, 0.60, 0.60]  # park buildings
@@ -2281,7 +2313,7 @@ layers:
                     filter: { ref: true, $zoom: { min: 12} }
                     draw:
                         lines:
-                            color: *minor_route
+                            color: [[8,*major_road5],[9,*major_route2],[10,*major_route1]]  #*minor_route
                     tunnel:
                         filter: {is_tunnel: yes, $zoom: {min: 13} }
                         draw:
@@ -5851,6 +5883,7 @@ layers:
                         width: [[7,0px],[8,1px],[10,2px]]
             urban:
                 filter: { kind: [urban, rural, residential] }
+                visible: *earth2_v
                 draw:
                     polygons:
                         color: [[0,*earth2],[9,*earth2]]
@@ -6076,10 +6109,11 @@ layers:
         filter:
             # This is from Natural Earth and only shows up from zoom(0,9)
             kind: ['urban area']
+        visible: *earth2_ev
         draw:
-            dots2:
+            polygons:
                 order: 1
-                color: [[4, [1.000,0.510,0.894]], [6, [1.000,0.510,0.894]], [7, [0.882,0.639,0.827]], [8, [0.757,0.729,0.753]]]
+                color: [[0,*earth2_e],[6,*earth2_e2],[8,*earth2_e3]]
 
     debug:
         data: { source: osm }
