@@ -9,6 +9,7 @@ labels-global:
     - &text_visible_continent         true
     - &text_visible_admin             true
     - &text_visible_populated_places  true
+    - &icon_visible_populated_places  true
     - &text_visible_neighbourhoods    true
     - &text_visible_neighbourhoods_e  true
     - &text_visible_water_labels      true
@@ -1060,7 +1061,7 @@ labels-global:
 #        - &text_stroke_road4  white              # road stroke color minor road
 #        - &townspot_sprite    townspot-l-rev     # depends on land color and text settings
 
-lite-gray-colors:
+light-gray-colors:
     cameras:
         - &camera_settings            { type: isometric, axis: [0, .1], vanishing_point: [0, -500] }
 
@@ -1123,7 +1124,7 @@ lite-gray-colors:
         - &subregion_boundary         '#ccc'
         - &city_wall                  '#b7b7b7'
         - &retaining_wall             '#c7c7c7'
-    
+
     areas:
         - &scene1      [0.85, 0.85, 0.85]  # map background, water
         - &water1      grey                # water
@@ -1692,39 +1693,6 @@ styles:
                     //float g = grain(st);
                     //color.rgb = mix(color.rgb, vec3(0.475,0.853,0.853),pow(g,3.5));
 
-    border:
-        base: lines
-        texcoords: true
-        shaders:
-            extensions: OES_standard_derivatives
-            blocks:
-                global: |
-                    float pulse(float x,float p, float w){
-                        x = abs(x - p);
-                        if( x>w ) return 0.0;
-                        x /= w;
-                        return 1.0 - x*x*(3.0-2.0*x);
-                    }
-                    // AntiAliased Step
-                    //=============================
-                    #ifdef TANGRAM_FRAGMENT_SHADER
-                    float aastep(float threshold, float value) {
-                      #ifdef TANGRAM_EXTENSION_OES_standard_derivatives
-                        float afwidth = length(vec2(dFdx(value), dFdy(value))) * 0.70710678118654757;
-                        return smoothstep(threshold-afwidth, threshold+afwidth, value);
-                      #else
-                        return step(threshold, value);
-                      #endif
-                    }
-                    #endif
-                width: |
-                    // Comment/Uncomment to fix the line to the border
-                    width *= 1.0-v_texcoord.x;
-                color: |
-                    vec2 st = v_texcoord.xy;
-                    float pattern = aastep(.5,pulse(st.x,.8,.15)+pulse(st.x,.5,.12)+pulse(st.x,.1,.1));
-                    color.rgb = mix(color.rgb,vec3(0.396,0.833,0.920),pattern);
-
     ground:
         base: polygons
         mix: tools
@@ -1764,7 +1732,7 @@ layers:
             icons:
                 priority: 1
                 sprite: capital-xl
-                size: 18px
+                size: 36px
     route_icon:
         data: { source: route_icon }
         draw:
@@ -1778,7 +1746,7 @@ layers:
             icons:
                 priority: 2
                 sprite: ice-cream-shop
-                size: 18px
+                size: 40px
 
     # Basemap styling
     earth:
@@ -4334,7 +4302,6 @@ layers:
                             font:
                                 size: 10px
 
-
             populated-places-natural-earth-z11-backfill:
                 filter: { name: true, source: naturalearthdata.com, $zoom: [11], population: { max: 10000 } }
                 draw: { text: { font: { fill: *text_fill } } }
@@ -4897,7 +4864,7 @@ layers:
                         - { $zoom: [4],  area: { min: 3000000000 } }
                         - { $zoom: [5],  area: { min: 3000000000 } }
                         - { $zoom: [6],  area: { min: 500000000 } }
-                        - { $zoom: [9],  area: { min: 100000000 } }
+                        - { $zoom: [7,8,9],  area: { min: 100000000 } }
                         - { $zoom: [10], area: { min: 50000000 } }
                         - { $zoom: [11], area: { min: 25000000 } }
                         - { $zoom: [12], area: { min: 5000000 } }
@@ -5024,6 +4991,7 @@ layers:
                         interactive: true
                 early:
                     filter: { $zoom: { max: 12 } }
+                    # todo: huh?
                     draw: { text: { text_source: ref } }
             university:
                 filter:
@@ -5095,10 +5063,16 @@ layers:
                         visible: *icon_visible_poi_landuse
                         interactive: true
                 building-like:
-                    filter: { kind: [commercial,residential,warehouse,public,dormitory] }
+                    filter: { kind: [commercial,residential,warehouse,public,dormitory], osm_relation: false }
                     draw:
                         icons:
                             sprite: building
+                residential-relations-paris-wtf:
+                    filter: { kind: [residential], osm_relation: true }
+                    draw:
+                        icons:
+                            text: { visible: true, text_source: short_name, font: { fill: red } }
+                            icons: { visible: false }
                 hide-till-later:
                     filter: { kind: [pedestrian,common,railway,ship,houseboat,common,grass,wetland,pitch], $zoom: { max: 17 } }
                     draw:
@@ -5779,6 +5753,7 @@ layers:
                     polygons:
                       color: *green7
                 us_national_park:
+                    # yosemite national park, death valley national park, grand canyon national park
                     filter: { operator: [ "United States National Park Service", "US National Park Service" ] }
                     draw:
                         polygons:
