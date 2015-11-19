@@ -5607,9 +5607,9 @@ layers:
                 storage-facility:
                     filter: { kind: [storage, storage-facility] }
                     draw:   { icons: { sprite: storage-facility } }
-                # subway-entrance:
-                #     filter: { kind: [subway_entrance] }
-                #     draw:   { icons: { sprite: subway-entrance } }
+                subway-entrance:
+                    filter: { kind: [subway_entrance] }
+                    draw:   { icons: { sprite: generic } }
                 tailor-shop:
                     filter: { kind: [tailor, tailor-shop] }
                     draw:   { icons: { sprite: tailor-shop } }
