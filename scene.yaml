@@ -1051,6 +1051,7 @@ cinnabar-colors:
         - &text_fill          '#333'             # WHITE
         - &text_fill2         '#000'             # WHITE
         - &text_fill_building '#ccc'             # WHITE
+        - &text_fill_address  '#aaa'             # HUH
         - &text_fill_water    '#4c89b5'          # blue
         - &text_fill_park     '#43a254'          # green
         - &text_stroke        '#e4e1de'          # land color
@@ -3126,7 +3127,7 @@ layers:
                 visible: *text_visible_address
                 text_source: addr_housenumber
                 font:
-                    fill: *text_fill_building
+                    fill: *text_fill_address
                     family: Helvetica
                     style: italic
                     size: 10px
@@ -3343,6 +3344,7 @@ layers:
         populated-places:
             draw:
                 text:
+                    #anchor: bottom
                     offset: [0, 8px]
                     font:
                         stroke: { color: *text_stroke, width: 3 }
@@ -4826,6 +4828,8 @@ layers:
                 visible: false    # labels are enabled by each layer below
                 move_into_tile: false
                 offset: [[13,13px],[14,15px],[16,19px]]
+                #anchor: bottom
+                #offset: [0px,30px] #[[13,13px],[14,15px],[16,19px]]
                 interactive: true
                 font:
                     family: Helvetica
@@ -4926,7 +4930,7 @@ layers:
                         text:
                             visible: *text_visible_landuse_green
                             interactive: true
-                            offset: [0, 14px]
+                            #offset: [0, 14px]
                             font:
                                 fill: *text_fill_park
                                 size: 12px
@@ -4961,7 +4965,7 @@ layers:
                     text:
                         visible: *text_visible_landuse_green
                         interactive: true
-                        offset: [0, 14px]
+                        #offset: [0, 14px]
                         font:
                             fill: *text_fill_park
                             size: 12px
