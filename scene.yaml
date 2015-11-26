@@ -1838,7 +1838,7 @@ layers:
         draw:
             lines:
                 interactive: true
-                order: function() { return (6 + feature.sort_key) | 6; }
+                order: function() { return (6 + feature.sort_key) || 6; }
         railway:
             filter: { kind: railway }
             draw:
@@ -4985,7 +4985,7 @@ layers:
                         text: { visible: false }
                         icons: { visible: false }
                 not-national-park:
-                    filter: function() { return feature.name && feature.name.indexOf("Park") > -1 && !feature.name.indexOf("National Park") > -1}
+                    filter: function() { return feature.name && feature.name.indexOf("Park") > -1 && !feature.name.indexOf("National Park") > -1 }
                     draw:
                         icons:
                             sprite: park
@@ -6002,6 +6002,13 @@ layers:
                 draw:
                     polygons:
                         color: *grey3
+            sports_centre:
+                filter:
+                    kind: sports_centre
+                draw:
+                    polygons:
+                        color: *green7
+                        order: function() { return feature.sort_key + 1 || 1; }
             recreation_ground:
                 filter:
                     kind: recreation_ground
