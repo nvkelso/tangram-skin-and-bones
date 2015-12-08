@@ -1760,7 +1760,24 @@ layers:
                 order: 0
                 color: *earth1
 
-    water:
+    ocean-water:
+        data: { source: osm, layer: water }
+        # don't filter ocean polys because OSM ocean split tiles don't have coherent areas
+        filter: { kind: ocean }
+        draw:
+            polygons:
+                order: 5
+                color: *water1
+        water_boundaries-ocean:
+          filter: { boundary: yes, $zoom: { min: 10 } }
+          draw:
+                lines:
+                    order: 7
+                    color: *water1_o
+                    width: [[10,1px],[12,2px]]
+                    join: round
+    
+    water-not-ocean:
         data: { source: osm, layer: water }
         draw:
             polygons:
@@ -1769,7 +1786,7 @@ layers:
         lakes:
             filter:
                 all:
-                    - kind: [ocean, lake, water, riverbank, reservoir]
+                    - kind: [lake, water, riverbank, reservoir]
                 any:
                     # limit show smaller landuse areas to higher zooms
                     - { $zoom: { min: 1 },  area: { min: 40000000000 } }
@@ -1792,7 +1809,7 @@ layers:
                 polygons:
                     color: *water1
         other-water-areas:
-            filter: { not: { kind: [ocean, lake, water, reservoir, playa] }, $zoom: { min: 11 }, area: { min: 100 } }
+            filter: { not: { kind: [lake, water, reservoir, playa] }, $zoom: { min: 11 }, area: { min: 100 } }
             draw:
                 polygons:
                     color: *water1
@@ -1801,19 +1818,10 @@ layers:
             draw:
                 polygons:
                     color: *water2
-        water_boundaries-ocean:
-          filter: { boundary: yes, kind: ocean, $zoom: { min: 10 } }
-          draw:
-                lines:
-                    order: 7
-                    color: *water1_o
-                    width: [[10,1px],[12,2px]]
-                    join: round
         water_boundaries-not-ocean:
             filter: 
                 all:
                     - boundary: yes
-                    - not: { kind: ocean }
                     - $zoom: { min: 14 }
                 any:
                     - { $zoom: { min: 14 }, area: { min: 2000 } }
