@@ -3256,7 +3256,6 @@ layers:
                 color: *building2
                 width: [[14,0.1px],[15,0.5px],[17,0.5px],[18,0.75px],[19,0.25m]]
                 extrude: *building_e
-                tile_edges: true
         in_park:
             #todo: does forest belong here?
             filter: { landuse_kind: [park,forest,nature_reserve,conservation,golf_course,garden] }
