@@ -1496,7 +1496,7 @@ textures:
 sources:
     osm:
         type: TopoJSONTiles
-        #url: '//vector.dev.mapzen.com/osm/all/{z}/{x}/{y}.topojson'
+        url: '//vector.dev.mapzen.com/osm/all/{z}/{x}/{y}.topojson'
         #url:  '//mapzen-tiles-prod-us-east-20151113.s3.amazonaws.com/osm/all/{z}/{x}/{y}.topojson'
         #url:  //localhost:8080/osm/all/{z}/{x}/{y}.topojson
         #url:  //vector.mapzen.com/osm/all/{z}/{x}/{y}.topojson?api_key=vector-tiles-HqUVidw
@@ -1895,6 +1895,11 @@ layers:
             draw:
                 polygons:
                     color: *water2
+        swimming_pool:
+            filter: { kind: swimming_pool }
+            draw:
+                polygons:
+                    order: 8
         water_boundaries-not-ocean:
             filter: 
                 all:
@@ -4680,7 +4685,6 @@ layers:
                             text-blend-order:
                                 font:
                                     size: 16px
-                            text-blend-order:
                             icons:
                                 sprite: capital-m
 
@@ -5199,6 +5203,26 @@ layers:
                 text-blend-order:
                     font:
                         weight: 600
+    airport-gate:
+        data: { source: osm, layer: [pois] }
+        filter: { kind: gate, aeroway: gate }
+        draw:
+            icons:
+                visible: false
+            text-blend-order:
+                visible: true
+                interactive: true
+                text_source: ref
+                font:
+                    fill: *text_fill
+                    size: [[16,9px],[17,12px],[20,14px]]
+                    #stroke: { color: *highway1, width: [[12,2px],[14,3px],[15,3px]] }
+        later:
+            filter: { $zoom: { min: 19 } }
+            draw:
+                text-blend-order:
+                    font:
+                        weight: 600
 
     pois_and_landuse_labels:
         data: { source: osm, layer: [pois,landuse,buildings] }
@@ -5688,6 +5712,11 @@ layers:
                     filter: { kind: [pedestrian,common,railway,ship,houseboat,common,grass,wetland,pitch], $zoom: { min: 17 } }
                     draw:
                         text-blend-order: { font: { style: italic } }
+                        icons: { visible: false }
+                burial_vault-early:
+                    filter: { kind: [burial_vault], $zoom: { max: 19 } }
+                    draw:
+                        text-blend-order:  { visible: false }
                         icons: { visible: false }
             university-poi:
                 filter: { kind: [university], area: false, $zoom: { max: 16 } }
@@ -6563,7 +6592,7 @@ layers:
                 draw:
                     polygons:
                         color: *green7
-                        order: function() { return feature.sort_key + 1 || 1; }
+                        order: function() { return (feature.sort_key + 1) || 1; }
                     lines:
                         order: 3
                         color: *earth1
@@ -6669,7 +6698,7 @@ layers:
                 draw:
                     polygons:
                         color: *green10
-                        order: function() { return feature.sort_key + 1 || 1; }
+                        order: function() { return (feature.sort_key + 1) || 1; }
             recreation_ground:
                 filter:
                     kind: recreation_ground
