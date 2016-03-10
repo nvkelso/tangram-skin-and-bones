@@ -45,6 +45,7 @@ labels-global:
     - &text_visible_aerialway         true
     - &text_visible_shields           true
     - &text_visible_exits             true
+    - &text_visible_exits_e           false
 
 
 #banana-colors:
@@ -1276,7 +1277,7 @@ cinnabar-colors:
 #        - &text_fill_beach    [0.2, 0.2, 0.2]    # green
 #        - &text_fill_piste    '#000'             # dark gray
 #        - &text_fill_piste_e  '#666'             # dark gray early
-#        - &text_fill_shield   white              # road shield fill color 
+#        - &text_fill_shield   [0.8, 0.8, 0.8]    # road shield fill color 
 #        - &text_stroke        [0.8, 0.8, 0.8]    # land color
 #        - &text_stroke_water  [0.8, 0.8, 0.8]    # water stroke color
 #        - &text_stroke_park   [0.8, 0.8, 0.8]    # park stroke color
@@ -3721,6 +3722,7 @@ layers:
                                 # stroke: { color: *text_stroke, width: 4 }
                         icons:
                             size: 5px
+                            visible: *icon_visible_populated_places
                             sprite: townspot-s-rev
                 z3places-2:
                     filter: { scalerank: [1] }
@@ -3736,6 +3738,7 @@ layers:
                         icons:
                             priority: 7
                             size: 5px
+                            visible: *icon_visible_populated_places
                             sprite: townspot-s-rev
 
             populated-places-natural-earth-z4:
@@ -3838,6 +3841,7 @@ layers:
                         icons:
                             priority: 17
                             size: 5px
+                            visible: *icon_visible_populated_places
                             sprite: townspot-s-rev
                     capital:
                         filter: { capital: yes }
@@ -4509,6 +4513,7 @@ layers:
                                 size: 13px
                         icons:
                             size: 6px
+                            visible: *icon_visible_populated_places
                             sprite: townspot-m-rev
                             priority: 7
 
@@ -5186,6 +5191,11 @@ layers:
                     fill: *text_fill_exits
                     size: [[12,9px],[15,12px],[17,14px]]
                     stroke: { color: *highway1, width: [[12,2px],[14,3px],[15,3px]] }
+        early:
+            filter: { $zoom: { max: 13 } }
+            draw:
+                text-blend-order:
+                    visible: *text_visible_exits_e
         later:
             filter: { $zoom: { min: 16 } }
             draw:
@@ -5650,7 +5660,7 @@ layers:
             tourism-related:
                 filter:
                     all:
-                        - kind: [zoo, theme_park, resort, aquarium, winery, maze]
+                        - kind: [zoo, theme_park, resort, aquarium, winery, maze, stadium]
                         - area: true
                         - $geometry: point
                     any:
@@ -5684,7 +5694,7 @@ layers:
                         - $zoom: { min: 6 }
                         - area: true
                         - $geometry: point
-                        - not: { kind: [park, national_park, "park or protected land", conservation, protected_area, nature_reserve, airport, aerodrome, university, college, school, kindergarten, winter_sports, zoo, theme_park, resort, aquarium, winery, maze] }
+                        - not: { kind: [park, national_park, "park or protected land", conservation, protected_area, nature_reserve, airport, aerodrome, university, college, school, kindergarten, winter_sports, zoo, theme_park, resort, aquarium, winery, maze, stadium] }
                     any:
                         # show labels for smaller landuse areas at higher zooms
                         - { $zoom: [5,6,7], area: { min: 5000000000 } }
