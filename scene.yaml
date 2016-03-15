@@ -2527,25 +2527,25 @@ layers:
                         width: [[11, 0.5px], [12, .75px], [14, 2.5px], [15, 4.0px], [16, 6.5px], [17, 7.5px], [19, 14m]]
                         outline:
                             width: [[11, 0px], [13, 0.5px], [14, 1.0px], [15, 1.5px], [16, 2.0px], [18, 3.5px]]
-#                early:
-#                    filter: { $zoom: { max: 15 } }
-#                    draw:
-#                        lines:
-#                            order: 352
-#                            outline:
-#                                order: function() { return feature.sort_key + 3; }
+                early:
+                    filter: { $zoom: { max: 15 } }
+                    draw:
+                        lines:
+                            order: 352
+                            outline:
+                                order: function() { return feature.sort_key + 3; }
                 routes:
                     filter: { ref: true, $zoom: { min: 12} }
                     draw:
                         lines:
                             color: *minor_route
-#                    early:
-#                        filter: { $zoom: { max: 15 } }
-#                        draw:
-#                            lines:
-#                                order: function() { return feature.sort_key + 3; }
-#                                outline:
-#                                    order: 353
+                    early:
+                        filter: { $zoom: { max: 15 } }
+                        draw:
+                            lines:
+                                order: function() { return feature.sort_key + 3; }
+                                outline:
+                                    order: 353
                     tunnel:
                         filter: {is_tunnel: yes, $zoom: {min: 13} }
                         draw:
@@ -3308,21 +3308,22 @@ layers:
             all:
                 - { $zoom: { min: 16 } }
                 - $geometry: point
-                - not: { location: underground }
-                - kind: [false, building, university, college, school, kindergarten]
+                - not: { location: underground, kind: address }
+                - name: true
+#                - kind: [false, building, university, college, school, kindergarten]
             any:
-                - { $zoom: [16], area: { min: 5000 }, name: true }
-                - { $zoom: [16], area: { min: 5000 }, kind: true }
+                - { $zoom: [16], area: { min: 5000 } }
+                - { $zoom: [16], area: { min: 5000 } }
                 - { $zoom: [16], area: { min: 10000 }, landuse_kind: true }
                 - { $zoom: [16], area: { min: 7000 }, kind: [university, college, school, kindergarten] }
                 - { $zoom: [16], volume: { min: 50000 }, name: true }
-                - { $zoom: [17], area: { min: 3000 }, name: true }
+                - { $zoom: [17], area: { min: 3000 } }
                 - { $zoom: [17], area: { min: 2000 }, kind: [university, college, school, kindergarten] }
-                - { $zoom: [18], area: { min: 1000 }, name: true }
+                - { $zoom: [18], area: { min: 1000 } }
                 - { $zoom: [18], kind: [university, college, school, kindergarten] }
-                - { $zoom: [19], area: { min: 200 }, name: true }
+                - { $zoom: [19], area: { min: 200 } }
                 - { $zoom: { min: 19 }, kind: [university, college, school, kindergarten] }
-                - { $zoom: { min: 20 }, name: true }
+                - { $zoom: { min: 20 }, area: true }
         draw:
             text-blend-order:
                 interactive: true
@@ -5224,10 +5225,10 @@ layers:
                         weight: 600
 
     pois_and_landuse_labels:
-        data: { source: osm, layer: [pois,landuse,buildings] }
+        data: { source: osm, layer: [pois,landuse] }
         visible: *label_visible_poi_landuse
         filter: 
-            not: { kind: [building,farm,tree,gate,address,apron] }
+            not: { kind: [building,farm,tree,gate,apron] }
             any:
                 - area: false
                   all:
