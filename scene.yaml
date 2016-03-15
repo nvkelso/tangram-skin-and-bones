@@ -3306,7 +3306,7 @@ layers:
         data: { source: osm, layer: buildings }
         filter:
             all:
-                - { $zoom: { min: 16 } }
+                - { $zoom: { min: 17 } }
                 - $geometry: point
                 - not: { location: underground, kind: address }
                 - name: true
@@ -3328,7 +3328,7 @@ layers:
             text-blend-order:
                 interactive: true
                 move_into_tile: true
-                priority: 51
+                priority: 70
                 visible: *text_visible_building
                 order: 7
                 font:
