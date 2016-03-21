@@ -108,10 +108,15 @@ map = (function () {
                 }                
                 var properties = selection.feature.properties;
 
+                popup.style.width = 'auto';
                 popup.style.left = (pixel.x + 0) + 'px';
                 popup.style.top = (pixel.y + 0) + 'px';
                 popup.style.margin = '10px';
-                popup.innerHTML = '<span class="labelInner">' + properties.name + '</span><br>';
+                if (properties.name) {
+                    popup.innerHTML = '<span class="labelInner">' + properties.name + '</span><br>';
+                } else {
+                    popup.innerHTML = '<span class="labelInner">' + 'unnamed ' + properties.kind + '</span><br>';
+                }
                 popup.innerHTML += '<span class="labelInner" style="font-size:10px;">' + 'Click to view more...' + '</span><br>';
                 popup.style.visibility = 'visible';
             });
@@ -221,8 +226,14 @@ map = (function () {
                             var val = properties[x]
                             label += "<span class='labelLine' key="+x+" value="+val+"'>"+x+" : "+val+"</span><br>"
                         }
+                        
+                        var mz_layers = JSON.stringify(
+                           selection.feature.layers.reduce((set, val) => { let last=set; val.split(':').forEach(k => { last = last[k] = last[k] || {} }); return set }, {}), 
+                           null, '\t')
+                        label += "<span class='labelLine'>layers : "+mz_layers+"</span><br>";
 
                         if (label != '') {
+                            popup.style.width = '300px'; // 'auto';
                             popup.style.left = (pixel.x) + 'px';
                             popup.style.top = (pixel.y) + 'px';
                             popup.style.margin = '0px';
