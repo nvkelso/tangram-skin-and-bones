@@ -6217,7 +6217,7 @@ layers:
                     draw:   { icons: { sprite: nightlife } }
                 office:
                     filter: { kind: [insurance, office, company] }
-                    draw:   { icons: { sprite: office } }
+                    draw:   { icons: { sprite: generic } }
                 office-supplies:
                     filter: { kind: [office_supplies, office-supplies, stationery] }
                     draw:   { icons: { sprite: office-supplies } }
